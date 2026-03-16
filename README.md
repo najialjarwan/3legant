@@ -1,16 +1,110 @@
-# React + Vite
+<div align="center">
+  <img src="" width="200">
+</div>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+<h1 align="center">
+⭐ 3legant • Modular e-commerce architecture
+</h1>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## React Compiler
+> A scalable, component-driven e-commerce frontend built from an open-source Figma design, demonstrating advanced React patterns and clean architecture principles.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+## 🔷 Project Overview
+<table>
+<tr><td>Type</td><td>personal project</td></tr>
+<tr><td>Role</td><td>front-end</td></tr>
+<tr><td>Platform</td><td>website</td></tr>
+<tr><td>Duration</td><td>dec 29 - present</td></tr>
+<tr><td>Status</td><td>active</td></tr>
+<tr><td>Version</td><td>1.0.0</td></tr>
+<tr><td>Live Demo</td><td>No public live deployment available</td></tr>
+</table>
+
+
+<!-- 
+📸 SCREENSHOTS PLACEHOLDER
+
+This section will eventually render project screenshots or GIF demos.
+Humans scan images first, so keep it near the top.
+-->
+
+<!-- {{screenshots}} -->
+
+
+## ⚙️ Tech Stack & Tools
+<p>
+  <img src="https://najialjarwan.vercel.app/external-icons/html.svg" height="40" title="HTML5" />&nbsp;&nbsp;
+<img src="https://najialjarwan.vercel.app/external-icons/css.svg" height="40" title="CSS3" />&nbsp;&nbsp;
+<img src="https://najialjarwan.vercel.app/external-icons/javascript.svg" height="40" title="JavaScript (ES6+)" />&nbsp;&nbsp;
+<img src="https://najialjarwan.vercel.app/external-icons/tailwindcss.svg" height="40" title="Tailwind CSS" />&nbsp;&nbsp;
+<img src="https://najialjarwan.vercel.app/external-icons/react.svg" height="40" title="React" />&nbsp;&nbsp;
+</p>
+
+<table>
+  <tr>
+    <td><strong>Frontend</strong></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td><strong>Backend</strong></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td><strong>Database</strong></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td><strong>Hosting</strong></td>
+    <td></td>
+  </tr>
+    <tr>
+    <td><strong>Tools</strong></td>
+    <td></td>
+  </tr>
+</table>
+
+
+## 💡 Problem / Motivation
+
+3legant continues the exploration started with Hekto, focusing on building a more scalable and modular React architecture for an e-commerce interface. The project emphasizes reusable UI components, layout systems, and custom hooks designed to support future backend integration.
+
+
+## ✨ Key Features
+
+- Architected a modular frontend structure separating concerns: pages, UI components, hooks, state, and data layers
+- Implemented dynamic product grid systems (4x2, 3x3, horizontal) with state-driven layout switching
+- Built reusable component library including product cards, layout selectors, dropdown controls, and progressive rendering patterns
+- Developed custom responsive breakpoint hooks for optimized cross-device layouts
+- Designed codebase architecture to seamlessly accommodate future backend integration and full e-commerce functionality
+- Solely implemented the frontend architecture, translating design specifications into scalable, production-ready code
+
+
+## 🚀 Future Improvements
+
+- Connect frontend with backend e-commerce functionality.
+- Expand component library and layout options for product displays.
+- Introduce advanced state management for full application interactivity.
+
+
+## 🎨 Credits & Inspirations
+
+- Frontend architecture solely implemented by me
+- UI/UX inspired by Figma open-source design
+
+
+## 📝 Notes
+
+- The project focuses primarily on frontend architecture and component design. Future iterations may integrate backend services to evolve the project into a complete e-commerce platform.
+
+
+---
+
+
+<p align="center">
+  <em>This README was automatically generated using a custom README generator</em> ✨
+</p>
