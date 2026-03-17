@@ -13,11 +13,17 @@
 
 ---
 
+## 📸 Showcase
+<div align="center">
+  <!-- <img src="" width="800" title="*Name* Quick Look" alt="*NAME* GIF screenshots showcase" /> -->
+  Showcase coming soon... 📸
+</div>
+
 
 ## 🔷 Project Overview
 <table>
 <tr><td>Type</td><td>personal project</td></tr>
-<tr><td>Role</td><td>front-end</td></tr>
+<tr><td>My Role</td><td>front-end</td></tr>
 <tr><td>Platform</td><td>website</td></tr>
 <tr><td>Duration</td><td>dec 29 - present</td></tr>
 <tr><td>Status</td><td>active</td></tr>
@@ -26,45 +32,38 @@
 </table>
 
 
-<!-- 
-📸 SCREENSHOTS PLACEHOLDER
-
-This section will eventually render project screenshots or GIF demos.
-Humans scan images first, so keep it near the top.
--->
-
-<!-- {{screenshots}} -->
-
-
 ## ⚙️ Tech Stack & Tools
-<p>
-  <img src="https://najialjarwan.vercel.app/external-icons/html.svg" height="40" title="HTML5" />&nbsp;&nbsp;
-<img src="https://najialjarwan.vercel.app/external-icons/css.svg" height="40" title="CSS3" />&nbsp;&nbsp;
-<img src="https://najialjarwan.vercel.app/external-icons/javascript.svg" height="40" title="JavaScript (ES6+)" />&nbsp;&nbsp;
-<img src="https://najialjarwan.vercel.app/external-icons/tailwindcss.svg" height="40" title="Tailwind CSS" />&nbsp;&nbsp;
-<img src="https://najialjarwan.vercel.app/external-icons/react.svg" height="40" title="React" />&nbsp;&nbsp;
-</p>
 
 <table>
   <tr>
     <td><strong>Frontend</strong></td>
-    <td></td>
+    <td>
+      <img src="https://najialjarwan.vercel.app/external-icons/html.svg" height="40" title="HTML5" />
+      <img src="https://najialjarwan.vercel.app/external-icons/css.svg" height="40" title="CSS3" />
+      <img src="https://najialjarwan.vercel.app/external-icons/javascript.svg" height="40" title="JavaScript (ES6+)" />
+      <img src="https://najialjarwan.vercel.app/external-icons/tailwindcss.svg" height="40" title="Tailwind CSS" />
+      <img src="https://najialjarwan.vercel.app/external-icons/react.svg" height="40" title="React" />
+    </td>
   </tr>
   <tr>
     <td><strong>Backend</strong></td>
-    <td></td>
+    <td><strong>⚠️ No Backend at the moment</strong></td>
   </tr>
   <tr>
     <td><strong>Database</strong></td>
-    <td></td>
+    <td><strong>⚠️ No Database at the moment</strong></td>
   </tr>
   <tr>
     <td><strong>Hosting</strong></td>
-    <td></td>
+    <td><strong>⚠️ Not hosted at the moment</strong></td>
   </tr>
     <tr>
     <td><strong>Tools</strong></td>
-    <td></td>
+    <td>
+      <img src="https://najialjarwan.vercel.app/external-icons/vscode.svg" height="40" title="VS Code" />
+      <img src="https://najialjarwan.vercel.app/external-icons/git.svg" height="40" title="Git" />
+      <img src="https://najialjarwan.vercel.app/external-icons/figma.svg" height="40" title="Figma" />
+    </td>
   </tr>
 </table>
 
