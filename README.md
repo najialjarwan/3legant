@@ -4,7 +4,7 @@
 
 
 <h1 align="center">
-⭐ 3legant • Modular e-commerce architecture
+⭐ 3legant • Modular E-Commerce Architecture
 </h1>
 
 
