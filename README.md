@@ -65,8 +65,6 @@
 
 ```bash
 ├── index.html              # Entry HTML
-├── package.json
-├── vite.config.js
 ├── public/                 # Static files
 ├── src/
 │   ├── app/                # App entry points
