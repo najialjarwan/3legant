@@ -61,6 +61,32 @@
 </table>
 
 
+## 🗂️ Project Structure
+
+```bash
+├── index.html              # Entry HTML
+├── package.json
+├── vite.config.js
+├── public/                 # Static files
+├── src/
+│   ├── app/                # App entry points
+│   │   ├── App.jsx
+│   │   └── main.jsx
+│   ├── assets/             # Images, icons, static files
+│   ├── components/         # Reusable UI components
+│   │   ├── footer/
+│   │   ├── layout/
+│   │   ├── navigation/
+│   │   ├── sections/
+│   │   └── ui/
+│   ├── data/               # Static data and constants
+│   ├── hooks/              # Custom React hooks
+│   ├── pages/              # Application pages
+│   ├── index.css
+│   └── utils/              # Helper functions
+```
+
+
 ## 💡 Problem / Motivation
 
 3legant continues the exploration started with Hekto, focusing on building a more scalable and modular React architecture for an e-commerce interface. The project emphasizes reusable UI components, layout systems, and custom hooks designed to support future backend integration.
