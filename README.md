@@ -22,13 +22,12 @@
 
 ## 🔷 Project Overview
 <table align="center">
-<tr><td>Type</td><td>personal project</td></tr>
-<tr><td>My Role</td><td>front-end</td></tr>
-<tr><td>Platform</td><td>website</td></tr>
-<tr><td>Duration</td><td>dec 29 - present</td></tr>
-<tr><td>Status</td><td>active</td></tr>
+<tr><td>Type</td><td>Personal Project</td></tr>
+<tr><td>My Role</td><td>Front-End</td></tr>
+<tr><td>Platform</td><td>Website</td></tr>
+<tr><td>Duration</td><td>Dec 29 - Present</td></tr>
+<tr><td>Status</td><td>Active</td></tr>
 <tr><td>Version</td><td>1.0.0</td></tr>
-<tr><td>Live Demo</td><td>No public live deployment available</td></tr>
 </table>
 
 
