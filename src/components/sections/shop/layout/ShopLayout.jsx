@@ -30,7 +30,7 @@ export const ShopLayout = () => {
                             iconClassName='w-[18px] h-[16px] text-n7100'
                         />
 
-                        <p className='text-black-900 body-1-semi'>FilterItem</p>
+                        <p className='text-black-900 body-1-semi'>Filter</p>
                     </header>
 
                     <FilterItems activeSelector3x3={activeSelector3x3} />
