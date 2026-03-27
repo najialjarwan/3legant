@@ -1,0 +1,1 @@
+export { productTabs } from './ProductTabs.config';

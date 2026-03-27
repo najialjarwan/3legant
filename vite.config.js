@@ -33,6 +33,8 @@ export default defineConfig({
           '@shop': path.resolve(__dirname, './src/components/sections/shop'),
         '@ui': path.resolve(__dirname, './src/components/ui'),
 
+      '@config': path.resolve(__dirname, './src/config'),
+
       '@data': path.resolve(__dirname, './src/data'),
 
       '@hooks': path.resolve(__dirname, './src/hooks'),

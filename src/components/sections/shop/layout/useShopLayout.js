@@ -9,7 +9,7 @@ export const useShopLayout = ({ activeSelector, isMobile }) => {
             case GRID_MODE.GRID_4X4:
                 return 'grid-rows-4 grid-cols-4 gap-6'
             case GRID_MODE.GRID_4X2:
-                return 'grid-rows-4 grid-cols-2 gap-x-2 gap-y-4'
+                return 'grid-rows-4 grid-cols-2 gap-x-2 gap-y-4 2xl:gap-6'
             case GRID_MODE.GRID_4X1:
                 return 'grid-rows-4 grid-cols-1 gap-6'
             default:

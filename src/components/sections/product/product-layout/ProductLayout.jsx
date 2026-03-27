@@ -1,4 +1,4 @@
-import { useProduct } from '../context/ProductContext';
+import { useProduct } from '../product-context/ProductContext';
 import { useBreakpoint } from '@hooks';
 import { computeLayoutFlags } from '@utils';
 import { ProductBreadcrumbs, ProductLoop, ProductTabs } from '@product';

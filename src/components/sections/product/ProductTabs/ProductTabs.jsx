@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import ProductTabsInline from './variants/ProductTabsInline';
 import ProductTabsSection from './variants/ProductTabsSection';
-import { PRODUCT_TABS } from './ProductTabs.config';
+import { tabsWithComponents } from '@utils';
 
 const ProductTabs = ({ variant, layout }) => {
     const defaultOpenTab = layout.showRecommendations ? 'additionalInfo' : 'reviews';
@@ -13,13 +13,13 @@ const ProductTabs = ({ variant, layout }) => {
 
     if (variant === 'inline')
         return <ProductTabsInline
-            tabs={PRODUCT_TABS}
+            tabs={tabsWithComponents}
             activeTab={activeTab}
             onTabClick={handleTabClick}
         />
 
     return <ProductTabsSection
-        tabs={PRODUCT_TABS}
+        tabs={tabsWithComponents}
         activeTab={activeTab}
         onTabClick={handleTabClick}
     />
