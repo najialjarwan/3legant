@@ -1,16 +1,16 @@
 import { useState } from 'react';
 import { useBreakpoint } from '@hooks';
 import { Icon } from '@ui';
-import { GRID_MODE } from '@shop/state'
+import { GRID_MODES } from '@constants'
 import { ProductsGrid } from '@shop';
 import { Toolbar } from '@shop/toolbar';
 import { FilterItems } from '@shop/filters';
 
 export const ShopLayout = () => {
     const { isMobile } = useBreakpoint();
-    const [activeSelector, setActiveSelector] = useState(isMobile ? GRID_MODE.GRID_4X2 : GRID_MODE.GRID_3X3);
+    const [activeSelector, setActiveSelector] = useState(isMobile ? GRID_MODES.GRID_4X2 : GRID_MODES.GRID_3X3);
 
-    const activeSelector3x3 = activeSelector === GRID_MODE.GRID_3X3;
+    const activeSelector3x3 = activeSelector === GRID_MODES.GRID_3X3;
 
     return (
         <section
@@ -40,7 +40,7 @@ export const ShopLayout = () => {
             <div
                 className={`
                 flex flex-col
-                ${isMobile && activeSelector === GRID_MODE.GRID_4X1 ? 'gap-10' : 'gap-8 2xl:gap-10'}`}>
+                ${isMobile && activeSelector === GRID_MODES.GRID_4X1 ? 'gap-10' : 'gap-8 2xl:gap-10'}`}>
                 <div
                     className={`
                     p-8 2xl:p-0

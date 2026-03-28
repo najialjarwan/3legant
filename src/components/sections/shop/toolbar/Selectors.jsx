@@ -1,20 +1,20 @@
 import { Icon } from '@ui';
 import { useBreakpoint } from '@hooks';
-import { GRID_MODE } from '@shop/state';
+import { GRID_MODES } from '@constants';
 
 export const Selectors = ({ activeSelector, onClick }) => {
     const { isMobile } = useBreakpoint();
 
     const base = [
-        { mode: GRID_MODE.GRID_4X2, icon: 'Grid4x2' },
-        { mode: GRID_MODE.GRID_4X1, icon: 'Grid4x1' },
+        { mode: GRID_MODES.GRID_4X2, icon: 'Grid4x2' },
+        { mode: GRID_MODES.GRID_4X1, icon: 'Grid4x1' },
     ];
 
     const items = isMobile
         ? [...base]
         : [
-            { mode: GRID_MODE.GRID_3X3, icon: 'Grid3x3' },
-            { mode: GRID_MODE.GRID_4X4, icon: 'Grid4x4' },
+            { mode: GRID_MODES.GRID_3X3, icon: 'Grid3x3' },
+            { mode: GRID_MODES.GRID_4X4, icon: 'Grid4x4' },
             ...base,
         ];
 

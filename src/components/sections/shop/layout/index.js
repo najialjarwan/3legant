@@ -1,2 +1,2 @@
 export { ShopLayout } from './ShopLayout';
-export { useShopLayout } from './useShopLayout';
+export { useShopLayout } from '../../../../hooks/useShopLayout';

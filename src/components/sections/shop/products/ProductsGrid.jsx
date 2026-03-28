@@ -1,4 +1,4 @@
-import { useShopLayout } from '@shop/layout/useShopLayout';
+import { useShopLayout } from '@hooks';
 import { ProductCard, ProductCardHorizontal, ViewMore } from '@ui';
 import { PRODUCTS_GRID } from '@data';
 
