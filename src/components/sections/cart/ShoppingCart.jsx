@@ -1,7 +1,12 @@
 import CartHeader from './CartHeader';
-import CartProudcts from './cart-body/CartProducts'
+import CartProudcts from './CartProducts'
+import CartCoupon from './CartCoupon';
+import CartSummary from './CartSummary';
+import { useBreakpoint } from '@hooks';
 
 const ShoppingCart = () => {
+    const { isMobile } = useBreakpoint();
+
     return (
         <section
             className="
@@ -10,7 +15,14 @@ const ShoppingCart = () => {
         >
             <CartHeader />
 
-            <CartProudcts />
+            <div className='flex justify-between'>
+                <CartProudcts />
+                {!isMobile && <CartSummary />}
+            </div>
+
+            <CartCoupon />
+
+            {isMobile && <CartSummary />}
         </section>
     )
 }
