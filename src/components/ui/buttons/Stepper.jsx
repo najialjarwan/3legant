@@ -9,19 +9,23 @@ const Stepper = ({ quantity }) => {
                 border border-n4100 rounded-sm
             '
         >
-            <Icon
-                name="Minus"
-                spanClassName="size-4"
-                iconClassName="w-[9.33px] text-black-900"
-            />
+            <button>
+                <Icon
+                    name="Minus"
+                    spanClassName="size-4"
+                    iconClassName="w-[9.33px] text-black-900"
+                />
+            </button>
 
             <span className='text-black-900 caption-2-semi'>{quantity}</span>
 
-            <Icon
-                name="Add"
-                spanClassName="size-4"
-                iconClassName="size-[10.08px] ext-black-900"
-            />
+            <button>
+                <Icon
+                    name="Add"
+                    spanClassName="size-4"
+                    iconClassName="size-[10.08px] ext-black-900"
+                />
+            </button>
         </div>
     )
 }
