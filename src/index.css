@@ -20,6 +20,7 @@
   /*---Neutral---*/
   --neutrals-2: #23262F;
   --neutrals-3: #353945;
+  --neutrals-5: #B1B5C3;
   --neutrals-8: #FCFCFD;
 
   --neutral-1-100: #FEFEFE;
@@ -95,6 +96,7 @@ body {
   /*---Neutral---*/
   --color-n2: var(--neutrals-2);
   --color-n3: var(--neutrals-3);
+  --color-n5: var(--neutrals-5);
   --color-n8: var(--neutrals-8);
 
   --color-n1100: var(--neutral-1-100);
