@@ -1,8 +1,11 @@
+import { useState } from 'react';
 import { Icon } from '@ui';
 
 const HEADER_ITEMS = ['Shopping cart', 'Checkout details', 'Order complete'];
 
 const CartHeader = () => {
+    const [activeItem, setActiveItem] = useState(HEADER_ITEMS[0]);
+    
     return (
         <header className="flex flex-col gap-10">
             <button
@@ -24,20 +27,24 @@ const CartHeader = () => {
                     {HEADER_ITEMS.map((item, i) => (
                         <div
                             key={i}
-                            className="
+                            className={`
                             w-[256px] pb-6.5 
-                            flex items-center gap-[17px] border-b-2 border-b-n7100"
+                            flex items-center gap-[17px]
+                            ${activeItem === item ? 'border-b-2 border-b-n7100' : ''}
+                            `}
                         >
                             <div
-                                className="
-                                size-[42px]
-                                flex items-center justify-center
-                                text-n8 bg-n2 rounded-full"
+                                className={`
+                                    size-[42px]
+                                    flex items-center justify-center
+                                    text-n8 rounded-full
+                                    ${activeItem === item ? 'bg-n7100' : 'bg-n5'}
+                                `}
                             >
                                 {i + 1}
                             </div>
 
-                            <p className="text-n2 body-2-semi">{item}</p>
+                            <p className={`text-n2 body-2-semi ${activeItem === item ? 'text-n7100' : 'text-n5'}`}>{item}</p>
                         </div>
                     ))}
                 </div>
