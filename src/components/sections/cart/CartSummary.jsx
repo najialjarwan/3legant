@@ -1,3 +1,5 @@
+import { useState } from 'react';
+
 const SHIPPING_OPTIONS = [
     { label: 'Free shipping', type: '$', value: 0 },
     { label: 'Express shipping', type: '+$', value: 15 },
@@ -6,6 +8,8 @@ const SHIPPING_OPTIONS = [
 
 
 const CartSummary = () => {
+    const [selectedShipping, setSelectedShipping] = useState(SHIPPING_OPTIONS[0]);
+
     return (
         <section
             className="
@@ -22,14 +26,25 @@ const CartSummary = () => {
                 {SHIPPING_OPTIONS.map((option) => (
                     <li
                         key={option.label}
-                        className="
+                        className={`
                             px-4 py-3.25
                             flex items-center gap-3
-                            border border-n4100
-                        "
+                            border border-n4100 rounded-sm
+                            cursor-pointer
+                            ${selectedShipping === option ? 'bg-n2100 text-white border border-n7100' : 'text-n7100'}
+                        `}
+                        onClick={() => setSelectedShipping(option)}
                     >
-                        <div className="size-4.5 shrink-0 rounded-full border border-black-900">
-
+                        <div
+                            className="
+                                size-4.5
+                                flex items-center justify-center shrink-0
+                                rounded-full border border-black-900
+                            "
+                        >
+                            {selectedShipping === option && (
+                                <div className="size-2.5 bg-black-900 rounded-full" />
+                            )}
                         </div>
 
                         <div className="w-full flex justify-between text-n7100 caption-1-semi 2xl:body-2">
