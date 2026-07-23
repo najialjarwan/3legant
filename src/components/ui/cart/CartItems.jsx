@@ -19,7 +19,7 @@ const CartItems = ({ canRemoveItem = true }) => {
                         <img
                             src={item.image}
                             alt={`${item.name} image`}
-                            className="size-full object-contain object-center"
+                            className="size-full object-cover object-center"
                         />
                     </div>
 
