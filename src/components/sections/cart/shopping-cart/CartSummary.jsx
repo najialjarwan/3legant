@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { CART_STEPS } from '@constants';
 
 const SHIPPING_OPTIONS = [
     { label: 'Free shipping', type: '$', value: 0 },
@@ -7,7 +8,7 @@ const SHIPPING_OPTIONS = [
 ];
 
 
-const CartSummary = () => {
+const CartSummary = ({ setStep }) => {
     const [selectedShipping, setSelectedShipping] = useState(SHIPPING_OPTIONS[0]);
 
     return (
@@ -74,7 +75,9 @@ const CartSummary = () => {
                 </div>
             </div>
 
-            <button className="w-full px-6.5 py-2.5 mt-2 text-white btn-m bg-n7100 rounded-lg">
+            <button
+                onClick={() => setStep(CART_STEPS.CHECKOUT)}
+                className="w-full px-6.5 py-2.5 mt-2 text-white btn-m bg-n7100 rounded-lg">
                 Checkout
             </button>
         </section >

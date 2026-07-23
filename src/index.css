@@ -14,6 +14,7 @@
   --black-900: #121212;
   --black-600: #605F5F;
   --black-500: #807E7E;
+  --black-300: #CBCBCB;
   --black-200: #EAEAEA;
   --black-100: #F5F5F5;
 
@@ -90,6 +91,7 @@ body {
   --color-black-900: var(--black-900);
   --color-black-600: var(--black-600);
   --color-black-500: var(--black-500);
+  --color-black-300: var(--black-300);
   --color-black-200: var(--black-200);
   --color-black-100: var(--black-100);
 
@@ -136,6 +138,9 @@ body {
   --shadow-line: inset 0 -1px 0 var(--color-n7100);
   --shadow-1: 0 8px 16px 0 rgba(0, 0, 0, 0.00364);
   --shadow-2: 0 64px 64px -48px rgba(15, 15, 15, 0.1);
+  --shadow-3:
+    0 8px 16px -4px rgba(0, 0, 0, 0.06),
+    0 24px 32px -12px rgba(0, 0, 0, 0.08);
 }
 
 /*------------HERO------------*/

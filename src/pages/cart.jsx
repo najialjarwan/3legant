@@ -1,7 +1,7 @@
-import { ShoppingCart } from '@cart';
+import { Cart } from '@cart';
 
 const CartPage = () => (
-    <ShoppingCart />
+    <Cart />
 )
 
 export default CartPage;

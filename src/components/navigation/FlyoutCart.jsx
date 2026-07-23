@@ -2,30 +2,7 @@ import { Link } from 'react-router-dom';
 import { asideClass } from '@navigation/FlyMenu.jsx';
 import { Icon } from '@ui';
 import { formatPrice } from '@utils';
-
-const cartItems = [
-    {
-        image: 'src/assets/images/product image 1.png',
-        name: 'Tray Table',
-        color: 'black',
-        quantity: 2,
-        price: 19.19,
-    },
-    {
-        image: 'src/assets/images/product image 2.png',
-        name: 'Tray Table',
-        color: 'red',
-        quantity: 2,
-        price: 19.19,
-    },
-    {
-        image: 'src/assets/images/product image 3.png',
-        name: 'Table Lamp',
-        color: 'Gold',
-        quantity: 2,
-        price: 39,
-    },
-]
+import { CART_ITEMS } from '@data';
 
 const FlyoutCart = ({ isOpen, onClose }) => {
     return (
@@ -75,7 +52,7 @@ const FlyoutCart = ({ isOpen, onClose }) => {
                     w-full
                     flex flex-col gap-4 2xl:gap-6"
                     >
-                        {cartItems.map((item, i) => (
+                        {CART_ITEMS.map((item, i) => (
                             <li
                                 key={i}
                                 className="

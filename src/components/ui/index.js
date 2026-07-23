@@ -39,3 +39,10 @@ export { default as ProductCardInfo } from './product/ProductCard/ProductCardInf
 
 // Social Links Components
 export { default as SocialLinks } from './SocialLinks.jsx';
+
+// Input Components
+export { default as InputsContainer } from './input/InputsContainer.jsx';
+export { default as Input } from './input/Input.jsx';
+
+// Cart Components
+export { default as CartItems } from './cart/CartItems';

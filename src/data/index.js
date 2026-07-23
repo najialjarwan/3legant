@@ -12,3 +12,6 @@ export { CATEGORIES } from './product/categories';
 export { PRICES } from './product/prices';
 
 export { PRODUCTS_GRID } from './product/productsGrid';
+
+export { HEADER_ITEMS } from './cart/headerItems';
+export { CART_ITEMS } from './cart/cartItems';
