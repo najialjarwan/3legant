@@ -15,3 +15,5 @@ export { PRODUCTS_GRID } from './product/productsGrid';
 
 export { HEADER_ITEMS } from './cart/headerItems';
 export { CART_ITEMS } from './cart/cartItems';
+
+export { ACCOUNT_MENU } from './account/accountMenu';
