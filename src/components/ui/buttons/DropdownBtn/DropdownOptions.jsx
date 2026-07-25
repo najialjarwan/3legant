@@ -1,4 +1,12 @@
-const DropdownOptions = ({ items, variant, checkBox = false, isOpen }) => {
+const DropdownOptions = ({
+    items,
+    variant,
+    checkBox = false,
+    isOpen,
+    handleClick,
+    activeItem,
+    setActiveItem,
+}) => {
     const VARIANTS = {
         default: {
             containerClass: `
@@ -6,7 +14,7 @@ const DropdownOptions = ({ items, variant, checkBox = false, isOpen }) => {
                 p-2 gap-2.5
                 bg-white border-[1.5px] border-n2100 rounded-xl shadow-2`,
             buttonClass: `
-                w-full p-2 text-n4100 body-2`,
+                w-full p-2 body-2-semi capitalize rounded-lg`,
         },
         alt: {
             containerClass: `gap-3`,
@@ -18,7 +26,14 @@ const DropdownOptions = ({ items, variant, checkBox = false, isOpen }) => {
             {items.map((item) => (
                 <button
                     key={item.id}
-                    className={`text-start ${VARIANTS[variant].buttonClass}`}
+                    onClick={() => {
+                        setActiveItem(item.id);
+                        handleClick();
+                    }}
+                    className={`
+                    text-start ${VARIANTS[variant].buttonClass}
+                    ${activeItem === item.id ? 'text-n7100 bg-n2100' : 'text-n4100 bg-transparent'}
+                    `}
                 >
                     {item.label}
                 </button>
