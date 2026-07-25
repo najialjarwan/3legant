@@ -1,22 +1,7 @@
 import { useState } from 'react';
 import { GoBackBtn } from '@ui';
 import { AccountMenu, AccountSettings } from './index';
-
-const ACCOUNT_MENU_ITEMS = {
-    ACCOUNT: 0,
-    ADDRESS: 1,
-    ORDERS: 2,
-    WISHLIST: 3,
-    LOGOUT: 4,
-};
-
-const ACCOUNT_MENU = [
-    { id: ACCOUNT_MENU_ITEMS.ACCOUNT, label: 'account' },
-    { id: ACCOUNT_MENU_ITEMS.ADDRESS, label: 'address' },
-    { id: ACCOUNT_MENU_ITEMS.ORDERS, label: 'orders' },
-    { id: ACCOUNT_MENU_ITEMS.WISHLIST, label: 'wishlist' },
-    { id: ACCOUNT_MENU_ITEMS.LOGOUT, label: 'log out' },
-];
+import { ACCOUNT_MENU_ITEMS } from '@constants';
 
 const AccountDetails = () => {
     const [activeItem, setActiveItem] = useState(ACCOUNT_MENU_ITEMS.ACCOUNT);
