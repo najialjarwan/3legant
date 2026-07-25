@@ -2,7 +2,7 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { GlobalLayout, MainLayout, MinimalLayout, StandardLayout } from '@layout';
-import { HomePage, AuthPage, ProductPage, ShopPage, CartPage } from '@pages';
+import { HomePage, AuthPage, ProductPage, ShopPage, CartPage, AccountPage, } from '@pages';
 import { ProductProvider } from '@product';
 
 const App = () => {
@@ -29,6 +29,7 @@ const App = () => {
 
         <Route element={<GlobalLayout Shell={MinimalLayout} />}>
           <Route path='/cart' element={<CartPage />} />
+          <Route path="/account" element={<AccountPage />} />
         </Route>
 
         <Route path="/auth" element={<AuthPage />} />

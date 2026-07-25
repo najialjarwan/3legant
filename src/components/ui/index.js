@@ -6,7 +6,9 @@ export { default as ProductTabBtn } from './buttons/ProductTabBtn';
 export { default as ViewMore } from './buttons/ViewMore';
 export { default as DropdownBtn } from './buttons/DropdownBtn/DropdownBtn';
 export { default as DropdownOptions } from './buttons/DropdownBtn/DropdownOptions';
+export { default as Dropdown } from './buttons/DropdownBtn/Dropdown';
 export { default as Stepper } from './buttons/Stepper';
+export { default as GoBackBtn } from './buttons/GoBackBtn';
 
 // Media Carousel Components
 export { default as MediaCarousel } from './carousel/media/MediaCarousel';

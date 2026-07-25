@@ -1,6 +1,6 @@
 import { HEADER_ITEMS } from '@data';
 import { CART_STEPS } from '@constants';
-import { Icon } from '@ui';
+import { Icon, GoBackBtn } from '@ui';
 
 const CartHeader = ({ step, setStep }) => {
     const handleBack = () => {
@@ -17,13 +17,7 @@ const CartHeader = ({ step, setStep }) => {
 
     return (
         <header className="flex flex-col gap-10">
-            <button
-                onClick={handleBack}
-                className="2xl:hidden flex items-center gap-1"
-            >
-                <Icon name='ChevronLeft' spanClassName='size-3' iconClassName='w-[4px] h-[7px] text-black-600' />
-                <span className='text-black-600 btn-sx'>Back</span>
-            </button>
+            <GoBackBtn onClick={handleBack} />
 
             <div className="flex flex-col 2xl:items-center gap-10 overflow-x-hidden">
                 <h4 className="text-brand 2xl:h3 mx-auto">Cart</h4>

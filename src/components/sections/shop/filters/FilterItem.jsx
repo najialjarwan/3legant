@@ -1,12 +1,6 @@
-import { useState } from 'react';
-import { DropdownBtn, DropdownOptions } from '@ui';
+import { Dropdown } from '@ui';
 
-export const FilterItem = ({ type, activeSelector3x3, items }) => {
-    const [isOpen, setIsOpen] = useState(false);
-    const handleClick = () => {
-        setIsOpen(prev => !prev);
-    }
-
+export const FilterItem = ({ type, activeSelector3x3, items, label }) => {
     return (
         <>
             <header className={`${activeSelector3x3 ? 'text-black-900' : 'text-n4100'} body-2-semi`}>
@@ -23,11 +17,7 @@ export const FilterItem = ({ type, activeSelector3x3, items }) => {
             )}
 
             {!activeSelector3x3 && (
-                <div className='relative w-full 2xl:w-[262px] flex flex-col gap-2'>
-                    <DropdownBtn items={items} onClick={handleClick} />
-
-                    <DropdownOptions items={items} variant='default' isOpen={isOpen} />
-                </div>
+                <Dropdown label={label} items={items} variant="default" />
             )}
         </>
     )

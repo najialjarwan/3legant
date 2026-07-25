@@ -9,6 +9,7 @@ export const FilterItems = ({ activeSelector3x3 }) => {
                     type="CATEGORIES"
                     items={CATEGORIES}
                     activeSelector3x3={activeSelector3x3}
+                    label="living room"
                 />
             </div>
 
@@ -17,6 +18,7 @@ export const FilterItems = ({ activeSelector3x3 }) => {
                     type="PRICE"
                     items={PRICES}
                     activeSelector3x3={activeSelector3x3}
+                    label="all price"
                 />
             </div>
         </>

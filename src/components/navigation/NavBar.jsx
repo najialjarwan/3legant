@@ -1,9 +1,9 @@
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { Icon, Brand, CartWishlistBtn } from '@ui';
 import { NavLinks } from '@navigation';
 
 const NavBar = ({ onMenuOpen, onCartOpen }) => {
-
+    const loggedIn = true;
     return (
         <nav
             className="
@@ -53,18 +53,15 @@ const NavBar = ({ onMenuOpen, onCartOpen }) => {
                 />
 
                 <Link
-                    to="/auth?mode=signin"
-                    className="
-                    size-6
-                    flex items-center justify-center"
-                    aria-label="Sign up"
+                    to={loggedIn ? "/account" : "/auth?mode=signin"}
+                    className="size-6 flex items-center justify-center"
+                    aria-label={loggedIn ? "Account" : "Sign in"}
                 >
                     <Icon
                         name="UserCircle"
                         className="hidden 2xl:block"
                     />
                 </Link>
-
 
                 <button
                     className="

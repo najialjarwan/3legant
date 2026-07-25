@@ -3,3 +3,4 @@ export { default as ProductPage } from './product';
 export { default as ShopPage } from './shop';
 export { default as AuthPage } from './auth';
 export { default as CartPage } from './cart';
+export { default as AccountPage } from './account';
