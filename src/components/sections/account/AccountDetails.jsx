@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { GoBackBtn } from '@ui';
 import { AccountMenu, AccountSettings } from './index';
 
-const items = {
+const ACCOUNT_MENU_ITEMS = {
     ACCOUNT: 0,
     ADDRESS: 1,
     ORDERS: 2,
@@ -10,16 +10,16 @@ const items = {
     LOGOUT: 4,
 };
 
-const ITEMS = [
-    { id: items.ACCOUNT, label: 'account' },
-    { id: items.ADDRESS, label: 'address' },
-    { id: items.ORDERS, label: 'orders' },
-    { id: items.WISHLIST, label: 'wishlist' },
-    { id: items.LOGOUT, label: 'log out' },
+const ACCOUNT_MENU = [
+    { id: ACCOUNT_MENU_ITEMS.ACCOUNT, label: 'account' },
+    { id: ACCOUNT_MENU_ITEMS.ADDRESS, label: 'address' },
+    { id: ACCOUNT_MENU_ITEMS.ORDERS, label: 'orders' },
+    { id: ACCOUNT_MENU_ITEMS.WISHLIST, label: 'wishlist' },
+    { id: ACCOUNT_MENU_ITEMS.LOGOUT, label: 'log out' },
 ];
 
 const AccountDetails = () => {
-    const [activeItem, setActiveItem] = useState(items.ACCOUNT);
+    const [activeItem, setActiveItem] = useState(ACCOUNT_MENU_ITEMS.ACCOUNT);
 
     return (
         <section
@@ -34,8 +34,8 @@ const AccountDetails = () => {
             </header>
 
             <div className='flex flex-col 2xl:flex-row gap-10 2xl:gap-20'>
-                <AccountMenu ITEMS={ITEMS} activeItem={activeItem} setActiveItem={setActiveItem} />
-                {activeItem === items.ACCOUNT && (
+                <AccountMenu ACCOUNT_MENU={ACCOUNT_MENU} activeItem={activeItem} setActiveItem={setActiveItem} />
+                {activeItem === ACCOUNT_MENU_ITEMS.ACCOUNT && (
                     <AccountSettings />
                 )}
             </div>
