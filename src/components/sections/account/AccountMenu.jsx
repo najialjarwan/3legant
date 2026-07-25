@@ -1,17 +1,9 @@
 import { useBreakpoint } from '@hooks';
 import { Icon, Dropdown } from '@ui';
 
-const items = [
-    "account",
-    "address",
-    "orders",
-    "wishlist",
-    "log out",
-]
-
-const AccountMenu = () => {
+const AccountMenu = ({ ITEMS, activeItem, setActiveItem }) => {
     const { isMobile } = useBreakpoint();
-    
+
     return (
         <div className='px-4 py-10 bg-n2100 rounded-lg'>
             <div className='relative size-[82px] mx-auto rounded-full'>
@@ -29,15 +21,20 @@ const AccountMenu = () => {
             </div>
             <p className='w-fit mx-auto mb-10 text-black body-1-semi'>Sofia Havertz</p>
             {isMobile
-                ? (<Dropdown label="account" items={items} variant="default" />)
+                ? (<Dropdown label="account" items={ITEMS} variant="default" />)
                 : (
                     <ul className='flex flex-col gap-3 text-n4100 body-2-semi capitalize'>
-                        {items.map((item, i) => (
+                        {ITEMS.map((item) => (
                             <li
-                                key={i}
-                                className={`w-[230px] py-2 ${i === 0 ? 'text-n7100 border-b border-n7100' : ''}`}
+                                key={item.id}
+                                onClick={() => setActiveItem(item.id)}
+                                className={`
+                                w-[230px] py-2
+                                cursor-pointer border-b
+                                ${activeItem === item.id ? 'text-n7100 border-b-n7100' : 'border-b-transparent'}
+                                `}
                             >
-                                {item}
+                                {item.label}
                             </li>
                         ))}
                     </ul>

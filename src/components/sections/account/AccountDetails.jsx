@@ -1,7 +1,25 @@
+import { useState } from 'react';
 import { GoBackBtn } from '@ui';
 import { AccountMenu, AccountSettings } from './index';
 
+const items = {
+    ACCOUNT: 0,
+    ADDRESS: 1,
+    ORDERS: 2,
+    WISHLIST: 3,
+    LOGOUT: 4,
+};
+
+const ITEMS = [
+    { id: items.ACCOUNT, label: 'account' },
+    { id: items.ADDRESS, label: 'address' },
+    { id: items.ORDERS, label: 'orders' },
+    { id: items.WISHLIST, label: 'wishlist' },
+    { id: items.LOGOUT, label: 'log out' },
+];
+
 const AccountDetails = () => {
+    const [activeItem, setActiveItem] = useState(items.ACCOUNT);
 
     return (
         <section
@@ -16,8 +34,10 @@ const AccountDetails = () => {
             </header>
 
             <div className='flex flex-col 2xl:flex-row gap-10 2xl:gap-20'>
-                <AccountMenu />
-                <AccountSettings />
+                <AccountMenu ITEMS={ITEMS} activeItem={activeItem} setActiveItem={setActiveItem} />
+                {activeItem === items.ACCOUNT && (
+                    <AccountSettings />
+                )}
             </div>
         </section>
     );

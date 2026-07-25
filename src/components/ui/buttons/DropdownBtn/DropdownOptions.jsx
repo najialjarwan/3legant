@@ -15,16 +15,16 @@ const DropdownOptions = ({ items, variant, checkBox = false, isOpen }) => {
     }
     return (
         <div className={`2xl:w-[262px] flex flex-col ${VARIANTS[variant].containerClass}`}>
-            {items.map((item, index) => (
+            {items.map((item) => (
                 <button
-                    key={index}
+                    key={item.id}
                     className={`text-start ${VARIANTS[variant].buttonClass}`}
                 >
-                    {item}
+                    {item.label}
                 </button>
             ))}
         </div>
-    )
+    );
 }
 
 export default DropdownOptions;
