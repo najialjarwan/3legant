@@ -19,7 +19,10 @@ const AccountDetails = () => {
             </header>
 
             <div className='flex flex-col 2xl:flex-row gap-10 2xl:gap-20'>
-                <AccountMenu ACCOUNT_MENU={ACCOUNT_MENU} activeItem={activeItem} setActiveItem={setActiveItem} />
+                <AccountMenu
+                    activeItem={activeItem}
+                    setActiveItem={setActiveItem}
+                />
                 {activeItem === ACCOUNT_MENU_ITEMS.ACCOUNT && (
                     <AccountSettings />
                 )}
