@@ -31,3 +31,4 @@ export { ReactComponent as Grid4x4 } from './4x4.svg';
 export { ReactComponent as Grid4x2 } from './4x2.svg';
 export { ReactComponent as Grid4x1 } from './4x1.svg';
 export { ReactComponent as Camera } from './camera.svg';
+export { ReactComponent as Pen } from './pen.svg';
