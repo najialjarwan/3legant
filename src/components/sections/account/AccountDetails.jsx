@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { GoBackBtn } from '@ui';
-import { AccountMenu, AccountSettings, Address } from './index';
+import { AccountMenu, AccountSettings, Address, OrdersHistory } from './index';
 import { ACCOUNT_MENU_ITEMS } from '@constants';
 
 const AccountDetails = () => {
@@ -28,6 +28,9 @@ const AccountDetails = () => {
                 )}
                 {activeItem === ACCOUNT_MENU_ITEMS.ADDRESS && (
                     <Address />
+                )}
+                {activeItem === ACCOUNT_MENU_ITEMS.ORDERS && (
+                    <OrdersHistory />
                 )}
             </div>
         </section>
