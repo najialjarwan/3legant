@@ -1,16 +1,5 @@
 import { Icon } from '@ui';
-
-const BILLING_ADDRESS = [
-    "Sofia Havertz",
-    "(+1) 234 567 890",
-    "345 Long Island, NewYork, United States",
-];
-
-const SHIPPING_ADDRESS = [
-    "Sofia Havertz",
-    "(+1) 234 567 890",
-    "345 Long Island, NewYork, United States",
-];
+import { BILLING_ADDRESS, SHIPPING_ADDRESS } from '@data';
 
 const Address = () => {
     return (
@@ -31,7 +20,7 @@ const AddressContainer = ({ header, info }) => (
         <header className="w-full mb-2 flex items-center justify-between body-2-semi capitalize">
             <span className="text-black">{header}</span>
             <button className="flex items-center gap-1 text-n4100">
-                <Icon name="Pen"/>
+                <Icon name="Pen" />
                 <span>Edit</span>
             </button>
         </header>

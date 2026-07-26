@@ -17,3 +17,5 @@ export { HEADER_ITEMS } from './cart/headerItems';
 export { CART_ITEMS } from './cart/cartItems';
 
 export { ACCOUNT_MENU } from './account/accountMenu';
+export { BILLING_ADDRESS } from './account/accountBillingAddress';
+export { SHIPPING_ADDRESS } from './account/accountShippingAddress';
