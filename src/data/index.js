@@ -19,3 +19,4 @@ export { CART_ITEMS } from './cart/cartItems';
 export { ACCOUNT_MENU } from './account/accountMenu';
 export { BILLING_ADDRESS } from './account/accountBillingAddress';
 export { SHIPPING_ADDRESS } from './account/accountShippingAddress';
+export { ORDERS_HISTORY } from './account/accountOrdersHistory';
