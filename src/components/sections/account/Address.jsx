@@ -3,7 +3,7 @@ import { BILLING_ADDRESS, SHIPPING_ADDRESS } from '@data';
 
 const Address = () => {
     return (
-        <div className='w-full pr-[72px]'>
+        <div className='w-full 2xl:pr-[72px]'>
             <header className="mb-[19px] text-black body-1-semi capitalize">address</header>
             <div className="w-full flex flex-col 2xl:flex-row gap-[23px]">
                 <AddressContainer header="billing address" info={BILLING_ADDRESS} />
