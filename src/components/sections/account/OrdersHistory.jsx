@@ -12,7 +12,7 @@ const OrdersHistory = () => {
     ]
 
     return (
-        <div className='w-full pr-[72px]'>
+        <div className='w-full 2xl:pr-[72px]'>
             <header className='mb-10 text-black body-1-semi capitalize'>orders history</header>
             {isMobile
                 ?
