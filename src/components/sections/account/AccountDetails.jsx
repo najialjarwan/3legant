@@ -1,11 +1,15 @@
 import { useState } from 'react';
+import { useLocation } from "react-router-dom";
 import { GoBackBtn } from '@ui';
 import { AccountMenu, AccountSettings, Address, OrdersHistory, AccountWishlist } from './index';
 import { ACCOUNT_MENU_ITEMS } from '@constants';
 
 const AccountDetails = () => {
-    const [activeItem, setActiveItem] = useState(ACCOUNT_MENU_ITEMS.ACCOUNT);
-
+    const location = useLocation();
+    const [activeItem, setActiveItem] = useState(
+        location.state?.activeTab ?? ACCOUNT_MENU_ITEMS.ACCOUNT
+    );
+    
     return (
         <section
             className="
