@@ -174,7 +174,7 @@ body {
 }
 
 @utility h7 {
-  @apply text-lg leading-[28px] -tracking-[0] font-poppins font-medium;
+  @apply text-xl leading-[28px] -tracking-[0] font-poppins font-medium;
 }
 
 /*------------BADGES------------*/

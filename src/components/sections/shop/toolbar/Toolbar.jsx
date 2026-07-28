@@ -1,5 +1,5 @@
 import { FilterItems } from '@shop/filters';
-import { ViewSelectors } from '@shop/toolbar';
+import { ViewSelectors } from '@ui';
 
 export const Toolbar = ({ activeSelector, activeSelector3x3, onClick }) => {
     return (

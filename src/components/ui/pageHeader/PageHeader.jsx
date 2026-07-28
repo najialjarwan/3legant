@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { Icon } from '@ui';
 
-const PageHeader = ({ title }) => {
+const PageHeader = ({ title, openedPage, pageDescription, bgImg }) => {
     return (
         <section className='px-8 2xl:px-40'>
             <div
@@ -9,6 +9,7 @@ const PageHeader = ({ title }) => {
                 w-full h-[308px] 2xl:h-[392px]
                 flex flex-col items-center justify-center gap-4 2xl:gap-6
                 bg-[url("src/assets/images/shop-hero-image.png")] bg-cover bg-center'
+                style={{ backgroundImage: `url(${bgImg})` }}
             >
                 <div className='flex gap-4 btn-xs'>
                     <Link to="/" className='flex items-center gap-1'>
@@ -20,13 +21,13 @@ const PageHeader = ({ title }) => {
                         />
                     </Link>
 
-                    <p className='text-black-900'>Shop</p>
+                    <p className='text-black-900 capitalize'>{openedPage}</p>
                 </div>
 
-                <h4 className='2xl:h3 text-brand'>{title}</h4>
+                <h4 className='2xl:h3 text-brand capitalize'>{title}</h4>
 
                 <p className='w-full text-black-900 body-2 2xl:body-1 text-center'>
-                    Let’s design the place you always imagined.
+                    {pageDescription}
                 </p>
             </div>
         </section >

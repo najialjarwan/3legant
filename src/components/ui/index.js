@@ -3,7 +3,7 @@ export { default as AddToCartBtn } from './buttons/AddToCartBtn';
 export { default as CartWishlistBtn } from './buttons/CartWishlistBtn';
 export { default as MoreActionBtn } from './buttons/MoreActionBtn';
 export { default as ProductTabBtn } from './buttons/ProductTabBtn';
-export { default as ViewMore } from './buttons/ViewMore';
+export { default as ShowMoreBtn } from './buttons/ShowMoreBtn';
 export { default as DropdownBtn } from './buttons/DropdownBtn/DropdownBtn';
 export { default as DropdownOptions } from './buttons/DropdownBtn/DropdownOptions';
 export { default as Dropdown } from './buttons/DropdownBtn/Dropdown';
@@ -48,3 +48,8 @@ export { default as Input } from './input/Input.jsx';
 
 // Cart Components
 export { default as CartItems } from './cart/CartItems';
+
+// selectors
+export { default as ViewSelectors } from './selectors/ViewSelectors';
+export { default as Selectors } from './selectors/Selectors';
+export { default as SortButton } from './selectors/SortButton';

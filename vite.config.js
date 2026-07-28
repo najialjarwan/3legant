@@ -32,6 +32,7 @@ export default defineConfig({
           '@product': path.resolve(__dirname, './src/components/sections/product'),
           '@shop': path.resolve(__dirname, './src/components/sections/shop'),
           '@account': path.resolve(__dirname, './src/components/sections/account'),
+          '@blog': path.resolve(__dirname, './src/components/sections/blog'),
         '@ui': path.resolve(__dirname, './src/components/ui'),
 
       '@config': path.resolve(__dirname, './src/config'),

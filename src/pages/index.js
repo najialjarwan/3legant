@@ -4,3 +4,4 @@ export { default as ShopPage } from './shop';
 export { default as AuthPage } from './auth';
 export { default as CartPage } from './cart';
 export { default as AccountPage } from './account';
+export { default as BlogPage } from './blog';

@@ -1,5 +1,5 @@
 import { useShopLayout } from '@hooks';
-import { ProductCard, ProductCardHorizontal, ViewMore } from '@ui';
+import { ProductCard, ProductCardHorizontal, ShowMoreBtn } from '@ui';
 import { PRODUCTS_GRID } from '@data';
 
 export const ProductsGrid = ({ activeSelector, isMobile }) => {
@@ -39,9 +39,7 @@ export const ProductsGrid = ({ activeSelector, isMobile }) => {
                 ))}
             </div>
 
-            <ViewMore
-                label="Show More"
-            />
+            <ShowMoreBtn />
         </div>
     )
 }

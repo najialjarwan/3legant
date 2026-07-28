@@ -21,3 +21,6 @@ export { BILLING_ADDRESS } from './account/accountBillingAddress';
 export { SHIPPING_ADDRESS } from './account/accountShippingAddress';
 export { ORDERS_HISTORY } from './account/accountOrdersHistory';
 export { ACCOUNT_WISHLIST_PRODUCTS } from './account/accountWishlistProducts';
+
+export { BLOG_MENU } from './blog/blogMenu';
+export { ARTICLES_LIST } from './blog/blogArticlesList';
