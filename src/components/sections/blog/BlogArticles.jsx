@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { useBreakpoint } from '@hooks';
 import { ARTICLES_LIST } from '@data';
 import { GRID_MODES, BLOG_GRID_CLASSES } from '@constants';
@@ -45,27 +46,33 @@ const BlogArticles = ({ activeSelector, showFeaturedOnly }) => {
                 {FILTERED_ARTICLES
                     .slice(0, visibleCount)
                     .map((article, index) => (
-                        <li key={index} className={isHorizontalArticle ? 'flex' : ''}>
-                            <div className='max-w-[312px] min-w-[250px] 2xl:max-w-full mb-6'>
-                                <img src={article.img} alt="article image" />
-                            </div>
-                            <div className={isHorizontalArticle ? 'px-6 flex flex-col gap-6' : ''}>
-                                <div>
-                                    <p
-                                        className='
+                        <li
+                            key={index}
+                            className={`cursor-pointer ${isHorizontalArticle ? 'flex' : ''}
+                            `}
+                        >
+                            <Link to={`/blog/${article.slug}`}>
+                                <div className='max-w-[312px] min-w-[250px] 2xl:max-w-full mb-6'>
+                                    <img src={article.img} alt="article image" />
+                                </div>
+                                <div className={isHorizontalArticle ? 'px-6 flex flex-col gap-6' : ''}>
+                                    <div>
+                                        <p
+                                            className='
                                         max-w-[312px] 2xl:w-auto mb-2
                                         text-n2 text-[16px]/[26px] font-inter font-medium 2xl:h7
                                         '
-                                    >
-                                        {article.title}
-                                    </p>
+                                        >
+                                            {article.title}
+                                        </p>
 
-                                    {isHorizontalArticle && (<p>{article.thesis}</p>)}
+                                        {isHorizontalArticle && (<p>{article.excerpt}</p>)}
+                                    </div>
+
+                                    <p className='text-n4100 caption-2'>{article.date}</p>
+
                                 </div>
-
-                                <p className='text-n4100 caption-2'>{article.date}</p>
-
-                            </div>
+                            </Link>
                         </li>
                     ))}
             </ul>
