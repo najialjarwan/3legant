@@ -5,3 +5,4 @@ export { default as AuthPage } from './auth';
 export { default as CartPage } from './cart';
 export { default as AccountPage } from './account';
 export { default as BlogPage } from './blog';
+export { default as BlogArticlePage } from './blogArticle';
