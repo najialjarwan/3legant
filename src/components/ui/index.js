@@ -53,3 +53,6 @@ export { default as CartItems } from './cart/CartItems';
 export { default as ViewSelectors } from './selectors/ViewSelectors';
 export { default as Selectors } from './selectors/Selectors';
 export { default as SortButton } from './selectors/SortButton';
+
+// Breadcrumbs
+export { default as Breadcrumbs } from './Breadcrumbs';
