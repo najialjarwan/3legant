@@ -10,6 +10,7 @@ import {
   CartPage,
   AccountPage,
   BlogPage,
+  BlogArticlePage,
 } from '@pages';
 import { ProductProvider } from '@product';
 
@@ -44,6 +45,7 @@ const App = () => {
 
         <Route element={<GlobalLayout Shell={StandardLayout} />}>
           <Route path='/blog' element={<BlogPage />} />
+          <Route path="/blog/:slug" element={<BlogArticlePage />} />
         </Route>
 
       </Routes>
