@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { GRID_MODES, BLOG_MENU_ITEMS } from '@constants';
-import { BlogToolbar, BlogArticles } from './index';
+import { BlogToolbar, BlogArticles } from '@blog';
 
 const BlogContent = () => {
     const [activeItem, setActiveItem] = useState(BLOG_MENU_ITEMS.ALL);
