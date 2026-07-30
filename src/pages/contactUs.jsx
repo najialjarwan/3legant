@@ -1,9 +1,11 @@
-import { ContactUsHeader } from '@contact-us';
+import { ContactUsHeader, AboutUs } from '@contact-us';
 
 const ContactUsPage = () => {
     return (
         <>
             <ContactUsHeader />
+            
+            <AboutUs />
         </>
     );
 }
