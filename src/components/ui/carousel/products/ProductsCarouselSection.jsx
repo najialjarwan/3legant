@@ -1,6 +1,6 @@
 import { ProductsCarousel, ProductsCarouselHeader, MoreActionBtn } from '@ui';
 
-const ProductCarouselSection = ({
+const ProductsCarouselSection = ({
     title,
     titleVariant,
     sectionVariant,
@@ -51,4 +51,4 @@ const ProductCarouselSection = ({
     );
 };
 
-export default ProductCarouselSection;
+export default ProductsCarouselSection;
