@@ -11,6 +11,7 @@ import {
   AccountPage,
   BlogPage,
   BlogPostPage,
+  ContactUsPage,
 } from '@pages';
 import { ProductProvider } from '@product';
 
@@ -39,6 +40,7 @@ const App = () => {
         <Route element={<GlobalLayout Shell={MinimalLayout} />}>
           <Route path='/cart' element={<CartPage />} />
           <Route path="/account" element={<AccountPage />} />
+          <Route path="/contactUs" element={<ContactUsPage />} />
         </Route>
 
         <Route path="/auth" element={<AuthPage />} />
