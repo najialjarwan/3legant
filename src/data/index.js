@@ -24,3 +24,5 @@ export { ACCOUNT_WISHLIST_PRODUCTS } from './account/accountWishlistProducts';
 
 export { BLOG_MENU } from './blog/blogMenu';
 export { ARTICLES_LIST } from './blog/blogArticlesList';
+
+export { CONTACT_US_DETAILS } from './contact-us/contactUsDetails';
