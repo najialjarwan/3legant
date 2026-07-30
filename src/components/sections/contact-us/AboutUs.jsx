@@ -12,7 +12,7 @@ const AboutUs = () => {
             </div>
             <div
                 className='
-                w-full h-[311px] 2xl:h-[413px] px-4 2xl:pl-18 2xl:pr-0 2xl:mb-12
+                w-full h-[311px] 2xl:h-[413px] px-4 2xl:pl-18 2xl:pr-0
                 flex flex-col justify-center gap-6
                 bg-n2100
                 '
