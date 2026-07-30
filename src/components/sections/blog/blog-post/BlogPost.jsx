@@ -1,4 +1,4 @@
-import { BlogPostHeader } from '@blog';
+import { BlogPostHeader, BlogPostContent } from '@blog';
 
 const BlogPost = ({ article }) => (
     <section
@@ -8,6 +8,7 @@ const BlogPost = ({ article }) => (
         '
     >
         <BlogPostHeader article={article} />
+        <BlogPostContent article={article} />
     </section>
 );
 
