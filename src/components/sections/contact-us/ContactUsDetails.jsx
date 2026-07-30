@@ -1,4 +1,4 @@
-import { Icon } from '@ui';
+import { Icon, Input } from '@ui';
 import { CONTACT_US_DETAILS } from '@data';
 
 const ContactUsDetails = () => {
@@ -47,6 +47,66 @@ const ContactUsDetails = () => {
                     )
                 })}
             </ul>
+
+            <div className='w-full flex flex-col 2xl:flex-row-reverse gap-6 2xl:gap-7'>
+                <div className='relative w-full 2xl:min-w-[548px] h-[311px] 2xl:h-[404px]'>
+                    <img
+                        src="src/assets/images/address-map-placeholder.png"
+                        alt=""
+                        className='size-full object-cover object-center'
+                    />
+                    <div className='absolute right-1/2 translate-x-1/2 top-[108px] 2xl:top-[155px]'>
+                        <Icon
+                            name="Subtract"
+                            spanClassName="size-16 text-n7100"
+                            iconClassName="w-[48px] h-[53.33]"
+                        />
+                        <span
+                            className='
+                            absolute left-1/2 -translate-x-1/2 top-[9.64px]
+                            size-10
+                            flex items-center justify-center
+                            bg-n7100 rounded-full
+                            '
+                        >
+                            <Icon name="Store" spanClassName="size-6" iconClassName="text-n1100" />
+                        </span>
+                    </div>
+                </div>
+                <form
+                    action=""
+                    className='w-full flex flex-col gap-4 2xl:gap-6'
+                >
+                    <Input type="text" label="full name" placeholder="your name" />
+                    <Input type="email" label="email address" placeholder="your email" />
+                    <div className='flex flex-col gap-3'>
+                        <span className='hairline-2 uppercase text-n4100'>message</span>
+                        <textarea
+                            placeholder='Your message'
+                            className='
+                            p-4 min-h-35
+                            text-n4100 body-2
+                            border border-black-300
+                            outline-0 rounded-md
+                            resize-none
+                            '
+                        >
+                        </textarea>
+                        <button
+                            className='
+                            w-fit mx-auto 2xl:mx-0 2xl:mr-auto
+                            px-10 py-1.5 
+                            text-white btn-s capitalize
+                            bg-n7100 border border-n7100 rounded-lg
+                            hover:text-n7100 hover:bg-transparent
+                            transition-all duration-150 ease-linear
+                            '
+                        >
+                            send message
+                        </button>
+                    </div>
+                </form>
+            </div>
         </section>
     );
 }
