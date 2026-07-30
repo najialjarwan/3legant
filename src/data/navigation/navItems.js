@@ -3,5 +3,5 @@ export const NAV_ITEMS = [
     { label: 'Shop', link: '/shop' },
     { label: 'Product', link: '/product' },
     { label: 'Blog', link: '#' },
-    { label: 'Contact Us', link: '#' },
+    { label: 'Contact Us', link: '/contactUs' },
 ];
