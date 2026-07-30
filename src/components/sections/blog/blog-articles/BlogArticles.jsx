@@ -46,14 +46,21 @@ const BlogArticles = ({ activeSelector, showFeaturedOnly }) => {
                 {FILTERED_ARTICLES
                     .slice(0, visibleCount)
                     .map((article, index) => (
-                        <li
-                            key={index}
-                            className={`cursor-pointer ${isHorizontalArticle ? 'flex' : ''}
-                            `}
-                        >
-                            <Link to={`/blog/${article.slug}`}>
-                                <div className='max-w-[312px] min-w-[250px] 2xl:max-w-full mb-6'>
-                                    <img src={article.img} alt="article image" />
+                        <li key={index}>
+                            <Link
+                                to={`/blog/${article.slug}`}
+                                className={`cursor-pointer ${isHorizontalArticle ? 'flex' : ''}`}
+                            >
+                                <div
+                                    className={`
+                                    min-w-[250px] max-w-[312px] 2xl:max-w-full mb-6 h-[283px]
+                                    ${activeSelector === GRID_MODES.GRID_3X3 ? '2xl:h-[325px]' : '2xl:h-[240px]'}`}
+                                >
+                                    <img
+                                        src={article.img}
+                                        alt="article image"
+                                        className='size-full object-cover object-center'
+                                    />
                                 </div>
                                 <div className={isHorizontalArticle ? 'px-6 flex flex-col gap-6' : ''}>
                                     <div>
@@ -76,13 +83,15 @@ const BlogArticles = ({ activeSelector, showFeaturedOnly }) => {
                         </li>
                     ))}
             </ul>
-            {FILTERED_ARTICLES.length > gridLimit && (
-                <ShowMoreBtn
-                    onClick={handleToggle}
-                    label={expanded ? 'Show less' : 'Show more'}
-                />
-            )}
-        </section>
+            {
+                FILTERED_ARTICLES.length > gridLimit && (
+                    <ShowMoreBtn
+                        onClick={handleToggle}
+                        label={expanded ? 'Show less' : 'Show more'}
+                    />
+                )
+            }
+        </section >
     );
 }
 
