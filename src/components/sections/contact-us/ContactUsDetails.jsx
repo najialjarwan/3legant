@@ -40,7 +40,7 @@ const ContactUsDetails = () => {
                                 iconClassName="text-n7100"
                             />
                             <div className='flex flex-col items-center gap-2'>
-                                <header className='text-n4100 hairline-1'>{label}</header>
+                                <header className='text-n4100 hairline-1 capitalize'>{label}</header>
                                 <div className='text-n7100 body-2-semi text-center'>{value}</div>
                             </div>
                         </li>
