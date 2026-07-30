@@ -56,3 +56,7 @@ export { default as SortButton } from './selectors/SortButton';
 
 // Breadcrumbs
 export { default as Breadcrumbs } from './Breadcrumbs';
+
+// articles rec components
+export { default as ArticlesRec } from './articles-rec/ArticlesRec';
+export { default as ArticleCard } from './articles-rec/ArticleCard';
