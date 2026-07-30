@@ -33,3 +33,5 @@ export { ReactComponent as Grid4x1 } from './4x1.svg';
 export { ReactComponent as Camera } from './camera.svg';
 export { ReactComponent as Pen } from './pen.svg';
 export { ReactComponent as Calendar } from './calendar.svg';
+export { ReactComponent as Store } from './store.svg';
+export { ReactComponent as Email2 } from './email-2.svg';
