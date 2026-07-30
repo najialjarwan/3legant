@@ -1,7 +1,7 @@
-const Input = ({ type, required = false, placeholder, caption = '' }) => {
+const Input = ({ type, required = false, label = '', placeholder, caption = '' }) => {
     return (
         <div className="w-full flex flex-col justify-start gap-3">
-            <header className='hairline-2 uppercase text-n4100'>{placeholder} {required ? '*' : ''}</header>
+            <header className='hairline-2 uppercase text-n4100'>{label || placeholder} {required ? '*' : ''}</header>
             <input
                 required={required}
                 type={type}
