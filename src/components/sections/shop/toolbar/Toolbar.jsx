@@ -1,16 +1,39 @@
-import { FilterItems } from '@shop/filters';
+import { FilterItem } from '@shop/filters';
 import { ViewSelectors } from '@ui';
+import { SHOP_CATEGORIES, SHOP_PRICES } from '@data';
 
-export const Toolbar = ({ activeSelector, activeSelector3x3, onClick }) => {
+export const Toolbar = ({
+    label,
+    activeSelector,
+    onClick,
+    activeCategory,
+    setActiveCategory,
+    activePrice,
+    setActivePrice,
+    activeSelector3x3
+}) => {
     return (
         <>
             {activeSelector3x3 && (
-                <p className='text-n7100 body-1-semi'>Living Room</p>
+                <p className='text-n7100 body-1-semi capitalize'>{label}</p>
             )}
 
             {!activeSelector3x3 && (
                 <div className='w-full 2xl:w-fit flex flex-col 2xl:flex-row gap-6'>
-                    <FilterItems activeSelector3x3={activeSelector3x3} />
+                    <FilterItem
+                        type="CATEGORIES"
+                        items={SHOP_CATEGORIES}
+                        activeSelector3x3={activeSelector3x3}
+                        activeItem={activeCategory}
+                        setActiveItem={setActiveCategory}
+                    />
+                    <FilterItem
+                        type="PRICE"
+                        items={SHOP_PRICES}
+                        activeSelector3x3={activeSelector3x3}
+                        activeItem={activePrice}
+                        setActiveItem={setActivePrice}
+                    />
                 </div>
             )}
 
