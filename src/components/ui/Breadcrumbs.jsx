@@ -3,16 +3,16 @@ import { Icon } from '@ui';
 
 const Breadcrumbs = ({ items }) => (
     <nav aria-label="Breadcrumb">
-        <ol className="flex gap-4">
+        <ol className="flex items-center gap-4">
             {items.map((item) => (
                 <li key={item.label}>
                     {item.href ? (
                         <Link to={item.href} className="flex items-center gap-1 text-black-600">
                             <span className='btn-xs capitalize'>{item.label}</span>
-                            <Icon name="ChevronRight" spanClassName="size-3" iconClassName="w-[4px] h-[7px]"/>
+                            <Icon name="ChevronRight" spanClassName="size-3" iconClassName="w-[5px] h-[8px]"/>
                         </Link>
                     ) : (
-                        <span className='text-black-900 btn-xs first-letter:capitalize'>{item.label}</span>
+                        <span className='block text-black-900 btn-xs'>{item.label}</span>
                     )}
                 </li>
             ))}
