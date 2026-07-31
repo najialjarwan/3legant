@@ -1,14 +1,17 @@
 import { useState } from 'react';
 import { useBreakpoint } from '@hooks';
 import { Icon } from '@ui';
-import { GRID_MODES } from '@constants'
+import { GRID_MODES, SHOP_CATEGORIES_ITEMS, SHOP_PRICES_ITEMS } from '@constants'
+import { SHOP_CATEGORIES, SHOP_PRICES } from '@data';
 import { ProductsGrid } from '@shop';
 import { Toolbar } from '@shop/toolbar';
-import { FilterItems } from '@shop/filters';
+import { FilterItem } from '@shop/filters';
 
 export const ShopLayout = () => {
     const { isMobile } = useBreakpoint();
     const [activeSelector, setActiveSelector] = useState(isMobile ? GRID_MODES.GRID_4X2 : GRID_MODES.GRID_3X3);
+    const [activeCategory, setActiveCategory] = useState(SHOP_CATEGORIES_ITEMS.ALL);
+    const [activePrice, setActivePrice] = useState(SHOP_PRICES_ITEMS.ALL);
 
     const activeSelector3x3 = activeSelector === GRID_MODES.GRID_3X3;
 
@@ -33,7 +36,20 @@ export const ShopLayout = () => {
                         <p className='text-black-900 body-1-semi'>Filter</p>
                     </header>
 
-                    <FilterItems activeSelector3x3={activeSelector3x3} />
+                    <FilterItem
+                        type="CATEGORIES"
+                        items={SHOP_CATEGORIES}
+                        activeSelector3x3={activeSelector3x3}
+                        activeItem={activeCategory}
+                        setActiveItem={setActiveCategory}
+                    />
+                    <FilterItem
+                        type="PRICE"
+                        items={SHOP_PRICES}
+                        activeSelector3x3={activeSelector3x3}
+                        activeItem={activePrice}
+                        setActiveItem={setActivePrice}
+                    />
                 </div>
             )}
 
@@ -49,9 +65,14 @@ export const ShopLayout = () => {
                     2xl:justify-between gap-8 2xl:gap-0`}
                 >
                     <Toolbar
+                        label={SHOP_CATEGORIES[activeCategory].label}
                         activeSelector={activeSelector}
+                        onClick={setActiveSelector}
+                        activeCategory={activeCategory}
+                        setActiveCategory={setActiveCategory}
+                        activePrice={activePrice}
+                        setActivePrice={setActivePrice}
                         activeSelector3x3={activeSelector3x3}
-                        onClick={(selector) => setActiveSelector(selector)}
                     />
                 </div>
 
