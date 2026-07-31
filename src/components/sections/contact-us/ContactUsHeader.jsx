@@ -10,7 +10,7 @@ const ContactUsHeader = () => {
         >
             <Breadcrumbs items={[
                 { label: "home", href: '/' },
-                { label: 'contact us' }]}
+                { label: 'Contact Us' }]}
             />
             <div className="max-w-[834px] flex flex-col gap-6">
                 <h6 className="text-n7100 2xl:h3">
