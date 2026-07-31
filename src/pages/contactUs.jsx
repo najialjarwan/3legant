@@ -1,4 +1,5 @@
 import { ContactUsHeader, AboutUs, ContactUsDetails } from '@contact-us';
+import { Values } from '@home';
 
 const ContactUsPage = () => {
     return (
@@ -8,6 +9,8 @@ const ContactUsPage = () => {
             <AboutUs />
 
             <ContactUsDetails />
+
+            <Values variant="alt" />
         </>
     );
 }
