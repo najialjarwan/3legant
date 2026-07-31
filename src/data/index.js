@@ -8,8 +8,8 @@ export { NAV_ITEMS } from './navigation/navItems';
 export { PRODUCT_ADDITONAL_INFO } from './product/productAddtionalInfo';
 export { PRODUCT_REVIEWS } from './product/productReviews';
 
-export { CATEGORIES } from './product/categories';
-export { PRICES } from './product/prices';
+export { SHOP_CATEGORIES } from './product/shopCategories';
+export { SHOP_PRICES } from './product/shopPrices';
 
 export { PRODUCTS_GRID } from './product/productsGrid';
 
