@@ -17,7 +17,7 @@ const ArticleCard = ({ article, withReadMore = true }) => {
                         label='read more'
                         labelClass='text-n7100'
                         iconClass='2xl:text-n4100'
-                        directTo='/blog'
+                        directTo={`/blog/${article.slug}`}
                     />)
                     : (<p className='text-n4100 caption-2'>{article.date}</p>)}
             </div>
