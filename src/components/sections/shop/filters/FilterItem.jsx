@@ -2,7 +2,7 @@ import { DropdownOptions, Dropdown } from '@ui';
 
 export const FilterItem = ({ type, activeSelector3x3, items, label }) => {
     return (
-        <>
+        <div className={`flex flex-col ${activeSelector3x3 ? 'gap-4' : 'gap-2'}`}>
             <header className={`${activeSelector3x3 ? 'text-black-900' : 'text-n4100'} body-2-semi`}>
                 {type}
             </header >
@@ -19,7 +19,7 @@ export const FilterItem = ({ type, activeSelector3x3, items, label }) => {
             {!activeSelector3x3 && (
                 <Dropdown label={label} items={items} variant="default" />
             )}
-        </>
+        </div>
     )
 }
 
