@@ -3,7 +3,7 @@ const DropdownOptions = ({
     variant,
     checkBox = false,
     isOpen,
-    handleClick,
+    handleClick = () => {},
     activeItem,
     setActiveItem,
 }) => {
