@@ -31,6 +31,7 @@ const AboutUs = () => {
                     labelClass="text-black-900 btn-s!"
                     iconSpanClass="size-5"
                     iconClass="text-black-900"
+                    directTo="/shop"
                 />
             </div>
         </section>
