@@ -14,13 +14,14 @@ const DropdownOptions = ({
                 p-2 gap-2.5
                 bg-white border-[1.5px] border-n2100 rounded-xl shadow-2`,
             buttonClass: `
-                w-full p-2 body-2-semi capitalize rounded-lg`,
+                w-full p-2 text-n4100 body-2-semi rounded-lg`,
         },
         alt: {
             containerClass: `gap-3`,
             buttonClass: `text-black-500 caption-1-semi`,
         }
-    }
+    };
+
     return (
         <div className={`2xl:w-[262px] flex flex-col ${VARIANTS[variant].containerClass}`}>
             {items.map((item) => (
@@ -31,8 +32,14 @@ const DropdownOptions = ({
                         handleClick();
                     }}
                     className={`
-                    text-start ${VARIANTS[variant].buttonClass}
-                    ${activeItem === item.id ? 'text-n7100 bg-n2100' : 'text-n4100 bg-transparent'}
+                    w-fit
+                    text-start capitalize
+                    ${VARIANTS[variant].buttonClass}
+                    ${activeItem === item.id && variant === "default"
+                            ? 'text-n7100 bg-n2100'
+                            : activeItem === item.id && variant === "alt"
+                                ? 'text-black-900 border-b border-b-black-900'
+                                : ''}
                     `}
                 >
                     {item.label}
