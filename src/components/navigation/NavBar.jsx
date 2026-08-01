@@ -59,7 +59,8 @@ const NavBar = ({ onMenuOpen, onCartOpen }) => {
                 >
                     <Icon
                         name="UserCircle"
-                        className="hidden 2xl:block"
+                        spanClassName="size-6 hidden 2xl:block"
+                        iconClassName="text-n7100"
                     />
                 </Link>
 
