@@ -5,7 +5,7 @@ import {
     CartHeader, CartProducts, CartCoupon, CartSummary,
     ContactInformation, ShippingAddress, PaymentMethod, PlaceOrderBtn, OrderSummary,
     OrderCompleteHeader, OrderCompleteItems, OrderCompleteDetails, PurchaseHistoryBtn
-} from './index';
+} from '../index';
 
 const Cart = () => {
     const { isMobile } = useBreakpoint();
