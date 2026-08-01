@@ -47,7 +47,9 @@ export { default as InputsContainer } from './input/InputsContainer.jsx';
 export { default as Input } from './input/Input.jsx';
 
 // Cart Components
-export { default as CartItems } from './cart/CartItems';
+export { default as CartItems } from './cart-items/CartItems.jsx';
+export { default as DefaultCartItem } from './cart-items/DefaultCartItem.jsx';
+export { default as CartProductItem } from './cart-items/CartProductItem.jsx';
 
 // selectors
 export { default as ViewSelectors } from './selectors/ViewSelectors';

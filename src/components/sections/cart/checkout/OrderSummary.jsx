@@ -1,6 +1,8 @@
+import { useBreakpoint } from '@hooks';
 import { CartItems, Icon } from '@ui';
 
 const OrderSummary = () => {
+    const { isMobile } = useBreakpoint();
     return (
         <div
             className='
@@ -9,7 +11,9 @@ const OrderSummary = () => {
             border border-n4100 rounded-md'
         >
             <h6 className='text-black-900'>order summary</h6>
-            <CartItems canRemoveItem={false} />
+
+            <CartItems variant="tertiary" canRemoveItem={isMobile} />
+
             <form className='w-full flex gap-3'>
                 <input
                     type="text"
@@ -29,6 +33,7 @@ const OrderSummary = () => {
                     Apply
                 </button>
             </form>
+
             <div>
                 <div className='w-full py-3.5 flex justify-between'>
                     <div className='flex items-center gap-2 text-n7100'>

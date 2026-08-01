@@ -1,8 +1,6 @@
 import { Link } from 'react-router-dom';
 import { asideClass } from '@navigation/FlyMenu.jsx';
-import { Icon } from '@ui';
-import { formatPrice } from '@utils';
-import { CART_ITEMS } from '@data';
+import { Icon, CartItems } from '@ui';
 
 const FlyoutCart = ({ isOpen, onClose }) => {
     return (
@@ -48,54 +46,7 @@ const FlyoutCart = ({ isOpen, onClose }) => {
                     </header>
 
                     {/* Cart Products Summary */}
-                    <ul className="
-                    w-full
-                    flex flex-col gap-4 2xl:gap-6"
-                    >
-                        {CART_ITEMS.map((item, i) => (
-                            <li
-                                key={i}
-                                className="
-                            w-full py-6"
-                            >
-                                <div className="
-                                w-full
-                                flex gap-4"
-                                >
-                                    <div
-                                        className='
-                                    w-20 h-24
-                                    bg-n2100'>
-                                        <img
-                                            src={item.image}
-                                            alt={`${item.name} image`}
-                                            className="size-full object-cover object-center"
-                                        />
-                                    </div>
-
-                                    <div
-                                        className="
-                                    w-49.75 2xl:w-[267px]
-                                    flex flex-col gap-2"
-                                    >
-                                        <p className="w-full
-                                    flex justify-between items-center
-                                    text-n7100 caption-1-semi">
-                                            <span>{item.name}</span>
-                                            <span>{formatPrice(item.price)}</span>
-                                        </p>
-
-                                        <p className="w-full
-                                    flex justify-between items-center
-                                    text-n4100 caption-2">
-                                            <span className=''>Color: {item.color}</span>
-                                            <span><Icon name="Close" className='size-6' /></span>
-                                        </p>
-                                    </div>
-                                </div>
-                            </li>
-                        ))}
-                    </ul>
+                    <CartItems variant="primary" />
                 </div>
 
                 {/* Bottom Container: Cart Checkout */}

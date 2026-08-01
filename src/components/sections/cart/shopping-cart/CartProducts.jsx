@@ -1,6 +1,9 @@
-import { CartItems } from '@ui';
+import { useBreakpoint } from '@hooks';
+import { CartItems, CartProductItem } from '@ui';
 
 const CartProducts = ({ }) => {
+    const { isMobile } = useBreakpoint();
+
     return (
         <div className='w-full 2xl:w-auto'>
             <header className='
@@ -11,6 +14,7 @@ const CartProducts = ({ }) => {
                 '
             >
                 <span>Proudct</span>
+
                 <div className='w-[322px] hidden 2xl:inline-flex justify-between'>
                     <span>Quantity</span>
                     <span>Price</span>
@@ -18,7 +22,14 @@ const CartProducts = ({ }) => {
                 </div>
             </header>
 
-            <CartItems />
+            {isMobile ? (
+                <CartItems variant="secondary" />
+            ) : (
+                <CartItems
+                    variant="secondary"
+                    ItemComponent={CartProductItem}
+                />
+            )}
         </div>
     )
 }
