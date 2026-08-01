@@ -1,7 +1,13 @@
 // App.jsx
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { GlobalLayout, MainLayout, MinimalLayout, StandardLayout } from '@layout';
+import {
+  GlobalLayout,
+  MainLayout,
+  MinimalLayout,
+  StandardLayout,
+  CleanLayout,
+} from '@layout';
 import {
   HomePage,
   AuthPage,
@@ -40,7 +46,6 @@ const App = () => {
         <Route element={<GlobalLayout Shell={MinimalLayout} />}>
           <Route path='/cart' element={<CartPage />} />
           <Route path="/account" element={<AccountPage />} />
-          <Route path="/contactUs" element={<ContactUsPage />} />
         </Route>
 
         <Route path="/auth" element={<AuthPage />} />
@@ -48,6 +53,10 @@ const App = () => {
         <Route element={<GlobalLayout Shell={StandardLayout} />}>
           <Route path='/blog' element={<BlogPage />} />
           <Route path="/blog/:slug" element={<BlogPostPage />} />
+        </Route>
+
+        <Route element={<GlobalLayout Shell={CleanLayout} />}>
+          <Route path="/contactUs" element={<ContactUsPage />} />
         </Route>
 
       </Routes>
