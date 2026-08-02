@@ -1,9 +1,9 @@
 import { GRID_MODES } from '@constants'
 
-const useShopLayout = ({ activeSelector, isMobile }) => {
+const useShopLayout = ({ gridMode, isMobile }) => {
 
     const getGridClasses = () => {
-        switch (activeSelector) {
+        switch (gridMode) {
             case GRID_MODES.GRID_3X3:
                 return 'grid-rows-3 grid-cols-3 gap-6'
             case GRID_MODES.GRID_4X4:
@@ -18,16 +18,16 @@ const useShopLayout = ({ activeSelector, isMobile }) => {
     }
 
     const isVerticalCard =
-        activeSelector === GRID_MODES.GRID_3X3 ||
-        activeSelector === GRID_MODES.GRID_4X4 ||
-        (activeSelector === GRID_MODES.GRID_4X2 && isMobile)
+        gridMode === GRID_MODES.GRID_3X3 ||
+        gridMode === GRID_MODES.GRID_4X4 ||
+        (gridMode === GRID_MODES.GRID_4X2 && isMobile)
 
     const isHorizontalCard =
-        (activeSelector === GRID_MODES.GRID_4X2 && !isMobile) ||
-        activeSelector === GRID_MODES.GRID_4X1
+        (gridMode === GRID_MODES.GRID_4X2 && !isMobile) ||
+        gridMode === GRID_MODES.GRID_4X1
 
     const cardVariant =
-        activeSelector === GRID_MODES.GRID_4X2 ? 'sm' : 'md'
+        gridMode === GRID_MODES.GRID_4X2 ? 'sm' : 'md'
 
     return {
         gridClasses: getGridClasses(),
