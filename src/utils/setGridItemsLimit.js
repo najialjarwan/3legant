@@ -1,5 +1,5 @@
-export const setGridItemsLimit = (activeSelector, GRID_MODES) => {
-    switch (activeSelector) {
+export const setGridItemsLimit = (gridMode, GRID_MODES) => {
+    switch (gridMode) {
         case GRID_MODES.GRID_3X3:
             return 9;
         case GRID_MODES.GRID_4X4:
