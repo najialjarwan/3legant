@@ -4,9 +4,6 @@ export { default as CartWishlistBtn } from './buttons/CartWishlistBtn';
 export { default as MoreActionBtn } from './buttons/MoreActionBtn';
 export { default as ProductTabBtn } from './buttons/ProductTabBtn';
 export { default as ShowMoreBtn } from './buttons/ShowMoreBtn';
-export { default as DropdownBtn } from './buttons/DropdownBtn/DropdownBtn';
-export { default as DropdownOptions } from './buttons/DropdownBtn/DropdownOptions';
-export { default as Dropdown } from './buttons/DropdownBtn/Dropdown';
 export { default as Stepper } from './buttons/Stepper';
 export { default as GoBackBtn } from './buttons/GoBackBtn';
 
@@ -55,6 +52,7 @@ export { default as CartProductItem } from './cart-items/CartProductItem.jsx';
 export { default as ViewSelectors } from './selectors/ViewSelectors';
 export { default as Selectors } from './selectors/Selectors';
 export { default as SortButton } from './selectors/SortButton';
+export { default as Dropdown } from './selectors/Dropdown';
 
 // Breadcrumbs
 export { default as Breadcrumbs } from './Breadcrumbs';
@@ -62,3 +60,6 @@ export { default as Breadcrumbs } from './Breadcrumbs';
 // articles rec components
 export { default as ArticlesRec } from './articles-rec/ArticlesRec';
 export { default as ArticleCard } from './articles-rec/ArticleCard';
+
+// checkbox
+export { default as Checkbox } from './Checkbox';
