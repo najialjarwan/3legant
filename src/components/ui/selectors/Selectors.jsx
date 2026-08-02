@@ -2,7 +2,7 @@ import { Icon } from '@ui';
 import { useBreakpoint } from '@hooks';
 import { GRID_MODES } from '@constants';
 
-export const Selectors = ({ activeSelector, onClick }) => {
+export const Selectors = ({ gridMode, onGridModeChange }) => {
     const { isMobile } = useBreakpoint();
 
     const base = [
@@ -23,19 +23,19 @@ export const Selectors = ({ activeSelector, onClick }) => {
             {items.map(({ mode, icon }) => (
                 <button
                     key={icon}
-                    onClick={() => onClick?.(mode)}
+                    onClick={() => onGridModeChange?.(mode)}
                     className={`
                         w-[46px] h-[40px]
                         flex items-center justify-center
                         border border-n3100 transition-colors
-                        ${activeSelector === mode ? 'border-black-900 bg-n2100' : ''}`}
+                        ${gridMode === mode ? 'border-black-900 bg-n2100' : ''}`}
                 >
                     <Icon
                         name={icon}
                         spanClassName='size-6'
                         iconClassName={`
                             size-[18px]
-                            ${activeSelector === mode ? 'text-n7100' : 'text-n4100'}`}
+                            ${gridMode === mode ? 'text-n7100' : 'text-n4100'}`}
                     />
                 </button>
             ))}
