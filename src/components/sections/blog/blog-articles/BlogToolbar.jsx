@@ -9,10 +9,9 @@ const BlogToolbar = ({ activeItem, setActiveItem, gridMode, onClick, }) => {
         return (
             <div className='p-8'>
                 <Dropdown
-                    listItems={BLOG_MENU}
-                    variant="default"
-                    activeItem={activeItem}
-                    setActiveItem={setActiveItem}
+                    items={BLOG_MENU}
+                    value={activeItem}
+                    onChange={setActiveItem}
                 />
             </div>
         );
