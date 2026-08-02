@@ -24,10 +24,9 @@ const AccountMenu = ({ activeItem, setActiveItem }) => {
             {isMobile
                 ? (
                     <Dropdown
-                        listItems={ACCOUNT_MENU}
-                        variant="default"
-                        activeItem={activeItem}
-                        setActiveItem={setActiveItem}
+                        items={ACCOUNT_MENU}
+                        value={activeItem}
+                        onChange={setActiveItem}
                     />)
                 : (
                     <ul className='flex flex-col gap-3 text-n4100 body-2-semi capitalize'>
