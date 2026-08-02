@@ -6,16 +6,16 @@ import { GRID_MODES, BLOG_GRID_CLASSES } from '@constants';
 import { setGridItemsLimit } from '@utils';
 import { ShowMoreBtn } from '@ui';
 
-const BlogArticles = ({ activeSelector, showFeaturedOnly }) => {
+const BlogArticles = ({ gridMode, showFeaturedOnly }) => {
     const { isMobile } = useBreakpoint();
     const FILTERED_ARTICLES = showFeaturedOnly
         ? ARTICLES_LIST.filter(a => a.isFeatured)
         : ARTICLES_LIST;
-    const isHorizontalArticle = activeSelector === GRID_MODES.GRID_4X2;
+    const isHorizontalArticle = gridMode === GRID_MODES.GRID_4X2;
 
     const gridLimit = isMobile
         ? setGridItemsLimit(GRID_MODES.GRID_4X2, GRID_MODES)
-        : setGridItemsLimit(activeSelector, GRID_MODES);
+        : setGridItemsLimit(gridMode, GRID_MODES);
 
     const [visibleCount, setVisibleCount] = useState(gridLimit);
     const [expanded, setExpanded] = useState(false);
@@ -40,7 +40,7 @@ const BlogArticles = ({ activeSelector, showFeaturedOnly }) => {
             <ul
                 className={`
                 grid grid-cols-1 2xl:gap-x-[25px] gap-y-4 2xl:gap-y-10
-                ${BLOG_GRID_CLASSES(activeSelector, GRID_MODES)}
+                ${BLOG_GRID_CLASSES(gridMode, GRID_MODES)}
                 `}
             >
                 {FILTERED_ARTICLES
@@ -54,7 +54,7 @@ const BlogArticles = ({ activeSelector, showFeaturedOnly }) => {
                                 <div
                                     className={`
                                     min-w-[250px] max-w-[312px] 2xl:max-w-full mb-6 h-[283px]
-                                    ${activeSelector === GRID_MODES.GRID_3X3 ? '2xl:h-[325px]' : '2xl:h-[240px]'}`}
+                                    ${gridMode === GRID_MODES.GRID_3X3 ? '2xl:h-[325px]' : '2xl:h-[240px]'}`}
                                 >
                                     <img
                                         src={article.img}
