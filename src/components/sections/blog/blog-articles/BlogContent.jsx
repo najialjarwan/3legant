@@ -4,7 +4,7 @@ import { BlogToolbar, BlogArticles } from '@blog';
 
 const BlogContent = () => {
     const [activeItem, setActiveItem] = useState(BLOG_MENU_ITEMS.ALL);
-    const [activeSelector, setActiveSelector] = useState(GRID_MODES.GRID_3X3);
+    const [gridMode, setGridMode] = useState(GRID_MODES.GRID_3X3);
     const showFeaturedOnly = activeItem === BLOG_MENU_ITEMS.FEATURED;
 
     return (
@@ -12,12 +12,12 @@ const BlogContent = () => {
             <BlogToolbar
                 activeItem={activeItem}
                 setActiveItem={setActiveItem}
-                activeSelector={activeSelector}
-                onClick={(selector) => setActiveSelector(selector)}
+                gridMode={gridMode}
+                onClick={(selector) => setGridMode(selector)}
             />
 
             <BlogArticles
-                activeSelector={activeSelector}
+                gridMode={gridMode}
                 showFeaturedOnly={showFeaturedOnly}
             />
         </>
