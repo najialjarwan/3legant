@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useLocation } from 'react-router-dom';
 import { useBreakpoint } from '@hooks';
 import { CART_STEPS } from '@constants';
 import {
@@ -9,7 +10,8 @@ import {
 
 const Cart = () => {
     const { isMobile } = useBreakpoint();
-    const [step, setStep] = useState(CART_STEPS.CART);
+    const location = useLocation();
+    const [step, setStep] = useState(location.state?.step ?? CART_STEPS.CART);
 
     return (
         <section className="
