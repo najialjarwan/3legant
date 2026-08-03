@@ -74,7 +74,7 @@ const FlyoutCart = ({ isOpen, onClose }) => {
 
                     <Link
                         to='/cart'
-                        className="w-fit mx-auto text-[#121212] caption-1-semi underline underline-offset-6">
+                        className="w-fit mx-auto text-black-900 caption-1-semi underline underline-offset-6">
                         View Cart
                     </Link>
                 </div>
