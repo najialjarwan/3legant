@@ -13,7 +13,7 @@ const BlogContent = () => {
                 activeItem={activeItem}
                 setActiveItem={setActiveItem}
                 gridMode={gridMode}
-                onClick={(selector) => setGridMode(selector)}
+                onGridModeChange={setGridMode}
             />
 
             <BlogArticles

@@ -1,6 +1,5 @@
-import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { useBreakpoint } from '@hooks';
+import { useBreakpoint, useExpandableList } from '@hooks';
 import { ARTICLES_LIST } from '@data';
 import { GRID_MODES, BLOG_GRID_CLASSES } from '@constants';
 import { setGridItemsLimit } from '@utils';
@@ -16,24 +15,15 @@ const BlogArticles = ({ gridMode, showFeaturedOnly }) => {
     const gridLimit = isMobile
         ? setGridItemsLimit(GRID_MODES.GRID_4X2, GRID_MODES)
         : setGridItemsLimit(gridMode, GRID_MODES);
-
-    const [visibleCount, setVisibleCount] = useState(gridLimit);
-    const [expanded, setExpanded] = useState(false);
-
-    useEffect(() => {
-        setVisibleCount(gridLimit);
-        setExpanded(false);
-    }, [gridLimit]);
-
-    const handleToggle = () => {
-        if (expanded) {
-            setVisibleCount(gridLimit);
-            setExpanded(false);
-        } else {
-            setVisibleCount(FILTERED_ARTICLES.length);
-            setExpanded(true);
-        }
-    };
+    const {
+        visibleItems,
+        canExpand,
+        expanded,
+        handleToggle,
+    } = useExpandableList({
+        items: FILTERED_ARTICLES,
+        initialVisibleCount: gridLimit,
+    });
 
     return (
         <section className="2xl:px-40 pb-20 2xl:pt-10 flex flex-col items-center gap-10 2xl:gap-20">
@@ -43,54 +33,50 @@ const BlogArticles = ({ gridMode, showFeaturedOnly }) => {
                 ${BLOG_GRID_CLASSES(gridMode, GRID_MODES)}
                 `}
             >
-                {FILTERED_ARTICLES
-                    .slice(0, visibleCount)
-                    .map((article, index) => (
-                        <li key={index}>
-                            <Link
-                                to={`/blog/${article.slug}`}
-                                className={`cursor-pointer ${isHorizontalArticle ? 'flex' : ''}`}
-                            >
-                                <div
-                                    className={`
+                {visibleItems.map((article, index) => (
+                    <li key={index}>
+                        <Link
+                            to={`/blog/${article.slug}`}
+                            className={`cursor-pointer ${isHorizontalArticle ? 'flex' : ''}`}
+                        >
+                            <div
+                                className={`
                                     min-w-[250px] max-w-[312px] 2xl:max-w-full mb-6 h-[283px]
                                     ${gridMode === GRID_MODES.GRID_3X3 ? '2xl:h-[325px]' : '2xl:h-[240px]'}`}
-                                >
-                                    <img
-                                        src={article.img}
-                                        alt="article image"
-                                        className='size-full object-cover object-center'
-                                    />
-                                </div>
-                                <div className={isHorizontalArticle ? 'px-6 flex flex-col gap-6' : ''}>
-                                    <div>
-                                        <p
-                                            className='
+                            >
+                                <img
+                                    src={article.img}
+                                    alt="article image"
+                                    className='size-full object-cover object-center'
+                                />
+                            </div>
+                            <div className={isHorizontalArticle ? 'px-6 flex flex-col gap-6' : ''}>
+                                <div>
+                                    <p
+                                        className='
                                         max-w-[312px] 2xl:w-auto mb-2
                                         text-n2 text-[16px]/[26px] font-inter font-medium 2xl:h7
                                         '
-                                        >
-                                            {article.title}
-                                        </p>
+                                    >
+                                        {article.title}
+                                    </p>
 
-                                        {isHorizontalArticle && (<p>{article.excerpt}</p>)}
-                                    </div>
-
-                                    <p className='text-n4100 caption-2'>{article.date}</p>
-
+                                    {isHorizontalArticle && (<p>{article.excerpt}</p>)}
                                 </div>
-                            </Link>
-                        </li>
-                    ))}
+
+                                <p className='text-n4100 caption-2'>{article.date}</p>
+
+                            </div>
+                        </Link>
+                    </li>
+                ))}
             </ul>
-            {
-                FILTERED_ARTICLES.length > gridLimit && (
-                    <ShowMoreBtn
-                        onClick={handleToggle}
-                        label={expanded ? 'Show less' : 'Show more'}
-                    />
-                )
-            }
+            {canExpand && (
+                <ShowMoreBtn
+                    onClick={handleToggle}
+                    label={expanded ? 'Show less' : 'Show more'}
+                />
+            )}
         </section >
     );
 }

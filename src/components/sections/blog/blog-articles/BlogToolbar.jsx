@@ -2,7 +2,7 @@ import { useBreakpoint } from '@hooks';
 import { BLOG_MENU } from '@data';
 import { Dropdown, ViewSelectors } from '@ui';
 
-const BlogToolbar = ({ activeItem, setActiveItem, gridMode, onClick, }) => {
+const BlogToolbar = ({ activeItem, setActiveItem, gridMode, onGridModeChange }) => {
     const { isMobile } = useBreakpoint();
 
     if (isMobile) {
@@ -37,7 +37,7 @@ const BlogToolbar = ({ activeItem, setActiveItem, gridMode, onClick, }) => {
                 </ul>
                 <ViewSelectors
                     gridMode={gridMode}
-                    onClick={onClick}
+                    onGridModeChange={onGridModeChange}
                 />
             </div>
         );
