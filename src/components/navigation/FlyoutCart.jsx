@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { asideClass } from '@navigation/FlyMenu.jsx';
+import { CART_STEPS } from '@constants';
 import { Icon, CartItems } from '@ui';
 
 const FlyoutCart = ({ isOpen, onClose }) => {
@@ -68,9 +69,18 @@ const FlyoutCart = ({ isOpen, onClose }) => {
                     </div>
 
                     {/* Cart Actions */}
-                    <button className="px-6.5 py-2.5 bg-n7100 rounded-md text-white btn-m">
+                    <Link
+                        to='/cart'
+                        state={{ step: CART_STEPS.CHECKOUT }}
+                        onClick={onClose}
+                        className="
+                        px-6.5 py-2.5
+                        text-white btn-m text-center
+                        bg-n7100 rounded-md
+                        "
+                    >
                         Checkout
-                    </button>
+                    </Link>
 
                     <Link
                         to='/cart'
