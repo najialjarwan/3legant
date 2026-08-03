@@ -70,7 +70,7 @@ const AccountWishlist = () => {
                                 </span>
                             )}
 
-                            <AddToCartBtn className="w-full 2xl:w-fit px-6 py-1.5 text-white btn-s" />
+                            <AddToCartBtn className="w-full 2xl:w-fit px-6 py-1.5 text-white btn-s rounded-lg" />
                         </li>
                     ))}
                 </ul>
