@@ -5,15 +5,15 @@ const useShopLayout = ({ gridMode, isMobile }) => {
     const getGridClasses = () => {
         switch (gridMode) {
             case GRID_MODES.GRID_3X3:
-                return 'grid-rows-3 grid-cols-3 gap-6'
+                return 'grid-cols-3 gap-6'
             case GRID_MODES.GRID_4X4:
-                return 'grid-rows-4 grid-cols-4 gap-6'
+                return 'grid-cols-4 gap-6'
             case GRID_MODES.GRID_4X2:
-                return 'grid-rows-4 grid-cols-2 gap-x-2 gap-y-4 2xl:gap-6'
+                return 'grid-cols-2 gap-x-2 gap-y-4 2xl:gap-6'
             case GRID_MODES.GRID_4X1:
-                return 'grid-rows-4 grid-cols-1 gap-6'
+                return 'grid-cols-1 gap-6'
             default:
-                return 'grid-rows-3 grid-cols-3 gap-6'
+                return 'grid-cols-3 gap-6'
         }
     }
 
