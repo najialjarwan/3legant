@@ -66,7 +66,8 @@ const ProductCardHorizontal = ({ product }) => {
                         <AddToCartBtn
                             className='
                             w-full 2xl:w-[230px] h-10 2xl:h-11.5 px-6 py-2 
-                            text-n1100 btn-xs 2xl:btn-s'
+                            text-n1100 btn-xs 2xl:btn-s
+                            rounded-lg'
                         />
                         <button className='
                             py-1 
