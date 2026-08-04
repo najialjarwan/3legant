@@ -8,10 +8,12 @@ const MoreActionBtn = ({
     iconSpanClass = '',
     iconClass = '',
     directTo = '',
+    state = {},
 }) => {
     return (
         <Link
             to={directTo}
+            state={state}
             className={`
             w-fit
             flex items-center gap-1
