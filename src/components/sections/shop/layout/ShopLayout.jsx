@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useLocation } from 'react-router-dom';
 import { useBreakpoint, useExpandableList } from '@hooks';
 import { GRID_MODES, SHOP_CATEGORIES_ITEMS, SHOP_PRICES_ITEMS } from '@constants'
 import { PRODUCTS_GRID, SHOP_PRICES } from '@data';
@@ -14,7 +15,8 @@ export const ShopLayout = () => {
     const isSidebarLayout = gridMode === GRID_MODES.GRID_3X3 || (!isMobile && gridMode === GRID_MODES.GRID_4X1);
 
     // Category filter
-    const [activeCategory, setActiveCategory] = useState(SHOP_CATEGORIES_ITEMS.ALL);
+    const location = useLocation();
+    const [activeCategory, setActiveCategory] = useState(location.state?.category ?? SHOP_CATEGORIES_ITEMS.ALL);
     const filterByCategory = product => {
         if (activeCategory === SHOP_CATEGORIES_ITEMS.ALL) {
             return true;
