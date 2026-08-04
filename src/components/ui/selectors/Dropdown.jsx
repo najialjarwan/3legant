@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Icon } from '@ui';
 
-const Dropdown = ({ items, value, onChange }) => {
+const Dropdown = ({ items, value, onChange, className = '' }) => {
     const [isOpen, setIsOpen] = useState(false);
 
     const handleClick = () => { setIsOpen(prev => !prev) };
@@ -12,10 +12,11 @@ const Dropdown = ({ items, value, onChange }) => {
     };
 
     return (
-        <div className='relative w-full 2xl:w-[262px] flex flex-col gap-2'>
+        <div className={`relative w-full 2xl:w-[262px] flex flex-col gap-2`}>
             <DropdownBtn
                 onClick={handleClick}
                 label={items[value].label}
+                className={className}
             />
 
             <DropdownOptions
@@ -23,6 +24,7 @@ const Dropdown = ({ items, value, onChange }) => {
                 isOpen={isOpen}
                 value={value}
                 onSelect={handleSelect}
+                className={className}
             />
         </div>
     );
@@ -30,15 +32,16 @@ const Dropdown = ({ items, value, onChange }) => {
 
 export default Dropdown;
 
-const DropdownBtn = ({ onClick, label }) => {
+const DropdownBtn = ({ onClick, label, className = '' }) => {
     return (
         <button
             onClick={onClick}
-            className='
+            className={`
             w-full p-2 pl-4
             flex items-center justify-between
             bg-white border-2 border-n4100 rounded-lg
-            '
+            ${className}
+            `}
         >
             <p className='text-n7100 body-2-semi capitalize'>{label}</p>
             <span className='p-1'>
@@ -57,6 +60,7 @@ const DropdownOptions = ({
     isOpen,
     value,
     onSelect,
+    className = ''
 }) => {
 
     return (
@@ -67,6 +71,7 @@ const DropdownOptions = ({
             flex flex-col gap-2.5
             bg-white border-[1.5px] border-n2100 rounded-xl shadow-2
             ${isOpen ? 'block' : 'hidden'}
+            ${className}
             `}
         >
             {items.map((item) => (
