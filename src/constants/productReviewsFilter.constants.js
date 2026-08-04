@@ -1,0 +1,1 @@
+export const REVIEWS_FILTER = { NEWEST: 0, OLDEST: 1 };
