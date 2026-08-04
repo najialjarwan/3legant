@@ -1,19 +1,21 @@
+import { SHOP_CATEGORIES_ITEMS } from '@constants';
+import { SHOP_CATEGORIES } from '@data';
 import { MoreActionBtn } from '@ui';
 
 const BANNER_ITEMS = [
     {
         image: 'src/assets/images/product image 4.png',
-        category: 'Living Room',
+        category: SHOP_CATEGORIES_ITEMS.LIVING_ROOM,
         variant: 'tall',
     },
     {
         image: 'src/assets/images/product image 5.png',
-        category: 'Bedroom',
+        category: SHOP_CATEGORIES_ITEMS.BEDROOM,
         variant: 'rightFloat',
     },
     {
         image: 'src/assets/images/product image 6.png',
-        category: 'Kitchen',
+        category: SHOP_CATEGORIES_ITEMS.KITCHEN,
         variant: 'leftFloat',
     },
 ];
@@ -50,7 +52,6 @@ const BannerGrid = () => {
         >
             {BANNER_ITEMS.map((item, i) => {
                 const v = variants[item.variant];
-
                 return (
                     <div
                         key={i}
@@ -65,7 +66,7 @@ const BannerGrid = () => {
                             className={`
                             ${v.image} object-contain object-bottom`}
                         />
-                        
+
                         {/* Category & Shop*/}
                         <div
                             className={`
@@ -74,9 +75,14 @@ const BannerGrid = () => {
                             flex flex-col gap-2
                             text-n7100`}
                         >
-                            <h6 className="2xl:h5">{item.category}</h6>
+                            <h6 className="2xl:h5 capitalize">{SHOP_CATEGORIES[item.category].label}</h6>
 
-                            <MoreActionBtn label='Shop Now' labelClass='btn-xs 2xl:btn-s text-n7100'/>
+                            <MoreActionBtn
+                                label='Shop Now'
+                                labelClass='btn-xs 2xl:btn-s text-n7100'
+                                directTo="shop"
+                                state={{ category: item.category }}
+                            />
                         </div>
                     </div>
                 );
