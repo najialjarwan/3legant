@@ -10,25 +10,34 @@ const Newsletter = () => {
             text-center
             bg-[#F2F4F6]'
         >
-            <img
-                src="src/assets/images/product image 5.png"
-                alt=""
+            <div
                 className='
-                absolute -left-[230px] -bottom-[160px]
+                absolute -left-[240px] -bottom-[150px]
                 hidden 2xl:block
-                size-[640px]'
-            />
+                size-[640px]'>
+                <img
+                    src="src/assets/images/product image 5.png"
+                    alt=""
+                    className='size-full object-cover'
+                />
+            </div>
 
-            <img
-                src="src/assets/images/image.png"
-                alt=""
+
+            <div
                 className='
-                absolute -right-[260px] -bottom-[210px]
+                absolute -right-[230px] -bottom-[210px]
                 hidden 2xl:block
-                size-[680px]'
-            />
+                size-[680px]
+                '
+            >
+                <img
+                    src="src/assets/images/image.png"
+                    alt=""
+                    className='size-full object-cover'
+                />
+            </div>
 
-            <div 
+            <div
                 className='
                 2xl:absolute left-1/2 2xl:-translate-x-1/2 top-[101px]
                 flex flex-col gap-8'
