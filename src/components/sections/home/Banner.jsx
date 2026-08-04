@@ -47,7 +47,11 @@ const Banner = () => {
                     </p>
                 </div>
 
-                <MoreActionBtn label='Shop Now' labelClass='btn-xs 2xl:btn-s text-n7100' />
+                <MoreActionBtn
+                    label='Shop Now'
+                    labelClass='btn-xs 2xl:btn-s text-n7100'
+                    directTo="/shop"
+                />
             </div>
         </section>
     );
