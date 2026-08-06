@@ -1,9 +1,9 @@
 import { useParams } from 'react-router-dom';
-import { HOME_NEW_ARRIVALS } from '@data';
+import { PRODUCTS } from '@data';
 
 const ProductAdditionalInfo = () => {
     const { id } = useParams();
-    const product = HOME_NEW_ARRIVALS.find(
+    const product = PRODUCTS.find(
         product => product.id === Number(id)
     );
 
