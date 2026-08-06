@@ -5,7 +5,6 @@ export { HOME_VALUES } from './home/homeValues';
 
 export { NAV_ITEMS } from './navigation/navItems';
 
-export { PRODUCT_ADDITONAL_INFO } from './product/productAddtionalInfo';
 export { PRODUCT_REVIEWS } from './product/productReviews';
 export { REVIEWS_FILTER_ITEMS } from './product/productReviewsFilterItems';
 
