@@ -43,7 +43,7 @@ const ProductInfo = ({ layout, product }) => {
                 <Section
                     className={`w-full pb-20 @sm:py-2 @sm:h-[352px] @sm:overflow-y-auto`}
                 >
-                    <ProductTabs variant='inline' layout={layout} product={product} />
+                    <ProductTabs variant='inline' layout={layout} />
                 </Section>
             )}
 
