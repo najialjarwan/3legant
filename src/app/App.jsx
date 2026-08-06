@@ -30,7 +30,7 @@ const App = () => {
           <Route path="/" element={<HomePage />} />
 
           <Route
-            path="/product"
+            path="/product/:id"
             element=
             {
               <ProductProvider>
