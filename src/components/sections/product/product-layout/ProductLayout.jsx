@@ -3,8 +3,8 @@ import { useProduct } from '../product-context/ProductContext';
 import { useBreakpoint } from '@hooks';
 import { computeLayoutFlags } from '@utils';
 import { ProductLoop, ProductTabs } from '@product';
-import { ProductsCarouselSection } from '@ui';
-import { PRODUCTS } from '@data';
+import { Breadcrumbs, ProductsCarouselSection } from '@ui';
+import { PRODUCTS, SHOP_CATEGORIES } from '@data';
 
 const ProductLayout = () => {
   const { id } = useParams();
@@ -18,6 +18,20 @@ const ProductLayout = () => {
 
   return (
     <>
+      <Breadcrumbs
+        items={[
+          { label: "home", href: '/' },
+          { label: 'shop', href: '/shop' },
+          {
+            label: SHOP_CATEGORIES[product.categories[0]].label,
+            href: '/shop',
+            state: { category: product.categories[0] },
+          },
+          { label: 'Product' }
+        ]}
+        className='px-8 2xl:px-40 py-4 gap-2 2xl:gap-4'
+      />
+
       <ProductLoop layout={layoutFlags} product={product} />
 
       {layoutFlags.showTabsSection && (
