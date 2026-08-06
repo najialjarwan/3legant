@@ -4,11 +4,11 @@ import { useBreakpoint } from '@hooks';
 import { computeLayoutFlags } from '@utils';
 import { ProductLoop, ProductTabs } from '@product';
 import { ProductsCarouselSection } from '@ui';
-import { HOME_NEW_ARRIVALS } from '@data';
+import { PRODUCTS } from '@data';
 
 const ProductLayout = () => {
   const { id } = useParams();
-  const product = HOME_NEW_ARRIVALS.find(
+  const product = PRODUCTS.find(
     product => product.id === Number(id)
   );
 
@@ -32,7 +32,7 @@ const ProductLayout = () => {
           titleVariant="alt"
           sectionVariant="alt"
           navMode="scrollbar"
-          products={HOME_NEW_ARRIVALS}
+          products={PRODUCTS}
           isMobile={isMobile}
         />
       )}
