@@ -34,7 +34,7 @@ const ProductReviewsSummary = ({ product }) => (
                     className='
                             w-[135px] 2xl:w-[154px] block
                             text-n4100 caption-1
-                            2xl:placeholder-transparent outline-none'
+                            outline-none'
                 />
             </form>
 
