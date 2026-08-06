@@ -1,16 +1,18 @@
 import { useState } from 'react';
 import { ProductRating, Dropdown, ShowMoreBtn } from '@ui';
 import { REVIEWS_FILTER } from '@constants';
-import { PRODUCT_REVIEWS, REVIEWS_FILTER_ITEMS } from "@data";
+import { REVIEWS_FILTER_ITEMS, USERS } from "@data";
+import { mergeReviewsWithUsers } from '@utils';
 
-const ProductReviewList = () => {
+const ProductReviewList = ({ product }) => {
     const [reviewFilter, setReviewFilter] = useState(REVIEWS_FILTER.NEWEST);
     const [reviewCount, setReviewCount] = useState(5);
+    const usersReview = mergeReviewsWithUsers(product.reviews, USERS);
 
     return (
         <div className='w-full flex flex-col gap-10'>
             <div className='flex flex-col 2xl:flex-row 2xl:justify-between gap-6'>
-                <h6 className='text-black'>11 Reviews</h6>
+                <h6 className='text-black'>{product.reviews.length} Reviews</h6>
 
                 <Dropdown
                     items={REVIEWS_FILTER_ITEMS}
@@ -21,22 +23,22 @@ const ProductReviewList = () => {
             </div>
 
             <div className='w-full flex flex-col items-center gap-6'>
-                {PRODUCT_REVIEWS.slice(0, reviewCount).map((review) => (
+                {usersReview.slice(0, reviewCount).map((review) => (
                     <div
-                        key={review.name}
+                        key={review.user.userName}
                         className='pb-4 2xl:pb-6 border-b border-b-n3100'
                     >
                         <div className='flex flex-col gap-4'>
                             <div className='flex gap-4 2xl:gap-10'>
                                 <img
-                                    src={review.avatar}
+                                    src={review.user.avatar}
                                     alt=""
                                     className="size-[72px]"
                                 />
 
                                 <div className='flex flex-col gap-4'>
                                     <header className='text-n7100 body-1-semi [word-spacing:4px]'>
-                                        {review.name}
+                                        {review.user.userName}
                                     </header>
 
                                     <ProductRating rating={review.rating} />
@@ -60,7 +62,7 @@ const ProductReviewList = () => {
 
                 <ShowMoreBtn
                     onClick={() => setReviewCount((prev) => prev + 5)}
-                    disabled={reviewCount === PRODUCT_REVIEWS.length}
+                    disabled={reviewCount === USERS.length}
                     label="load more"
                 />
             </div>

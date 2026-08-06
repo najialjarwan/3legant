@@ -1,19 +1,22 @@
+import { calculateAverageRating } from '@utils';
 import { Icon, ProductRating } from '@ui';
 
-const ProductReviewsSummary = () => (
+const ProductReviewsSummary = ({ product }) => (
     <div className='flex flex-col gap-8 2xl:gap-8'>
         <div className='flex flex-col gap-6'>
             <p className='text-n2 h7 2xl:h6'>Customer Reviews</p>
 
             <div className='flex flex-col gap-2'>
                 <div className='flex gap-2'>
-                    <ProductRating rating={4} />
-                    <span className='text-n7100 caption-2'>11 Reviews</span>
+                    <ProductRating rating={calculateAverageRating(product.reviews)} />
+                    <span className='text-n7100 caption-2'>{product.reviews.length} Reviews</span>
                 </div>
 
                 <div className='flex gap-2'>
-                    <p className='text-n7100 caption-1'>Be the first to review</p>
-                    <p className='text-n2 caption-1-semi 2xl:body-2-semi'>Tray Table</p>
+                    {product.reviews.length == 0 && (
+                        <p className='text-n7100 caption-1'>Be the first to review</p>
+                    )}
+                    <p className='text-n2 caption-1-semi 2xl:body-2-semi capitalize'>{product.label}</p>
                 </div>
             </div>
         </div>
