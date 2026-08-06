@@ -19,10 +19,10 @@ const ProductsCarousel = ({ products, navMode, }) => {
                             key={product.id}
                             className="
                             h-full
-                            flex flex-col gap-3
-                            group cursor-pointer"
+                            flex flex-col gap-3 group"
                         >
                             <ProductCard
+                                directTo={`/product/${product.id}`}
                                 product={product}
                                 variant='md'
                             />
