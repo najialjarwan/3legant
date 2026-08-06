@@ -1,5 +1,5 @@
 import { ProductRating } from '@ui';
-import { formatPrice, finalPrice } from '@utils';
+import { calculateAverageRating, formatPrice, finalPrice } from '@utils';
 
 const ProductSummary = ({ product }) => {
     return (
@@ -7,8 +7,8 @@ const ProductSummary = ({ product }) => {
             className={`flex flex-col gap-4`}
         >
             <div className='flex gap-2.5'>
-                <ProductRating rating={product.rating} />
-                <span className='text-n7100 caption-2'>{product.reviews} Reviews</span>
+                <ProductRating rating={calculateAverageRating(product.reviews)} />
+                <span className='text-n7100 caption-2'>{product.reviews.length} Reviews</span>
             </div>
 
             <h4>{product.label}</h4>
