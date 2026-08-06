@@ -1,6 +1,6 @@
 import { useBreakpoint } from '@hooks';
 import { ProductsCarouselSection } from '@ui';
-import { HOME_NEW_ARRIVALS } from '@data';
+import { PRODUCTS } from '@data';
 
 const NewArrivals = () => {
     const { isMobile } = useBreakpoint();
@@ -11,7 +11,7 @@ const NewArrivals = () => {
             titleVariant="default"
             sectionVariant="default"
             navMode="scrollbar"
-            products={HOME_NEW_ARRIVALS}
+            products={PRODUCTS}
             isMobile={isMobile}
         />
     );
