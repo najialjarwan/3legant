@@ -1,6 +1,6 @@
 import { ProductMedia, ProductInfo, } from '@product';
 
-const ProductLoop = ({ layout }) => {
+const ProductLoop = ({ layout, product }) => {
 
     return (
         <section
@@ -10,9 +10,9 @@ const ProductLoop = ({ layout }) => {
                 ${layout.showRecommendations ? 'mb-20 2xl:mb-10' : ''}
             `}
         >
-            <ProductMedia layout={layout} />
+            <ProductMedia layout={layout} product={product} />
 
-            <ProductInfo layout={layout} />
+            <ProductInfo layout={layout} product={product} />
         </section>
     );
 }

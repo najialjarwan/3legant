@@ -6,7 +6,7 @@ import ProductActions from './ProductActions';
 import ProductMeta from './ProductMeta';
 import ProductTabs from '../../ProductTabs/ProductTabs';
 
-const ProductInfo = ({ layout }) => {
+const ProductInfo = ({ layout, product }) => {
     return (
         <div
             className={`
@@ -15,7 +15,7 @@ const ProductInfo = ({ layout }) => {
             flex flex-col ${layout.showTabsInline ? 'gap-4' : 'gap-6'}`}
         >
             <Section divider={layout.divider}>
-                <ProductSummary />
+                <ProductSummary product={product} />
             </Section>
 
             {(layout.showOfferCountdown) && (
@@ -25,7 +25,7 @@ const ProductInfo = ({ layout }) => {
             )}
 
             <Section>
-                <ProductOptions />
+                <ProductOptions product={product} />
             </Section>
 
             <Section
@@ -36,14 +36,14 @@ const ProductInfo = ({ layout }) => {
             </Section>
 
             <Section>
-                <ProductMeta />
+                <ProductMeta product={product} />
             </Section>
 
             {layout.showTabsInline && (
                 <Section
                     className={`w-full pb-20 @sm:py-2 @sm:h-[352px] @sm:overflow-y-auto`}
                 >
-                    <ProductTabs variant='inline' layout={layout} />
+                    <ProductTabs variant='inline' layout={layout} product={product} />
                 </Section>
             )}
 

@@ -1,18 +1,13 @@
+import { useState } from 'react';
 import { Icon } from '@ui';
 
-const PRODUCT_COLORS = [
-    "src/assets/images/product image 1 black.png",
-    "src/assets/images/product image 1 brown.png",
-    "src/assets/images/product image 1 red.png",
-    "src/assets/images/product image 1 white.png",
-]
-
-const ProductOptions = () => {
+const ProductOptions = ({ product }) => {
+    const [selectedColor, setSelectedColor] = useState(product.colors[0].color);
     return (
         <div className={`flex flex-col gap-6`}>
             <div className='flex flex-col gap-2'>
                 <p className='text-n4100 body-2-semi'>Measurements</p>
-                <p className='text-black body-1'>17 1/2x20 5/8 "</p>
+                <p className='text-black body-1'>{product.measurements}</p>
             </div>
 
             <div className='flex flex-col gap-4'>
@@ -26,19 +21,26 @@ const ProductOptions = () => {
                         />
                     </div>
 
-                    <p className='text-black body-1'>Black</p>
+                    <p className='text-black body-1 capitalize'>{selectedColor}</p>
                 </div>
 
-                <div className='w-full max-w-[334px] flex justify-between'>
-                    {PRODUCT_COLORS.map((colors, i) => (
-                        <img
-                            key={i}
-                            src={colors}
-                            alt=""
-                            className="h-[72px]"
-                        />
+                <ul className='w-full max-w-[334px] flex justify-between'>
+                    {product.colors?.map((color) => (
+                        <li
+                            key={color.color}
+                            onClick={() => setSelectedColor(color.color)}
+                            className={`
+                            size-[71px] border cursor-pointer
+                            ${selectedColor === color.color ? 'border-n7100' : 'border-transparent'}`}
+                        >
+                            <img
+                                src={color.image}
+                                alt=""
+                                className="size-full object-contain"
+                            />
+                        </li>
                     ))}
-                </div>
+                </ul>
             </div>
         </div>
     )

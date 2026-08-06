@@ -1,3 +1,4 @@
+import { useParams } from 'react-router-dom';
 import { useProduct } from '../product-context/ProductContext';
 import { useBreakpoint } from '@hooks';
 import { computeLayoutFlags } from '@utils';
@@ -6,14 +7,18 @@ import { ProductsCarouselSection } from '@ui';
 import { HOME_NEW_ARRIVALS } from '@data';
 
 const ProductLayout = () => {
+  const { id } = useParams();
+  const product = HOME_NEW_ARRIVALS.find(
+    product => product.id === Number(id)
+  );
+
   const { canShowRecommendations } = useProduct();
   const { isMobile } = useBreakpoint();
-
   const layoutFlags = computeLayoutFlags({ canShowRecommendations, isMobile });
 
   return (
     <>
-      <ProductLoop layout={layoutFlags} />
+      <ProductLoop layout={layoutFlags} product={product} />
 
       {layoutFlags.showTabsSection && (
         <section className="@container px-40 py-10">

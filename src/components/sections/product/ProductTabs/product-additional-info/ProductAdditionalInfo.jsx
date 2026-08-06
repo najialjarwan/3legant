@@ -1,19 +1,27 @@
-import { PRODUCT_ADDITONAL_INFO } from "@data";
+import { useParams } from 'react-router-dom';
+import { HOME_NEW_ARRIVALS } from '@data';
 
-const ProductAdditionalInfo = () => (
-    <div className="py-2 flex flex-col gap-4">
-        {PRODUCT_ADDITONAL_INFO.map((item, i) => (
-            <div key={i} className="flex flex-col gap-2">
-                <p className="text-n4100 caption-1-semi">
-                    {item.infoTitle}
-                </p>
+const ProductAdditionalInfo = () => {
+    const { id } = useParams();
+    const product = HOME_NEW_ARRIVALS.find(
+        product => product.id === Number(id)
+    );
 
-                <p className="text-n7100 caption-2 whitespace-pre-line">
-                    {item.infoText}
-                </p>
-            </div>
-        ))}
-    </div>
-)
+    return (
+        <div className="py-2 flex flex-col gap-4">
+            {product.additionalInfo.map((item, i) => (
+                <div key={i} className="flex flex-col gap-2">
+                    <p className="text-n4100 caption-1-semi">
+                        {item.label}
+                    </p>
+
+                    <p className="text-n7100 caption-2 whitespace-pre-line">
+                        {item.value}
+                    </p>
+                </div>
+            ))}
+        </div>
+    )
+}
 
 export default ProductAdditionalInfo;
