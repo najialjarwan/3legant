@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { ProductRating, Dropdown, ShowMoreBtn } from '@ui';
 import { REVIEWS_FILTER } from '@constants';
 import { REVIEWS_FILTER_ITEMS, USERS } from "@data";
-import { mergeReviewsWithUsers } from '@utils';
+import { mergeReviewsWithUsers, calculateTimeAgo } from '@utils';
 
 const ProductReviewList = ({ product }) => {
     const [reviewFilter, setReviewFilter] = useState(REVIEWS_FILTER.NEWEST);
@@ -26,7 +26,7 @@ const ProductReviewList = ({ product }) => {
                 {usersReview.slice(0, reviewCount).map((review) => (
                     <div
                         key={review.user.userName}
-                        className='pb-4 2xl:pb-6 border-b border-b-n3100'
+                        className='w-full pb-4 2xl:pb-6 border-b border-b-n3100'
                     >
                         <div className='flex flex-col gap-4'>
                             <div className='flex gap-4 2xl:gap-10'>
@@ -50,7 +50,7 @@ const ProductReviewList = ({ product }) => {
                             </p>
 
                             <div className='2xl:ml-[112px] flex gap-4'>
-                                <p className='text-n2 caption-2'>about 1 hours ago</p>
+                                <p className='text-n2 caption-2'>{calculateTimeAgo(review.datePosted)}</p>
 
                                 <button className='text-n2 caption-2-semi'>Like</button>
 
