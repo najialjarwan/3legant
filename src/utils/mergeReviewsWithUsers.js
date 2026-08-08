@@ -6,6 +6,7 @@ export const mergeReviewsWithUsers = (reviews, users) => {
             user,
             rating: review.rating,
             comment: review.comment,
+            datePosted: review.datePosted
         };
     });
 };
