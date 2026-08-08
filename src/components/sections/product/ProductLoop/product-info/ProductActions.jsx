@@ -1,28 +1,10 @@
-import { Icon, AddToCartBtn } from '@ui';
+import { Stepper, Icon, AddToCartBtn } from '@ui';
 
 const ProductActions = () => {
     return (
         <div className={`flex flex-col gap-4`}>
             <div className='flex items-center gap-2 2xl:gap-6'>
-                <div className='h-8 2xl:h-auto px-2 2xl:px-4 2xl:py-3 flex items-center bg-black-100'>
-                    <div className='2xl:h-7 flex items-center gap-[13px] 2xl:gap-6'>
-                        <Icon
-                            name="Minus"
-                            spanClassName='size-4 2xl:size-5'
-                            iconClassName='w-[10px] 2xl:w-[12px] text-black-900'
-                        />
-                        <span
-                            className='
-                            text-black-900 text-[12px] 2xl:text-[16px] leading-5 2xl:leading-6.5 font-inter font-semibold'>
-                            1
-                        </span>
-                        <Icon
-                            name="Add"
-                            spanClassName='size-4 2xl:size-5'
-                            iconClassName='w-[10px] 2xl:w-[13px] 2xl:h-[13px] text-black-900'
-                        />
-                    </div>
-                </div>
+                <Stepper variant="alt" />
 
                 <button
                     className='
