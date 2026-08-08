@@ -3,7 +3,7 @@ import { ProductTabBtn } from '@ui';
 const ProductTabsSection = ({ tabs, activeTab, onTabClick }) => {
     return (
         <>
-            <div className="flex flex-row gap-20">
+            <div className="flex flex-row gap-20 border-b border-b-n3100">
                 {tabs.map((tab) => (
                     <ProductTabBtn
                         key={tab.id}
