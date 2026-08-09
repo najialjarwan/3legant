@@ -1,11 +1,13 @@
+import { Link } from 'react-router-dom';
 import { Icon, Badges, AddToCartBtn, ProductRating } from '@ui';
 import { formatPrice, finalPrice } from '@utils';
 
 const ProductCardHorizontal = ({ product }) => {
-    const price = formatPrice(finalPrice(product.price, product.discountPercentage));
     return (
         <>
-            <div className="relative bg-n2100 w-full 2xl:w-[265px] h-[416px] 2xl:h-[349px]">
+            <Link
+                to={`/product/${product.id}`}
+                className="relative bg-n2100 w-full 2xl:w-[265px] h-[416px] 2xl:h-[349px]">
                 <img
                     src={product.image}
                     alt=""
@@ -16,13 +18,14 @@ const ProductCardHorizontal = ({ product }) => {
                     variant='medium'
                     discountPercentage={product.discountPercentage}
                     containerClass='left-4 top-4'
+                    isNew={product.isNew}
                 />
-            </div>
+            </Link>
 
             <div className="
                 w-full 2xl:w-[282px] p-0 2xl:p-6 
                 flex flex-col items-start gap-4 2xl:gap-6"
-                >
+            >
                 <div className='flex flex-col gap-2 2xl:gap-4'>
                     <ProductRating rating={product.rating} />
 
@@ -43,22 +46,25 @@ const ProductCardHorizontal = ({ product }) => {
 
                         <p className='flex items-center gap-3'>
                             <span className='text-n7100 caption-1-semi'>
-                                {price}
+                                {formatPrice(finalPrice(product.price, product.discountPercentage))}
                             </span>
 
-                            <span className=' 
-                                text-n4100 caption-1 line-through
-                                opacity-0
-                                group-hover:opacity-100
-                                transition-opacity duration-300 ease-out'
-                            >
-                                {formatPrice(product.price)}
-                            </span>
+                            {product.discountPercentage && (
+                                <span
+                                    className=' 
+                                    text-n4100 caption-1 line-through
+                                    opacity-0
+                                    group-hover:opacity-100
+                                    transition-opacity duration-300 ease-out
+                                    '
+                                >
+                                    {formatPrice(product.price)}
+                                </span>
+                            )}
                         </p>
 
                         <p className='w-full 2xl:w-[230px] text-n4100 caption-2 2xl:caption-1'>
-                            Super-soft cushion cover in off-white with a tactile pattern that 
-                            enhances the different tones in the pile and base.
+                            {product.description}
                         </p>
                     </div>
 
