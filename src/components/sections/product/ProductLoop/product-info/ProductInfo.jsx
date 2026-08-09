@@ -14,7 +14,7 @@ const ProductInfo = ({ layout, product }) => {
             w-full max-w-[508px] pt-4 2xl:pt-0
             flex flex-col ${layout.showTabsInline ? 'gap-4' : 'gap-6'}`}
         >
-            <Section divider={layout.divider}>
+            <Section divider>
                 <ProductSummary product={product} />
             </Section>
 
