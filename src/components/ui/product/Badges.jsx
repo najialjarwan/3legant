@@ -1,4 +1,9 @@
-const Badges = ({ variant = 'medium', discountPercentage = 0, containerClass = '' }) => {
+const Badges = ({
+    variant = 'medium',
+    discountPercentage,
+    containerClass = '',
+    isNew = false,
+}) => {
     const VARIANTS = {
         medium: {
             base: 'size-fit px-3.5 py-1 hairline-1',
@@ -21,25 +26,30 @@ const Badges = ({ variant = 'medium', discountPercentage = 0, containerClass = '
             absolute flex flex-col gap-2 2xl:gap-2.25
             ${containerClass}`}
         >
-            <div
-                className={`
-                flex items-center justify-center 
-                bg-white rounded-sm 
-                ${VARIANTS[variant].base}
-                ${VARIANTS[variant].new}`}
-            >
-                <span>NEW</span>
-            </div>
+            {isNew && (
+                <div
+                    className={`
+                    flex items-center justify-center 
+                    bg-white rounded-sm 
+                    ${VARIANTS[variant].base}
+                    ${VARIANTS[variant].new}
+                    `}
+                >
+                    <span>NEW</span>
+                </div>
+            )}
 
-            <div
-                className={`
-                flex items-center justify-center 
-                bg-green rounded-sm
-                ${VARIANTS[variant].base}
-                ${VARIANTS[variant].percent}`}
-            >
-                <span>-50%</span>
-            </div>
+            {discountPercentage && (
+                <div
+                    className={`
+                    flex items-center justify-center 
+                    bg-green rounded-sm
+                    ${VARIANTS[variant].base}
+                    ${VARIANTS[variant].percent}`}
+                >
+                    <span>-{discountPercentage}%</span>
+                </div>
+            )}
         </div>
     );
 }
