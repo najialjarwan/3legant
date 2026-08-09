@@ -12,6 +12,8 @@ const ProductLayout = () => {
     product => product.id === Number(id)
   );
 
+  const recommendedProducts = PRODUCTS.filter(a => a.isRecommended && a.id !== Number(id));
+
   const { canShowRecommendations } = useProduct();
   const { isMobile } = useBreakpoint();
   const layoutFlags = computeLayoutFlags({ canShowRecommendations, isMobile });
@@ -46,7 +48,7 @@ const ProductLayout = () => {
           titleVariant="alt"
           sectionVariant="alt"
           navMode="scrollbar"
-          products={PRODUCTS}
+          products={recommendedProducts}
           isMobile={isMobile}
         />
       )}
