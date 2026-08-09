@@ -4,6 +4,7 @@ import { PRODUCTS } from '@data';
 
 const NewArrivals = () => {
     const { isMobile } = useBreakpoint();
+    const newProducts = PRODUCTS.filter(a => a.isNew);
 
     return (
         <ProductsCarouselSection
@@ -11,7 +12,7 @@ const NewArrivals = () => {
             titleVariant="default"
             sectionVariant="default"
             navMode="scrollbar"
-            products={PRODUCTS}
+            products={newProducts}
             isMobile={isMobile}
         />
     );
