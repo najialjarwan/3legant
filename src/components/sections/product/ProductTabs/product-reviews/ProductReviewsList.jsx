@@ -2,12 +2,14 @@ import { useState } from 'react';
 import { ProductRating, Dropdown, ShowMoreBtn } from '@ui';
 import { REVIEWS_FILTER } from '@constants';
 import { REVIEWS_FILTER_ITEMS, USERS } from "@data";
-import { mergeReviewsWithUsers, calculateTimeAgo } from '@utils';
+import { mergeReviewsWithUsers, sortReviews, calculateTimeAgo } from '@utils';
 
 const ProductReviewList = ({ product }) => {
     const [reviewFilter, setReviewFilter] = useState(REVIEWS_FILTER.NEWEST);
     const [reviewCount, setReviewCount] = useState(5);
+
     const usersReview = mergeReviewsWithUsers(product.reviews, USERS);
+    const usersReviewSorted = sortReviews(usersReview, reviewFilter);
 
     return (
         <div className='w-full flex flex-col gap-10'>
@@ -23,7 +25,7 @@ const ProductReviewList = ({ product }) => {
             </div>
 
             <div className='w-full flex flex-col items-center gap-6'>
-                {usersReview.slice(0, reviewCount).map((review) => (
+                {usersReviewSorted.slice(0, reviewCount).map((review) => (
                     <div
                         key={review.user.userName}
                         className='w-full pb-4 2xl:pb-6 border-b border-b-n3100'
@@ -62,7 +64,7 @@ const ProductReviewList = ({ product }) => {
 
                 <ShowMoreBtn
                     onClick={() => setReviewCount((prev) => prev + 5)}
-                    disabled={reviewCount === USERS.length}
+                    disabled={reviewCount >= usersReviewSorted.length}
                     label="load more"
                 />
             </div>
