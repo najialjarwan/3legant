@@ -22,7 +22,6 @@ const ProductsCarousel = ({ products, navMode, }) => {
                             flex flex-col gap-3 group"
                         >
                             <ProductCard
-                                directTo={`/product/${product.id}`}
                                 product={product}
                                 variant='md'
                             />
