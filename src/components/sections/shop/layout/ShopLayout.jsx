@@ -36,8 +36,7 @@ export const ShopLayout = () => {
             return true;
         }
 
-        const discountedPrice =
-            product.price * (product.discountPercentage / 100);
+        const discountedPrice = finalPrice(product.price, product.discountPercentage);
 
         return selectedRanges.some(range =>
             discountedPrice >= range.min &&
