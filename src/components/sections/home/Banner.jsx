@@ -13,7 +13,7 @@ const Banner = () => {
                 relative
                 w-full 2xl:w-1/2 h-1/2 2xl:h-full overflow-hidden'>
                 <img
-                    src="src/assets/images/banner image.png"
+                    src="/images/banner/banner.png"
                     alt="banner image"
                     className='
                     absolute -bottom-[26px] 2xl:-bottom-[40px]

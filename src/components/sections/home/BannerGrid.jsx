@@ -4,17 +4,17 @@ import { MoreActionBtn } from '@ui';
 
 const BANNER_ITEMS = [
     {
-        image: 'src/assets/images/product image 4.png',
+        image: '/images/products/luxury-sofa/luxury sofa gray.png',
         category: SHOP_CATEGORIES_ITEMS.LIVING_ROOM,
         variant: 'tall',
     },
     {
-        image: 'src/assets/images/product image 5.png',
+        image: '/images/products/squared-drawer-unit/squared drawer unit.png',
         category: SHOP_CATEGORIES_ITEMS.BEDROOM,
         variant: 'rightFloat',
     },
     {
-        image: 'src/assets/images/product image 6.png',
+        image: '/images/products/toasted/toasted gray.png',
         category: SHOP_CATEGORIES_ITEMS.KITCHEN,
         variant: 'leftFloat',
     },
