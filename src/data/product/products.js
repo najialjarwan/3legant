@@ -27,31 +27,31 @@ export const PRODUCTS = [
             }
 
         ],
-        image: '/products-images/tray-table/tray table black.png',
+        image: '/images/products/tray-table/tray table black.png',
         gallery: [
-            "/products-images/tray-table/tray table black.png",
-            "/products-images/tray-table/tray table black 2.png",
-            "/products-images/tray-table/tray table black 3.png",
-            "/products-images/tray-table/tray table black 4.png",
-            "/products-images/tray-table/tray table black 5.png",
-            "/products-images/tray-table/tray table black 6.png",
+            "/images/products/tray-table/tray table black.png",
+            "/images/products/tray-table/tray table black 2.png",
+            "/images/products/tray-table/tray table black 3.png",
+            "/images/products/tray-table/tray table black 4.png",
+            "/images/products/tray-table/tray table black 5.png",
+            "/images/products/tray-table/tray table black 6.png",
         ],
         colors: [
             {
                 color: 'black',
-                image: '/products-images/tray-table/tray table black.png'
+                image: '/images/products/tray-table/tray table black.png'
             },
             {
                 color: 'brown',
-                image: '/products-images/tray-table/tray table brown.png'
+                image: '/images/products/tray-table/tray table brown.png'
             },
             {
                 color: 'red',
-                image: '/products-images/tray-table/tray table red.png'
+                image: '/images/products/tray-table/tray table red.png'
             },
             {
                 color: 'white',
-                image: '/products-images/tray-table/tray table white.png'
+                image: '/images/products/tray-table/tray table white.png'
             }
         ],
         reviews: [
@@ -148,31 +148,31 @@ export const PRODUCTS = [
             }
 
         ],
-        image: '/products-images/loveseat-sofa/loveseat sofa gray.png',
+        image: '/images/products/loveseat-sofa/loveseat sofa gray.png',
         gallery: [
-            '/products-images/loveseat-sofa/loveseat sofa gray.png',
-            '/products-images/loveseat-sofa/loveseat sofa gray.png',
-            '/products-images/loveseat-sofa/loveseat sofa gray.png',
-            '/products-images/loveseat-sofa/loveseat sofa gray.png',
-            '/products-images/loveseat-sofa/loveseat sofa gray.png',
-            '/products-images/loveseat-sofa/loveseat sofa gray.png',
+            '/images/products/loveseat-sofa/loveseat sofa gray.png',
+            '/images/products/loveseat-sofa/loveseat sofa gray.png',
+            '/images/products/loveseat-sofa/loveseat sofa gray.png',
+            '/images/products/loveseat-sofa/loveseat sofa gray.png',
+            '/images/products/loveseat-sofa/loveseat sofa gray.png',
+            '/images/products/loveseat-sofa/loveseat sofa gray.png',
         ],
         colors: [
             {
                 color: 'black',
-                image: '/products-images/loveseat-sofa/loveseat sofa gray.png',
+                image: '/images/products/loveseat-sofa/loveseat sofa gray.png',
             },
             {
                 color: 'brown',
-                image: '/products-images/loveseat-sofa/loveseat sofa gray.png',
+                image: '/images/products/loveseat-sofa/loveseat sofa gray.png',
             },
             {
                 color: 'red',
-                image: '/products-images/loveseat-sofa/loveseat sofa gray.png',
+                image: '/images/products/loveseat-sofa/loveseat sofa gray.png',
             },
             {
                 color: 'white',
-                image: '/products-images/loveseat-sofa/loveseat sofa gray.png',
+                image: '/images/products/loveseat-sofa/loveseat sofa gray.png',
             }
         ],
         reviews: [
@@ -272,31 +272,31 @@ export const PRODUCTS = [
             }
 
         ],
-        image: '/products-images/table-lamp/table lamp gold.png',
+        image: '/images/products/table-lamp/table lamp gold.png',
         gallery: [
-            '/products-images/table-lamp/table lamp gold.png',
-            '/products-images/table-lamp/table lamp gold.png',
-            '/products-images/table-lamp/table lamp gold.png',
-            '/products-images/table-lamp/table lamp gold.png',
-            '/products-images/table-lamp/table lamp gold.png',
-            '/products-images/table-lamp/table lamp gold.png',
+            '/images/products/table-lamp/table lamp gold.png',
+            '/images/products/table-lamp/table lamp gold.png',
+            '/images/products/table-lamp/table lamp gold.png',
+            '/images/products/table-lamp/table lamp gold.png',
+            '/images/products/table-lamp/table lamp gold.png',
+            '/images/products/table-lamp/table lamp gold.png',
         ],
         colors: [
             {
                 color: 'black',
-                image: '/products-images/table-lamp/table lamp gold.png',
+                image: '/images/products/table-lamp/table lamp gold.png',
             },
             {
                 color: 'brown',
-                image: '/products-images/table-lamp/table lamp gold.png',
+                image: '/images/products/table-lamp/table lamp gold.png',
             },
             {
                 color: 'red',
-                image: '/products-images/table-lamp/table lamp gold.png',
+                image: '/images/products/table-lamp/table lamp gold.png',
             },
             {
                 color: 'white',
-                image: '/products-images/table-lamp/table lamp gold.png',
+                image: '/images/products/table-lamp/table lamp gold.png',
             }
         ],
         reviews: [
@@ -395,31 +395,31 @@ export const PRODUCTS = [
             }
 
         ],
-        image: '/products-images/beige-table-lamp/beige table lamp beige.png',
+        image: '/images/products/beige-table-lamp/beige table lamp beige.png',
         gallery: [
-            '/products-images/beige-table-lamp/beige table lamp beige.png',
-            '/products-images/beige-table-lamp/beige table lamp beige.png',
-            '/products-images/beige-table-lamp/beige table lamp beige.png',
-            '/products-images/beige-table-lamp/beige table lamp beige.png',
-            '/products-images/beige-table-lamp/beige table lamp beige.png',
-            '/products-images/beige-table-lamp/beige table lamp beige.png',
+            '/images/products/beige-table-lamp/beige table lamp beige.png',
+            '/images/products/beige-table-lamp/beige table lamp beige.png',
+            '/images/products/beige-table-lamp/beige table lamp beige.png',
+            '/images/products/beige-table-lamp/beige table lamp beige.png',
+            '/images/products/beige-table-lamp/beige table lamp beige.png',
+            '/images/products/beige-table-lamp/beige table lamp beige.png',
         ],
         colors: [
             {
                 color: 'black',
-                image: '/products-images/beige-table-lamp/beige table lamp beige.png',
+                image: '/images/products/beige-table-lamp/beige table lamp beige.png',
             },
             {
                 color: 'brown',
-                image: '/products-images/beige-table-lamp/beige table lamp beige.png',
+                image: '/images/products/beige-table-lamp/beige table lamp beige.png',
             },
             {
                 color: 'red',
-                image: '/products-images/beige-table-lamp/beige table lamp beige.png',
+                image: '/images/products/beige-table-lamp/beige table lamp beige.png',
             },
             {
                 color: 'white',
-                image: '/products-images/beige-table-lamp/beige table lamp beige.png',
+                image: '/images/products/beige-table-lamp/beige table lamp beige.png',
             }
         ],
         reviews: [
@@ -517,31 +517,31 @@ export const PRODUCTS = [
             }
 
         ],
-        image: '/products-images/bamboo-basket/bamboo basket yellow.png',
+        image: '/images/products/bamboo-basket/bamboo basket yellow.png',
         gallery: [
-            '/products-images/bamboo-basket/bamboo basket yellow.png',
-            '/products-images/bamboo-basket/bamboo basket yellow.png',
-            '/products-images/bamboo-basket/bamboo basket yellow.png',
-            '/products-images/bamboo-basket/bamboo basket yellow.png',
-            '/products-images/bamboo-basket/bamboo basket yellow.png',
-            '/products-images/bamboo-basket/bamboo basket yellow.png',
+            '/images/products/bamboo-basket/bamboo basket yellow.png',
+            '/images/products/bamboo-basket/bamboo basket yellow.png',
+            '/images/products/bamboo-basket/bamboo basket yellow.png',
+            '/images/products/bamboo-basket/bamboo basket yellow.png',
+            '/images/products/bamboo-basket/bamboo basket yellow.png',
+            '/images/products/bamboo-basket/bamboo basket yellow.png',
         ],
         colors: [
             {
                 color: 'black',
-                image: '/products-images/bamboo-basket/bamboo basket yellow.png',
+                image: '/images/products/bamboo-basket/bamboo basket yellow.png',
             },
             {
                 color: 'brown',
-                image: '/products-images/bamboo-basket/bamboo basket yellow.png',
+                image: '/images/products/bamboo-basket/bamboo basket yellow.png',
             },
             {
                 color: 'red',
-                image: '/products-images/bamboo-basket/bamboo basket yellow.png',
+                image: '/images/products/bamboo-basket/bamboo basket yellow.png',
             },
             {
                 color: 'white',
-                image: '/products-images/bamboo-basket/bamboo basket yellow.png',
+                image: '/images/products/bamboo-basket/bamboo basket yellow.png',
             }
         ],
         reviews: [
@@ -639,31 +639,31 @@ export const PRODUCTS = [
             }
 
         ],
-        image: '/products-images/toasted/toasted gray.png',
+        image: '/images/products/toasted/toasted gray.png',
         gallery: [
-            '/products-images/toasted/toasted gray.png',
-            '/products-images/toasted/toasted gray.png',
-            '/products-images/toasted/toasted gray.png',
-            '/products-images/toasted/toasted gray.png',
-            '/products-images/toasted/toasted gray.png',
-            '/products-images/toasted/toasted gray.png',
+            '/images/products/toasted/toasted gray.png',
+            '/images/products/toasted/toasted gray.png',
+            '/images/products/toasted/toasted gray.png',
+            '/images/products/toasted/toasted gray.png',
+            '/images/products/toasted/toasted gray.png',
+            '/images/products/toasted/toasted gray.png',
         ],
         colors: [
             {
                 color: 'black',
-                image: '/products-images/toasted/toasted gray.png',
+                image: '/images/products/toasted/toasted gray.png',
             },
             {
                 color: 'brown',
-                image: '/products-images/toasted/toasted gray.png',
+                image: '/images/products/toasted/toasted gray.png',
             },
             {
                 color: 'red',
-                image: '/products-images/toasted/toasted gray.png',
+                image: '/images/products/toasted/toasted gray.png',
             },
             {
                 color: 'white',
-                image: '/products-images/toasted/toasted gray.png',
+                image: '/images/products/toasted/toasted gray.png',
             }
         ],
         reviews: [
@@ -760,31 +760,31 @@ export const PRODUCTS = [
             }
 
         ],
-        image: '/products-images/luxury-sofa/luxury sofa gray.png',
+        image: '/images/products/luxury-sofa/luxury sofa gray.png',
         gallery: [
-            '/products-images/luxury-sofa/luxury sofa gray.png',
-            '/products-images/luxury-sofa/luxury sofa gray.png',
-            '/products-images/luxury-sofa/luxury sofa gray.png',
-            '/products-images/luxury-sofa/luxury sofa gray.png',
-            '/products-images/luxury-sofa/luxury sofa gray.png',
-            '/products-images/luxury-sofa/luxury sofa gray.png',
+            '/images/products/luxury-sofa/luxury sofa gray.png',
+            '/images/products/luxury-sofa/luxury sofa gray.png',
+            '/images/products/luxury-sofa/luxury sofa gray.png',
+            '/images/products/luxury-sofa/luxury sofa gray.png',
+            '/images/products/luxury-sofa/luxury sofa gray.png',
+            '/images/products/luxury-sofa/luxury sofa gray.png',
         ],
         colors: [
             {
                 color: 'black',
-                image: '/products-images/luxury-sofa/luxury sofa gray.png',
+                image: '/images/products/luxury-sofa/luxury sofa gray.png',
             },
             {
                 color: 'brown',
-                image: '/products-images/luxury-sofa/luxury sofa gray.png',
+                image: '/images/products/luxury-sofa/luxury sofa gray.png',
             },
             {
                 color: 'red',
-                image: '/products-images/luxury-sofa/luxury sofa gray.png',
+                image: '/images/products/luxury-sofa/luxury sofa gray.png',
             },
             {
                 color: 'white',
-                image: '/products-images/luxury-sofa/luxury sofa gray.png',
+                image: '/images/products/luxury-sofa/luxury sofa gray.png',
             }
         ],
         reviews: [
@@ -883,31 +883,31 @@ export const PRODUCTS = [
             }
 
         ],
-        image: '/products-images/light-beige-pillow/light beige pillow.png',
+        image: '/images/products/light-beige-pillow/light beige pillow.png',
         gallery: [
-            '/products-images/light-beige-pillow/light beige pillow.png',
-            '/products-images/light-beige-pillow/light beige pillow.png',
-            '/products-images/light-beige-pillow/light beige pillow.png',
-            '/products-images/light-beige-pillow/light beige pillow.png',
-            '/products-images/light-beige-pillow/light beige pillow.png',
-            '/products-images/light-beige-pillow/light beige pillow.png',
+            '/images/products/light-beige-pillow/light beige pillow.png',
+            '/images/products/light-beige-pillow/light beige pillow.png',
+            '/images/products/light-beige-pillow/light beige pillow.png',
+            '/images/products/light-beige-pillow/light beige pillow.png',
+            '/images/products/light-beige-pillow/light beige pillow.png',
+            '/images/products/light-beige-pillow/light beige pillow.png',
         ],
         colors: [
             {
                 color: 'black',
-                image: '/products-images/light-beige-pillow/light beige pillow.png',
+                image: '/images/products/light-beige-pillow/light beige pillow.png',
             },
             {
                 color: 'brown',
-                image: '/products-images/light-beige-pillow/light beige pillow.png',
+                image: '/images/products/light-beige-pillow/light beige pillow.png',
             },
             {
                 color: 'red',
-                image: '/products-images/light-beige-pillow/light beige pillow.png',
+                image: '/images/products/light-beige-pillow/light beige pillow.png',
             },
             {
                 color: 'white',
-                image: '/products-images/light-beige-pillow/light beige pillow.png',
+                image: '/images/products/light-beige-pillow/light beige pillow.png',
             }
         ],
         reviews: [
@@ -1005,31 +1005,31 @@ export const PRODUCTS = [
             }
 
         ],
-        image: '/products-images/white-drawer-unit/white drawer unit.png',
+        image: '/images/products/white-drawer-unit/white drawer unit.png',
         gallery: [
-            '/products-images/white-drawer-unit/white drawer unit.png',
-            '/products-images/white-drawer-unit/white drawer unit.png',
-            '/products-images/white-drawer-unit/white drawer unit.png',
-            '/products-images/white-drawer-unit/white drawer unit.png',
-            '/products-images/white-drawer-unit/white drawer unit.png',
-            '/products-images/white-drawer-unit/white drawer unit.png',
+            '/images/products/white-drawer-unit/white drawer unit.png',
+            '/images/products/white-drawer-unit/white drawer unit.png',
+            '/images/products/white-drawer-unit/white drawer unit.png',
+            '/images/products/white-drawer-unit/white drawer unit.png',
+            '/images/products/white-drawer-unit/white drawer unit.png',
+            '/images/products/white-drawer-unit/white drawer unit.png',
         ],
         colors: [
             {
                 color: 'black',
-                image: '/products-images/white-drawer-unit/white drawer unit.png',
+                image: '/images/products/white-drawer-unit/white drawer unit.png',
             },
             {
                 color: 'brown',
-                image: '/products-images/white-drawer-unit/white drawer unit.png',
+                image: '/images/products/white-drawer-unit/white drawer unit.png',
             },
             {
                 color: 'red',
-                image: '/products-images/white-drawer-unit/white drawer unit.png',
+                image: '/images/products/white-drawer-unit/white drawer unit.png',
             },
             {
                 color: 'white',
-                image: '/products-images/white-drawer-unit/white drawer unit.png',
+                image: '/images/products/white-drawer-unit/white drawer unit.png',
             }
         ],
         reviews: [
