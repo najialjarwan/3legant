@@ -16,7 +16,7 @@ const Newsletter = () => {
                 hidden 2xl:block
                 size-[640px]'>
                 <img
-                    src="src/assets/images/product image 5.png"
+                    src="/images/products/squared-drawer-unit/squared drawer unit.png"
                     alt=""
                     className='size-full object-cover'
                 />
@@ -31,7 +31,7 @@ const Newsletter = () => {
                 '
             >
                 <img
-                    src="src/assets/images/image.png"
+                    src="/images/products/polished-sofa/polished sofa.png"
                     alt=""
                     className='size-full object-cover'
                 />
