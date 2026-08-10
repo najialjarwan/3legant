@@ -8,7 +8,7 @@ const ShopPage = () => {
                 title="shop page"
                 openedPage="Shop"
                 pageDescription="Let’s design the place you always imagined."
-                bgImg="src/assets/images/shop-hero-image.png"
+                bgImg="/images/heros/shop-hero.png"
             />
             <ShopLayout />
         </>

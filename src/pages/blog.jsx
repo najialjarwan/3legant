@@ -8,7 +8,7 @@ const BlogPage = () => {
                 title="our blog"
                 openedPage="Blog"
                 pageDescription="Home ideas and design inspiration"
-                bgImg="src/assets/images/blog-hero-image.png"
+                bgImg="/images/heros/blog-hero.png"
             />
 
             <BlogContent />
