@@ -7,7 +7,7 @@ const PageHeader = ({ title, openedPage, pageDescription, bgImg }) => {
                 className='
                 w-full h-[308px] 2xl:h-[392px]
                 flex flex-col items-center justify-center gap-4 2xl:gap-6
-                bg-[url("src/assets/images/shop-hero-image.png")] bg-cover bg-center'
+                bg-cover bg-center'
                 style={{ backgroundImage: `url(${bgImg})` }}
             >
                 <Breadcrumbs items={[
