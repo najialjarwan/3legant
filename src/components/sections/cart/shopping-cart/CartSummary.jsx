@@ -9,11 +9,17 @@ const SHIPPING_OPTIONS = [
     { label: 'Pick Up', type: '%', value: 21 }
 ];
 
-const { subTotal, total } = calculateCartTotals(CART_PRODUCTS);
-
-
 const CartSummary = ({ setStep }) => {
     const [selectedShipping, setSelectedShipping] = useState(SHIPPING_OPTIONS[0]);
+    const { subTotal, total } = calculateCartTotals(CART_PRODUCTS);
+    const shippingCost =
+        selectedShipping.type === '$'
+            ? selectedShipping.value
+            : selectedShipping.type === '+$'
+                ? selectedShipping.value
+                : -(total * selectedShipping.value) / 100;
+
+    const finalTotal = total + shippingCost;
 
     return (
         <section
@@ -55,12 +61,7 @@ const CartSummary = ({ setStep }) => {
                         <div className="w-full flex justify-between text-n7100 caption-1-semi 2xl:body-2">
                             <p>{option.label}</p>
                             <p>
-                                {option.value !== 21 && (
-                                    <>{option.type}{option.value.toFixed(2)}</>
-                                )}
-                                {option.value === 21 && (
-                                    <>{option.value}{option.type}</>
-                                )}
+                                <>{option.type}{option.value.toFixed(2)}</>
                             </p>
                         </div>
                     </li>
@@ -75,7 +76,7 @@ const CartSummary = ({ setStep }) => {
 
                 <div className="w-full py-3.25 flex justify-between body-2-bold 2xl:body-1-semi">
                     <span>Total</span>
-                    <span>{formatPrice(total)}</span>
+                    <span>{formatPrice(finalTotal)}</span>
                 </div>
             </div>
 
