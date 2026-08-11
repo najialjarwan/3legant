@@ -1,7 +1,7 @@
 import { SHOP_CATEGORIES_ITEMS } from '@constants';
 
-export const PRODUCTS = [
-    {
+export const PRODUCTS = {
+    TRAY_TABLE: {
         id: 1,
         label: 'tray table',
         discountPercentage: 50,
@@ -36,24 +36,24 @@ export const PRODUCTS = [
             "/images/products/tray-table/tray table black 5.png",
             "/images/products/tray-table/tray table black 6.png",
         ],
-        colors: [
-            {
+        variants: {
+            BLACK: {
                 color: 'black',
                 image: '/images/products/tray-table/tray table black.png'
             },
-            {
+            BROWN: {
                 color: 'brown',
                 image: '/images/products/tray-table/tray table brown.png'
             },
-            {
+            RED: {
                 color: 'red',
                 image: '/images/products/tray-table/tray table red.png'
             },
-            {
+            WHITE: {
                 color: 'white',
                 image: '/images/products/tray-table/tray table white.png'
             }
-        ],
+        },
         reviews: [
             {
                 userName: 'Sofia Havertz',
@@ -123,7 +123,7 @@ export const PRODUCTS = [
             },
         ],
     },
-    {
+    LOVESEAT_SOFA: {
         id: 2,
         label: 'loveseat sofa',
         discountPercentage: 50,
@@ -157,24 +157,24 @@ export const PRODUCTS = [
             '/images/products/loveseat-sofa/loveseat sofa gray.png',
             '/images/products/loveseat-sofa/loveseat sofa gray.png',
         ],
-        colors: [
-            {
+        variants: {
+            BLACK: {
                 color: 'black',
-                image: '/images/products/loveseat-sofa/loveseat sofa gray.png',
+                image: '/images/products/tray-table/tray table black.png'
             },
-            {
+            BROWN: {
                 color: 'brown',
-                image: '/images/products/loveseat-sofa/loveseat sofa gray.png',
+                image: '/images/products/tray-table/tray table brown.png'
             },
-            {
+            RED: {
                 color: 'red',
-                image: '/images/products/loveseat-sofa/loveseat sofa gray.png',
+                image: '/images/products/tray-table/tray table red.png'
             },
-            {
+            WHITE: {
                 color: 'white',
-                image: '/images/products/loveseat-sofa/loveseat sofa gray.png',
+                image: '/images/products/tray-table/tray table white.png'
             }
-        ],
+        },
         reviews: [
             {
                 userName: 'Sofia Havertz',
@@ -246,7 +246,7 @@ export const PRODUCTS = [
         isRecommended: true,
         isNew: true,
     },
-    {
+    TABLE_LAMP: {
         id: 3,
         label: 'table lamp',
         discountPercentage: 25,
@@ -281,24 +281,12 @@ export const PRODUCTS = [
             '/images/products/table-lamp/table lamp gold.png',
             '/images/products/table-lamp/table lamp gold.png',
         ],
-        colors: [
-            {
-                color: 'black',
+        variants: {
+            GOLD: {
+                color: 'gold',
                 image: '/images/products/table-lamp/table lamp gold.png',
             },
-            {
-                color: 'brown',
-                image: '/images/products/table-lamp/table lamp gold.png',
-            },
-            {
-                color: 'red',
-                image: '/images/products/table-lamp/table lamp gold.png',
-            },
-            {
-                color: 'white',
-                image: '/images/products/table-lamp/table lamp gold.png',
-            }
-        ],
+        },
         reviews: [
             {
                 userName: 'Sofia Havertz',
@@ -370,7 +358,7 @@ export const PRODUCTS = [
         isRecommended: true,
         isNew: true,
     },
-    {
+    BEIGE_TABLE_LAMP: {
         id: 4,
         label: 'beige table lamp',
         discountPercentage: 10,
@@ -404,24 +392,24 @@ export const PRODUCTS = [
             '/images/products/beige-table-lamp/beige table lamp beige.png',
             '/images/products/beige-table-lamp/beige table lamp beige.png',
         ],
-        colors: [
-            {
+        variants: {
+            BLACK: {
                 color: 'black',
-                image: '/images/products/beige-table-lamp/beige table lamp beige.png',
+                image: '/images/products/tray-table/tray table black.png'
             },
-            {
+            BROWN: {
                 color: 'brown',
-                image: '/images/products/beige-table-lamp/beige table lamp beige.png',
+                image: '/images/products/tray-table/tray table brown.png'
             },
-            {
+            RED: {
                 color: 'red',
-                image: '/images/products/beige-table-lamp/beige table lamp beige.png',
+                image: '/images/products/tray-table/tray table red.png'
             },
-            {
+            WHITE: {
                 color: 'white',
-                image: '/images/products/beige-table-lamp/beige table lamp beige.png',
+                image: '/images/products/tray-table/tray table white.png'
             }
-        ],
+        },
         reviews: [
             {
                 userName: 'Sofia Havertz',
@@ -492,7 +480,7 @@ export const PRODUCTS = [
         ],
         isNew: true,
     },
-    {
+    BAMBOO_BASKET: {
         id: 5,
         label: 'bamboo basket',
         price: 500,
@@ -526,24 +514,24 @@ export const PRODUCTS = [
             '/images/products/bamboo-basket/bamboo basket yellow.png',
             '/images/products/bamboo-basket/bamboo basket yellow.png',
         ],
-        colors: [
-            {
+        variants: {
+            BLACK: {
                 color: 'black',
-                image: '/images/products/bamboo-basket/bamboo basket yellow.png',
+                image: '/images/products/tray-table/tray table black.png'
             },
-            {
+            BROWN: {
                 color: 'brown',
-                image: '/images/products/bamboo-basket/bamboo basket yellow.png',
+                image: '/images/products/tray-table/tray table brown.png'
             },
-            {
+            RED: {
                 color: 'red',
-                image: '/images/products/bamboo-basket/bamboo basket yellow.png',
+                image: '/images/products/tray-table/tray table red.png'
             },
-            {
+            WHITE: {
                 color: 'white',
-                image: '/images/products/bamboo-basket/bamboo basket yellow.png',
+                image: '/images/products/tray-table/tray table white.png'
             }
-        ],
+        },
         reviews: [
             {
                 userName: 'Sofia Havertz',
@@ -615,7 +603,7 @@ export const PRODUCTS = [
         isRecommended: true,
         isNew: true,
     },
-    {
+    TOASTED: {
         id: 6,
         label: 'toasted',
         price: 300,
@@ -648,24 +636,24 @@ export const PRODUCTS = [
             '/images/products/toasted/toasted gray.png',
             '/images/products/toasted/toasted gray.png',
         ],
-        colors: [
-            {
+        variants: {
+            BLACK: {
                 color: 'black',
-                image: '/images/products/toasted/toasted gray.png',
+                image: '/images/products/tray-table/tray table black.png'
             },
-            {
+            BROWN: {
                 color: 'brown',
-                image: '/images/products/toasted/toasted gray.png',
+                image: '/images/products/tray-table/tray table brown.png'
             },
-            {
+            RED: {
                 color: 'red',
-                image: '/images/products/toasted/toasted gray.png',
+                image: '/images/products/tray-table/tray table red.png'
             },
-            {
+            WHITE: {
                 color: 'white',
-                image: '/images/products/toasted/toasted gray.png',
+                image: '/images/products/tray-table/tray table white.png'
             }
-        ],
+        },
         reviews: [
             {
                 userName: 'Sofia Havertz',
@@ -736,7 +724,7 @@ export const PRODUCTS = [
         ],
         isNew: true,
     },
-    {
+    LUXURY_SOFA: {
         id: 7,
         label: 'luxury sofa',
         price: 200,
@@ -769,24 +757,24 @@ export const PRODUCTS = [
             '/images/products/luxury-sofa/luxury sofa gray.png',
             '/images/products/luxury-sofa/luxury sofa gray.png',
         ],
-        colors: [
-            {
+        variants: {
+            BLACK: {
                 color: 'black',
-                image: '/images/products/luxury-sofa/luxury sofa gray.png',
+                image: '/images/products/tray-table/tray table black.png'
             },
-            {
+            BROWN: {
                 color: 'brown',
-                image: '/images/products/luxury-sofa/luxury sofa gray.png',
+                image: '/images/products/tray-table/tray table brown.png'
             },
-            {
+            RED: {
                 color: 'red',
-                image: '/images/products/luxury-sofa/luxury sofa gray.png',
+                image: '/images/products/tray-table/tray table red.png'
             },
-            {
+            WHITE: {
                 color: 'white',
-                image: '/images/products/luxury-sofa/luxury sofa gray.png',
+                image: '/images/products/tray-table/tray table white.png'
             }
-        ],
+        },
         reviews: [
             {
                 userName: 'Sofia Havertz',
@@ -858,7 +846,7 @@ export const PRODUCTS = [
         isRecommended: true,
         isNew: true,
     },
-    {
+    LIGHT_BEIGE_PILLOW: {
         id: 8,
         label: 'light beige pillow',
         discountPercentage: 50,
@@ -892,24 +880,24 @@ export const PRODUCTS = [
             '/images/products/light-beige-pillow/light beige pillow.png',
             '/images/products/light-beige-pillow/light beige pillow.png',
         ],
-        colors: [
-            {
+        variants: {
+            BLACK: {
                 color: 'black',
-                image: '/images/products/light-beige-pillow/light beige pillow.png',
+                image: '/images/products/tray-table/tray table black.png'
             },
-            {
+            BROWN: {
                 color: 'brown',
-                image: '/images/products/light-beige-pillow/light beige pillow.png',
+                image: '/images/products/tray-table/tray table brown.png'
             },
-            {
+            RED: {
                 color: 'red',
-                image: '/images/products/light-beige-pillow/light beige pillow.png',
+                image: '/images/products/tray-table/tray table red.png'
             },
-            {
+            WHITE: {
                 color: 'white',
-                image: '/images/products/light-beige-pillow/light beige pillow.png',
+                image: '/images/products/tray-table/tray table white.png'
             }
-        ],
+        },
         reviews: [
             {
                 userName: 'Sofia Havertz',
@@ -980,7 +968,7 @@ export const PRODUCTS = [
         ],
         isRecommended: true,
     },
-    {
+    LIGHT_DRAWER_UNIT: {
         id: 9,
         label: 'white drawer unit',
         discountPercentage: 50,
@@ -1014,24 +1002,24 @@ export const PRODUCTS = [
             '/images/products/white-drawer-unit/white drawer unit.png',
             '/images/products/white-drawer-unit/white drawer unit.png',
         ],
-        colors: [
-            {
+        variants: {
+            BLACK: {
                 color: 'black',
-                image: '/images/products/white-drawer-unit/white drawer unit.png',
+                image: '/images/products/tray-table/tray table black.png'
             },
-            {
+            BROWN: {
                 color: 'brown',
-                image: '/images/products/white-drawer-unit/white drawer unit.png',
+                image: '/images/products/tray-table/tray table brown.png'
             },
-            {
+            RED: {
                 color: 'red',
-                image: '/images/products/white-drawer-unit/white drawer unit.png',
+                image: '/images/products/tray-table/tray table red.png'
             },
-            {
+            WHITE: {
                 color: 'white',
-                image: '/images/products/white-drawer-unit/white drawer unit.png',
+                image: '/images/products/tray-table/tray table white.png'
             }
-        ],
+        },
         reviews: [
             {
                 userName: 'Sofia Havertz',
@@ -1102,4 +1090,6 @@ export const PRODUCTS = [
         ],
         isRecommended: true,
     },
-]
+}
+
+export const PRODUCTS_ARRAY = Object.values(PRODUCTS);

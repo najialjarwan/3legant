@@ -7,6 +7,7 @@ export { REVIEWS_FILTER_ITEMS } from './product/productReviewsFilterItems';
 export { SHOP_CATEGORIES } from './product/shopCategories';
 export { SHOP_PRICES } from './product/shopPrices';
 export { PRODUCTS } from './product/products';
+export { PRODUCTS_ARRAY } from './product/products';
 
 export { HEADER_ITEMS } from './cart/headerItems';
 export { CART_ITEMS } from './cart/cartItems';
