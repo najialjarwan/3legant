@@ -3,7 +3,7 @@ import { Icon, Stepper } from '@ui';
 import { formatPrice } from '@utils';
 
 const CartProductCompact = ({
-    item,
+    product,
     liClassName,
     canRemoveItem = true,
 }) => (
@@ -14,11 +14,11 @@ const CartProductCompact = ({
             ${liClassName}
         `}
     >
-        <Link to={`/product/${item.id}`}>
+        <Link to={`/product/${product.id}`}>
             <div className="w-20 h-24 bg-n2100 shrink-0">
                 <img
-                    src={item.image}
-                    alt={`${item.label} image`}
+                    src={product.image}
+                    alt={`${product.label} image`}
                     className="size-full object-cover object-center"
                 />
             </div>
@@ -27,19 +27,19 @@ const CartProductCompact = ({
         <div className="w-full flex justify-between">
             <div className="flex flex-col gap-2">
                 <p className="text-n7100 caption-1-semi capitalize">
-                    {item.label}
+                    {product.label}
                 </p>
 
                 <p className="text-n4100 caption-2 capitalize">
-                    Color: {item.color}
+                    Color: {product.color}
                 </p>
 
-                <Stepper quantity={item.quantity} />
+                <Stepper quantity={product.quantity} />
             </div>
 
             <div className="flex flex-col items-end gap-2">
                 <p className="text-black-900 caption-1-semi">
-                    {formatPrice(item.price)}
+                    {formatPrice(product.price)}
                 </p>
 
                 {canRemoveItem && (

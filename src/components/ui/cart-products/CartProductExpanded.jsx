@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import { Icon, Stepper } from '@ui';
 import { formatPrice } from '@utils';
 
-const CartProductExpanded = ({ item, liClassName }) => (
+const CartProductExpanded = ({ product, liClassName }) => (
     <li
         className={`
             flex items-center gap-4
@@ -10,11 +10,11 @@ const CartProductExpanded = ({ item, liClassName }) => (
             ${liClassName}
         `}
     >
-        <Link to={`/product/${item.id}`}>
+        <Link to={`/product/${product.id}`}>
             <div className="w-20 h-24 bg-n2100 shrink-0">
                 <img
-                    src={item.image}
-                    alt={`${item.label} image`}
+                    src={product.image}
+                    alt={`${product.label} image`}
                     className="size-full object-cover object-center"
                 />
             </div>
@@ -22,11 +22,11 @@ const CartProductExpanded = ({ item, liClassName }) => (
 
         <div className="flex flex-col gap-2">
             <p className="text-n7100 caption-1-semi capitalize">
-                {item.label}
+                {product.label}
             </p>
 
             <p className="text-n4100 caption-2 capitalize">
-                Color: {item.color}
+                Color: {product.color}
             </p>
 
             <button className="flex items-center gap-1 text-n4100">
@@ -47,14 +47,14 @@ const CartProductExpanded = ({ item, liClassName }) => (
                 font-inter
             "
         >
-            <Stepper quantity={item.quantity} />
+            <Stepper quantity={product.quantity} />
 
             <p className="font-normal">
-                {formatPrice(item.price)}
+                {formatPrice(product.price)}
             </p>
 
             <p className="font-semibold">
-                {formatPrice(item.price * item.quantity)}
+                {formatPrice(product.price * product.quantity)}
             </p>
         </div>
     </li>

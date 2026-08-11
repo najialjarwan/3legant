@@ -22,10 +22,10 @@ const CartProducts = ({
 
     return (
         <ul className={`w-full flex flex-col ${SPACING_VARIANTS[variant]?.ul}`}>
-            {CART_PRODUCTS.map((item) => (
+            {CART_PRODUCTS.map((product) => (
                 <ItemComponent
-                    key={`${item.id}-${item.color}`}
-                    item={item}
+                    key={`${product.id}-${product.color}`}
+                    product={product}
                     liClassName={SPACING_VARIANTS[variant]?.li}
                 />
             ))}
