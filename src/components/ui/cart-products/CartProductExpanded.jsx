@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import { Icon, Stepper } from '@ui';
 import { formatPrice } from '@utils';
 
-const CartProductItem = ({ item, liClassName }) => (
+const CartProductExpanded = ({ item, liClassName }) => (
     <li
         className={`
             flex items-center gap-4
@@ -60,4 +60,4 @@ const CartProductItem = ({ item, liClassName }) => (
     </li>
 );
 
-export default CartProductItem;
+export default CartProductExpanded;

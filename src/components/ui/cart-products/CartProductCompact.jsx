@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import { Icon, Stepper } from '@ui';
 import { formatPrice } from '@utils';
 
-const DefaultCartItem = ({
+const CartProductCompact = ({
     item,
     liClassName,
     canRemoveItem = true,
@@ -56,4 +56,4 @@ const DefaultCartItem = ({
     </li>
 );
 
-export default DefaultCartItem;
+export default CartProductCompact;

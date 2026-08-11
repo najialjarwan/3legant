@@ -1,9 +1,9 @@
-import { DefaultCartItem } from '@ui';
+import { CartProductCompact } from '@ui';
 import { CART_PRODUCTS } from '@data';
 
-const CartItems = ({
+const CartProducts = ({
     variant,
-    ItemComponent = DefaultCartItem,
+    ItemComponent = CartProductCompact,
 }) => {
     const SPACING_VARIANTS = {
         primary: {
@@ -33,4 +33,4 @@ const CartItems = ({
     );
 };
 
-export default CartItems;
+export default CartProducts;
