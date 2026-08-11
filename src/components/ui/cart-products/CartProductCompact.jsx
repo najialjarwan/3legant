@@ -30,7 +30,7 @@ const CartProductCompact = ({
                     {item.label}
                 </p>
 
-                <p className="text-n4100 caption-2">
+                <p className="text-n4100 caption-2 capitalize">
                     Color: {item.color}
                 </p>
 
