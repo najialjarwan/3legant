@@ -1,10 +1,10 @@
 import { useBreakpoint } from '@hooks';
 import { ProductsCarouselSection } from '@ui';
-import { PRODUCTS } from '@data';
+import { PRODUCTS_ARRAY } from '@data';
 
 const NewArrivals = () => {
     const { isMobile } = useBreakpoint();
-    const newProducts = PRODUCTS.filter(a => a.isNew);
+    const newProducts = PRODUCTS_ARRAY.filter(a => a.isNew);
 
     return (
         <ProductsCarouselSection
