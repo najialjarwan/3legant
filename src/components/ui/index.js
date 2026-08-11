@@ -44,9 +44,9 @@ export { default as InputsContainer } from './input/InputsContainer.jsx';
 export { default as Input } from './input/Input.jsx';
 
 // Cart Components
-export { default as CartItems } from './cart-items/CartProducts.jsx';
-export { default as DefaultCartItem } from './cart-items/CartProductCompact.jsx';
-export { default as CartProductItem } from './cart-items/CartProductExpanded.jsx';
+export { default as CartItems } from './cart-products/CartProducts.jsx';
+export { default as DefaultCartItem } from './cart-products/CartProductCompact.jsx';
+export { default as CartProductItem } from './cart-products/CartProductExpanded.jsx';
 
 // selectors
 export { default as ViewSelectors } from './selectors/ViewSelectors';
