@@ -1,11 +1,11 @@
 import ProductReviewsSummary from './ProductReviewsSummary';
 import ProductReviewList from './ProductReviewsList';
 import { useParams } from 'react-router-dom';
-import { PRODUCTS } from '@data';
+import { PRODUCTS_ARRAY } from '@data';
 
 const ProductReviews = () => {
     const { id } = useParams();
-    const product = PRODUCTS.find(
+    const product = PRODUCTS_ARRAY.find(
         product => product.id === Number(id)
     );
 
