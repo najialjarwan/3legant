@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import { useBreakpoint, useExpandableList } from '@hooks';
 import { GRID_MODES, SHOP_CATEGORIES_ITEMS, SHOP_PRICES_ITEMS } from '@constants'
-import { PRODUCTS, SHOP_PRICES } from '@data';
+import { PRODUCTS_ARRAY, SHOP_PRICES } from '@data';
 import { setGridItemsLimit, finalPrice } from '@utils';
 import { ShowMoreBtn } from '@ui';
 import { Sidebar, Toolbar, ProductsGrid } from '@shop';
@@ -45,7 +45,7 @@ export const ShopLayout = () => {
     };
 
     // Final products
-    const filteredProducts = PRODUCTS
+    const filteredProducts = PRODUCTS_ARRAY
         .filter(filterByCategory)
         .filter(filterByPrice);
 
