@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { CART_STEPS } from '@constants';
-import { CART_ITEMS } from '@data';
+import { CART_PRODUCTS } from '@data';
 import { calculateCartTotals, formatPrice } from '@utils';
 
 const SHIPPING_OPTIONS = [
@@ -9,7 +9,7 @@ const SHIPPING_OPTIONS = [
     { label: 'Pick Up', type: '%', value: 21 }
 ];
 
-const { subTotal, total } = calculateCartTotals(CART_ITEMS);
+const { subTotal, total } = calculateCartTotals(CART_PRODUCTS);
 
 
 const CartSummary = ({ setStep }) => {

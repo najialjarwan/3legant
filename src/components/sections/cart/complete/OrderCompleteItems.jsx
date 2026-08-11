@@ -1,8 +1,8 @@
-import { CART_ITEMS } from '@data';
+import { CART_PRODUCTS } from '@data';
 
 const OrderCompleteItems = () => (
     <ul className='w-full 2xl:w-auto flex justify-between 2xl:gap-10'>
-        {CART_ITEMS.map((item) => (
+        {CART_PRODUCTS.map((item) => (
             <li
                 key={item.name}
                 className='
