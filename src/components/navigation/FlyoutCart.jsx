@@ -3,7 +3,7 @@ import { asideClass } from '@navigation/FlyMenu.jsx';
 import { CART_STEPS } from '@constants';
 import { CART_PRODUCTS } from '@data';
 import { formatPrice, calculateCartTotals } from '@utils';
-import { Icon, CartItems } from '@ui';
+import { Icon, CartProducts } from '@ui';
 
 const { subTotal, total } = calculateCartTotals(CART_PRODUCTS);
 
@@ -51,7 +51,7 @@ const FlyoutCart = ({ isOpen, onClose }) => {
                     </header>
 
                     {/* Cart Products Summary */}
-                    <CartItems variant="primary" />
+                    <CartProducts variant="primary" />
                 </div>
 
                 {/* Bottom Container: Cart Checkout */}
