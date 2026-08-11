@@ -1,5 +1,5 @@
 import { useBreakpoint } from '@hooks';
-import { CartItems, Icon } from '@ui';
+import { CartProducts, Icon } from '@ui';
 
 const OrderSummary = () => {
     const { isMobile } = useBreakpoint();
@@ -12,7 +12,7 @@ const OrderSummary = () => {
         >
             <h6 className='text-black-900'>order summary</h6>
 
-            <CartItems variant="tertiary" canRemoveItem={isMobile} />
+            <CartProducts variant="tertiary" canRemoveItem={isMobile} />
 
             <form className='w-full flex gap-3'>
                 <input
