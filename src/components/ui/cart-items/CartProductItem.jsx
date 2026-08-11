@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { Icon, Stepper } from '@ui';
 import { formatPrice } from '@utils';
 
@@ -9,17 +10,19 @@ const CartProductItem = ({ item, liClassName }) => (
             ${liClassName}
         `}
     >
-        <div className="w-20 h-24 bg-n2100 shrink-0">
-            <img
-                src={item.image}
-                alt={`${item.name} image`}
-                className="size-full object-cover object-center"
-            />
-        </div>
+        <Link to={`/product/${item.id}`}>
+            <div className="w-20 h-24 bg-n2100 shrink-0">
+                <img
+                    src={item.image}
+                    alt={`${item.label} image`}
+                    className="size-full object-cover object-center"
+                />
+            </div>
+        </Link>
 
         <div className="flex flex-col gap-2">
-            <p className="text-n7100 caption-1-semi">
-                {item.name}
+            <p className="text-n7100 caption-1-semi capitalize">
+                {item.label}
             </p>
 
             <p className="text-n4100 caption-2">
