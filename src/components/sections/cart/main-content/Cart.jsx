@@ -3,7 +3,7 @@ import { useLocation } from 'react-router-dom';
 import { useBreakpoint } from '@hooks';
 import { CART_STEPS } from '@constants';
 import {
-    CartHeader, CartProducts, CartCoupon, CartSummary,
+    CartHeader, ShoppingCartProducts, CartCoupon, CartSummary,
     ContactInformation, ShippingAddress, PaymentMethod, PlaceOrderBtn, OrderSummary,
     OrderCompleteHeader, OrderCompleteItems, OrderCompleteDetails, PurchaseHistoryBtn
 } from '../index';
@@ -23,7 +23,7 @@ const Cart = () => {
             {step === CART_STEPS.CART && (
                 <>
                     <div className='flex justify-between'>
-                        <CartProducts />
+                        <ShoppingCartProducts />
                         {!isMobile && <CartSummary step={step} setStep={setStep} />}
                     </div>
                     <CartCoupon />
