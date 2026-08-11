@@ -3,7 +3,7 @@ export { default as Cart } from './main-content/Cart';
 export { default as CartHeader } from './main-content/CartHeader';
 
 // shopping cart components
-export { default as CartProducts } from './shopping-cart/CartProducts';
+export { default as ShoppingCartProducts } from './shopping-cart/ShoppingCartProducts';
 export { default as CartCoupon } from './shopping-cart/CartCoupon';
 export { default as CartSummary } from './shopping-cart/CartSummary';
 

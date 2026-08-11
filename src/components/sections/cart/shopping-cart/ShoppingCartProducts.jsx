@@ -1,7 +1,7 @@
 import { useBreakpoint } from '@hooks';
-import { CartItems, CartProductItem } from '@ui';
+import { CartProducts, CartProductExpanded } from '@ui';
 
-const CartProducts = ({ }) => {
+const ShoppingCartProducts = ({ }) => {
     const { isMobile } = useBreakpoint();
 
     return (
@@ -23,15 +23,15 @@ const CartProducts = ({ }) => {
             </header>
 
             {isMobile ? (
-                <CartItems variant="secondary" />
+                <CartProducts variant="secondary" />
             ) : (
-                <CartItems
+                <CartProducts
                     variant="secondary"
-                    ItemComponent={CartProductItem}
+                    ItemComponent={CartProductExpanded}
                 />
             )}
         </div>
     )
 }
 
-export default CartProducts;
+export default ShoppingCartProducts;
