@@ -4,15 +4,15 @@ import { useBreakpoint } from '@hooks';
 import { computeLayoutFlags } from '@utils';
 import { ProductLoop, ProductTabs } from '@product';
 import { Breadcrumbs, ProductsCarouselSection } from '@ui';
-import { PRODUCTS, SHOP_CATEGORIES } from '@data';
+import { PRODUCTS_ARRAY, SHOP_CATEGORIES } from '@data';
 
 const ProductLayout = () => {
   const { id } = useParams();
-  const product = PRODUCTS.find(
+  const product = PRODUCTS_ARRAY.find(
     product => product.id === Number(id)
   );
 
-  const recommendedProducts = PRODUCTS.filter(a => a.isRecommended && a.id !== Number(id));
+  const recommendedProducts = PRODUCTS_ARRAY.filter(a => a.isRecommended && a.id !== Number(id));
 
   const { canShowRecommendations } = useProduct();
   const { isMobile } = useBreakpoint();
