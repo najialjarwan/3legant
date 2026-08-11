@@ -1,7 +1,7 @@
 import { PRODUCTS } from '@data';
 import { finalPrice } from '@utils';
 
-export const CART_ITEMS = [
+export const CART_PRODUCTS = [
     {
         id: PRODUCTS.TRAY_TABLE.id,
         label: PRODUCTS.TRAY_TABLE.label,

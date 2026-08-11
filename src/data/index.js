@@ -10,7 +10,7 @@ export { PRODUCTS } from './product/products';
 export { PRODUCTS_ARRAY } from './product/products';
 
 export { HEADER_ITEMS } from './cart/headerItems';
-export { CART_ITEMS } from './cart/cartItems';
+export { CART_PRODUCTS } from './cart/cartProducts';
 
 export { ACCOUNT_MENU } from './account/accountMenu';
 export { USERS } from './account/users';
