@@ -1,11 +1,11 @@
 import { Link } from 'react-router-dom';
 import { asideClass } from '@navigation/FlyMenu.jsx';
 import { CART_STEPS } from '@constants';
-import { CART_ITEMS } from '@data';
+import { CART_PRODUCTS } from '@data';
 import { formatPrice, calculateCartTotals } from '@utils';
 import { Icon, CartItems } from '@ui';
 
-const { subTotal, total } = calculateCartTotals(CART_ITEMS);
+const { subTotal, total } = calculateCartTotals(CART_PRODUCTS);
 
 const FlyoutCart = ({ isOpen, onClose }) => {
     return (
