@@ -1,7 +1,11 @@
 import { Link } from 'react-router-dom';
 import { asideClass } from '@navigation/FlyMenu.jsx';
 import { CART_STEPS } from '@constants';
+import { CART_ITEMS } from '@data';
+import { formatPrice, calculateCartTotals } from '@utils';
 import { Icon, CartItems } from '@ui';
+
+const { subTotal, total } = calculateCartTotals(CART_ITEMS);
 
 const FlyoutCart = ({ isOpen, onClose }) => {
     return (
@@ -59,12 +63,12 @@ const FlyoutCart = ({ isOpen, onClose }) => {
                     <div className="">
                         <p className="flex justify-between items-center py-3.25">
                             <span className='body-2'>Subtotal</span>
-                            <span className='body-2-semi'>$99.00</span>
+                            <span className='body-2-semi'>{formatPrice(subTotal)}</span>
                         </p>
                         <div className="h-px bg-n3100"></div>
                         <p className="flex justify-between items-center py-3.25 h7">
                             <span>Total</span>
-                            <span>$234.00</span>
+                            <span>{formatPrice(total)}</span>
                         </p>
                     </div>
 
