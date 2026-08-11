@@ -2,7 +2,8 @@ import { useState } from 'react';
 import { Icon } from '@ui';
 
 const ProductOptions = ({ product }) => {
-    const [selectedColor, setSelectedColor] = useState(product.colors[0].color);
+    const [selectedColor, setSelectedColor] = useState(Object.values(product.variants ?? {})[0]?.color || '');
+
     return (
         <div className={`flex flex-col gap-6`}>
             <div className='flex flex-col gap-2'>
@@ -25,16 +26,16 @@ const ProductOptions = ({ product }) => {
                 </div>
 
                 <ul className='w-full max-w-[334px] flex justify-between'>
-                    {product.colors?.map((color) => (
+                    {Object.values(product.variants ?? {}).map((variant) => (
                         <li
-                            key={color.color}
-                            onClick={() => setSelectedColor(color.color)}
+                            key={variant.color}
+                            onClick={() => setSelectedColor(variant.color)}
                             className={`
                             size-[71px] border cursor-pointer
-                            ${selectedColor === color.color ? 'border-n7100' : 'border-transparent'}`}
+                            ${selectedColor === variant.color ? 'border-n7100' : 'border-transparent'}`}
                         >
                             <img
-                                src={color.image}
+                                src={variant.image}
                                 alt=""
                                 className="size-full object-contain"
                             />
