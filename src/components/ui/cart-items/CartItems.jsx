@@ -24,7 +24,7 @@ const CartItems = ({
         <ul className={`w-full flex flex-col ${SPACING_VARIANTS[variant]?.ul}`}>
             {CART_ITEMS.map((item) => (
                 <ItemComponent
-                    key={item.name}
+                    key={`${item.id}-${item.color}`}
                     item={item}
                     liClassName={SPACING_VARIANTS[variant]?.li}
                 />
