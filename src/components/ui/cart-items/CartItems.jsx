@@ -1,5 +1,5 @@
 import { DefaultCartItem } from '@ui';
-import { CART_ITEMS } from '@data';
+import { CART_PRODUCTS } from '@data';
 
 const CartItems = ({
     variant,
@@ -22,7 +22,7 @@ const CartItems = ({
 
     return (
         <ul className={`w-full flex flex-col ${SPACING_VARIANTS[variant]?.ul}`}>
-            {CART_ITEMS.map((item) => (
+            {CART_PRODUCTS.map((item) => (
                 <ItemComponent
                     key={`${item.id}-${item.color}`}
                     item={item}
