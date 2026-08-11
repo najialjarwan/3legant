@@ -7,3 +7,4 @@ export { calculateAverageRating } from './calculateAverageRating';
 export { mergeReviewsWithUsers } from './mergeReviewsWithUsers';
 export { calculateTimeAgo } from './calculateTimeAgo';
 export { sortReviews } from './sortReviews';
+export { calculateCartTotals } from './calculateCartTotals';
