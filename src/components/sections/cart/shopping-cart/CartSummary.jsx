@@ -1,11 +1,15 @@
 import { useState } from 'react';
 import { CART_STEPS } from '@constants';
+import { CART_ITEMS } from '@data';
+import { calculateCartTotals, formatPrice } from '@utils';
 
 const SHIPPING_OPTIONS = [
     { label: 'Free shipping', type: '$', value: 0 },
     { label: 'Express shipping', type: '+$', value: 15 },
     { label: 'Pick Up', type: '%', value: 21 }
 ];
+
+const { subTotal, total } = calculateCartTotals(CART_ITEMS);
 
 
 const CartSummary = ({ setStep }) => {
@@ -66,12 +70,12 @@ const CartSummary = ({ setStep }) => {
             <div className="text-n7100">
                 <div className="w-full py-3.25 flex justify-between">
                     <span className="caption-1-bold 2xl:body-2">Subtotal</span>
-                    <span className="caption-1-bold 2xl:body-2-semi">$199.99</span>
+                    <span className="caption-1-bold 2xl:body-2-semi">{formatPrice(subTotal)}</span>
                 </div>
 
                 <div className="w-full py-3.25 flex justify-between body-2-bold 2xl:body-1-semi">
                     <span>Total</span>
-                    <span>$214.99</span>
+                    <span>{formatPrice(total)}</span>
                 </div>
             </div>
 
