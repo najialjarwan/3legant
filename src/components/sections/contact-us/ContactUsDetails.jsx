@@ -51,7 +51,7 @@ const ContactUsDetails = () => {
             <div className='w-full flex flex-col 2xl:flex-row-reverse gap-6 2xl:gap-7'>
                 <div className='relative w-full 2xl:min-w-[548px] h-[311px] 2xl:h-[404px]'>
                     <img
-                        src="src/assets/images/address-map-placeholder.png"
+                        src="/images/3legant/address map placeholder.png"
                         alt=""
                         className='size-full object-cover object-center'
                     />

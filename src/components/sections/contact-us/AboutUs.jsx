@@ -5,7 +5,7 @@ const AboutUs = () => {
         <section className='px-8 2xl:px-40 flex flex-col 2xl:flex-row'>
             <div className='w-full h-[311px] 2xl:h-[413px]'>
                 <img
-                    src="src/assets/images/banner image.png"
+                    src="/images/banner/banner.png"
                     alt="banner image"
                     className='size-full object-cover'
                 />
