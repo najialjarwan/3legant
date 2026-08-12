@@ -3,22 +3,28 @@ import { CART_STEPS } from '@constants';
 import { CART_PRODUCTS } from '@data';
 import { calculateCartTotals, formatPrice } from '@utils';
 
-const SHIPPING_OPTIONS = [
-    { label: 'Free shipping', type: '$', value: 0 },
-    { label: 'Express shipping', type: '+$', value: 15 },
-    { label: 'Pick Up', type: '%', value: 21 }
-];
+const SHIPPING_OPTIONS = {
+    FREE: { id: 'free-shipping', label: 'Free shipping', value: 0 },
+    EXPRESS: { id: 'express-shipping', label: 'Express shipping', value: 15 },
+    PICK_UP: { id: 'pick-up', label: 'Pick Up', value: 21 }
+};
 
 const CartSummary = ({ setStep }) => {
-    const [selectedShipping, setSelectedShipping] = useState(SHIPPING_OPTIONS[0]);
-    const { subTotal, total } = calculateCartTotals(CART_PRODUCTS);
-    const shippingCost =
-        selectedShipping.type === '$'
-            ? selectedShipping.value
-            : selectedShipping.type === '+$'
-                ? selectedShipping.value
-                : -(total * selectedShipping.value) / 100;
+    const [selectedShipping, setSelectedShipping] = useState(SHIPPING_OPTIONS.FREE);
 
+    const { subTotal, total } = calculateCartTotals(CART_PRODUCTS);
+    const shippingCost = (() => {
+        switch (selectedShipping.id) {
+            case 'free-shipping':
+                return 0;
+            case 'express-shipping':
+                return selectedShipping.value;
+            case 'pick-up':
+                return -(total * selectedShipping.value) / 100;
+            default:
+                return 0;
+        }
+    })();
     const finalTotal = total + shippingCost;
 
     return (
@@ -34,7 +40,7 @@ const CartSummary = ({ setStep }) => {
             </header>
 
             <ul className="flex flex-col gap-3">
-                {SHIPPING_OPTIONS.map((option) => (
+                {Object.values(SHIPPING_OPTIONS).map((option) => (
                     <li
                         key={option.label}
                         className={`
@@ -60,9 +66,12 @@ const CartSummary = ({ setStep }) => {
 
                         <div className="w-full flex justify-between text-n7100 caption-1-semi 2xl:body-2">
                             <p>{option.label}</p>
-                            <p>
-                                <>{option.type}{option.value.toFixed(2)}</>
-                            </p>
+
+                            {option.id === 'pick-up' ? (
+                                <p>${option.value.toFixed(2)}</p>
+                            ) : (
+                                <p>%{option.value.toFixed(2)}</p>
+                            )}
                         </div>
                     </li>
                 ))}
