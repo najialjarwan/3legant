@@ -1,6 +1,6 @@
 // Button Components
 export { default as AddToCartBtn } from './buttons/AddToCartBtn';
-export { default as CartWishlistBtn } from './buttons/CartWishlistBtn';
+export { default as ActionBadgeBtn } from './buttons/ActionBadgeBtn';
 export { default as MoreActionBtn } from './buttons/MoreActionBtn';
 export { default as ProductTabBtn } from './buttons/ProductTabBtn';
 export { default as ShowMoreBtn } from './buttons/ShowMoreBtn';
