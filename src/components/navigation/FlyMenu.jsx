@@ -1,5 +1,7 @@
 import { Link } from 'react-router-dom';
-import { Icon, Brand, CartWishlistBtn, SocialLinks } from '@ui';
+import { ACCOUNT_MENU_ITEMS } from '@constants';
+import { CART_PRODUCTS, ACCOUNT_WISHLIST_PRODUCTS } from '@data';
+import { Icon, Brand, ActionBadgeBtn, SocialLinks } from '@ui';
 import { NavLinks } from '@navigation';
 
 export const asideClass = `
@@ -14,11 +16,25 @@ const FlyMenu = ({ isOpen, onClose, onCartOpen }) => {
     const userSavedProducts = [
         {
             label: "Cart",
-            tool: <CartWishlistBtn onClick={onCartOpen} count={2} iconName="ShoppingBag" />,
+            tool: (
+                <ActionBadgeBtn
+                    onClick={onCartOpen}
+                    count={CART_PRODUCTS.length}
+                    iconName="ShoppingBag"
+                />
+            ),
         },
         {
             label: "Wishlist",
-            tool: <CartWishlistBtn count={2} iconName="Heart" />,
+            tool: (
+                <ActionBadgeBtn
+                    to="/account"
+                    state={{ activeTab: ACCOUNT_MENU_ITEMS.WISHLIST }}
+                    onClick={onClose}
+                    count={ACCOUNT_WISHLIST_PRODUCTS.length}
+                    iconName="Heart"
+                />
+            ),
         }
     ]
 
@@ -121,7 +137,6 @@ const FlyMenu = ({ isOpen, onClose, onCartOpen }) => {
                         text-n4100
                         "
                     >
-
                         {userSavedProducts.map((item, i) => (
                             <div
                                 key={i}
