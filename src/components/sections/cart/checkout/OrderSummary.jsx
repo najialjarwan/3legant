@@ -1,8 +1,11 @@
 import { useBreakpoint } from '@hooks';
+import { CART_PRODUCTS } from '@data';
+import { calculateCartTotals, formatPrice } from '@utils';
 import { CartProducts, Icon } from '@ui';
 
 const OrderSummary = () => {
     const { isMobile } = useBreakpoint();
+    const { subTotal, total } = calculateCartTotals(CART_PRODUCTS);
     return (
         <div
             className='
@@ -50,12 +53,12 @@ const OrderSummary = () => {
                 <div className='h-px bg-n3100'></div>
                 <div className='w-full py-3.5 flex justify-between'>
                     <span className="body-2">Subtotal</span>
-                    <span className="text-n7100 body-2-semi">$99.00</span>
+                    <span className="text-n7100 body-2-semi">{formatPrice(subTotal)}</span>
                 </div>
                 <div className='h-px bg-n3100'></div>
                 <div className='w-full py-3.5 flex justify-between'>
                     <span className="text-n7100 h7">Total</span>
-                    <span className="text-n7100 h7">$234.00</span>
+                    <span className="text-n7100 h7">{formatPrice(total)}</span>
                 </div>
             </div>
         </div>
