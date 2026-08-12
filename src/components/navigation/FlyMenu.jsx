@@ -119,18 +119,18 @@ const FlyMenu = ({ isOpen, onClose, onCartOpen }) => {
                         w-full
                         flex flex-col gap-2
                         text-n4100
-                        border-b border-n4100 box-border"
+                        "
                     >
 
                         {userSavedProducts.map((item, i) => (
                             <div
                                 key={i}
                                 className="
-                                w-full h-8 pb-1.75
+                                w-full pb-2
                                 flex justify-between
                                 border-b border-n3100 box-border"
                             >
-                                <span>{item.label}</span>
+                                <span className='btn-m'>{item.label}</span>
                                 {item.tool}
                             </div>
                         ))}
