@@ -13,7 +13,7 @@ const OrderSummary = () => {
             flex flex-col justify-start gap-4
             border border-n4100 rounded-md'
         >
-            <h6 className='text-black-900'>order summary</h6>
+            <h6 className='text-black-900'>Order summary</h6>
 
             <CartProducts variant="tertiary" canRemoveItem={isMobile} />
 
