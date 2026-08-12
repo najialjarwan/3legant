@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
-import { Icon, Brand, CartWishlistBtn } from '@ui';
+import { CART_PRODUCTS } from '@data';
+import { Icon, Brand, ActionBadgeBtn } from '@ui';
 import { NavLinks } from '@navigation';
 
 const NavBar = ({ onMenuOpen, onCartOpen }) => {
@@ -46,9 +47,9 @@ const NavBar = ({ onMenuOpen, onCartOpen }) => {
                 className="
                 flex flex-row-reverse items-center gap-4"
             >
-                <CartWishlistBtn
+                <ActionBadgeBtn
                     onClick={onCartOpen}
-                    count={2}
+                    count={CART_PRODUCTS.length}
                     iconName="ShoppingBag"
                 />
 
