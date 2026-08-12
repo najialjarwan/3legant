@@ -45,7 +45,8 @@ const Footer = () => {
             <div
                 className='
                 w-full py-6 2xl:py-4
-                flex flex-col 2xl:flex-row-reverse items-center gap-8'
+                flex flex-col 2xl:flex-row-reverse items-center gap-8
+                border-t border-t-n4100'
             >
                 <SocialLinks color='light' />
 
