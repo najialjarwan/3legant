@@ -48,12 +48,12 @@ const AccountWishlist = () => {
                                     <div className='w-15 h-18 bg-n2100'>
                                         <img
                                             src={product.image}
-                                            alt={product.name}
-                                            className='size-full object-cover'
+                                            alt={product.label}
+                                            className='size-full object-contain'
                                         />
                                     </div>
                                     <div className='flex flex-col gap-2 capitalize'>
-                                        <span className='text-n7100 caption-1-semi'>{product.name}</span>
+                                        <span className='text-n7100 caption-1-semi'>{product.label}</span>
                                         <span className='text-n4100 caption-2'>color: {product.color}</span>
                                         {isMobile && (
                                             <span className='text-n7100 caption-1'>
