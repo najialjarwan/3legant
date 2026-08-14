@@ -1,10 +1,8 @@
 import { Link } from 'react-router-dom';
-import { Icon } from '@ui';
 import { NAV_ITEMS } from '@data';
 
 const NavLinks = ({
   items = NAV_ITEMS,
-  showChevron = false,
   exclude = [],
   classNames = {},
 
@@ -27,12 +25,6 @@ const NavLinks = ({
               <Link to={item.link} className={link}>
                 {item.label}
               </Link>
-
-              {showChevron && (
-                <span className="size-6 flex items-center justify-center">
-                  <Icon name="ChevronDown" className="w-3 h-1.5" />
-                </span>
-              )}
             </div>
           </li>
         ))}
