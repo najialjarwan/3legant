@@ -29,7 +29,7 @@ const AuthPopup = ({ title }) => {
                 <Brand className='absolute left-1/2 -translate-x-1/2 top-8' />
 
                 <img
-                    src="src/assets/images/image.png"
+                    src="/images/products/polished-sofa/polished sofa.png"
                     alt=""
                     className='size-full 2xl:h-auto max-h-[1080px] object-contain'
                 />
