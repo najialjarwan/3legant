@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { NAV_ITEMS } from '@data';
 
 const NavLinks = ({
+  onMenuClose,
   items = NAV_ITEMS,
   exclude = [],
   classNames = {},
@@ -22,7 +23,7 @@ const NavLinks = ({
         .map(item => (
           <li key={item.label} className={li}>
             <div className={`flex justify-between ${row}`}>
-              <Link to={item.link} className={link}>
+              <Link to={item.link} onClick={onMenuClose} className={link}>
                 {item.label}
               </Link>
             </div>
