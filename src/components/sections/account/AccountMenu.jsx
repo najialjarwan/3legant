@@ -8,7 +8,7 @@ const AccountMenu = ({ activeItem, setActiveItem }) => {
     return (
         <div className='h-fit px-4 py-10 bg-n2100 rounded-lg'>
             <div className='relative size-[82px] mx-auto rounded-full'>
-                <img src="src/assets/images/avatar sofia havertz.png" alt="user profile" />
+                <img src="/images/users-avatar/sofia havertz.png" alt="user profile" />
                 <div
                     className='
                     absolute bottom-0 right-0
