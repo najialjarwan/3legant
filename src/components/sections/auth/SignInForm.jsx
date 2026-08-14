@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import { Eye, Check } from '@icons/index.js';
+import { Checkbox } from '@ui';
+import { Eye } from '@icons';
 import Button from './FormBtn.jsx';
 
 const fields = [
@@ -50,29 +51,11 @@ const SignInForm = ({ }) => {
                 cursor-pointer 
                 select-none"
             >
-                {/* Real checkbox (accessible, functional) */}
-                <input
-                    type="checkbox"
+                {/* Custom visual checkbox */}
+                <Checkbox
                     checked={agreed}
                     onChange={() => setAgreed(prev => !prev)}
-                    className="sr-only"
                 />
-
-                {/* Custom visual checkbox */}
-                <span
-                    className={`
-                            size-6 rounded-sm
-                            flex items-center justify-center
-                            border-[1.5px] border-n4100
-                            transition
-                            ${agreed
-                            ? ''
-                            : ''
-                        }
-    `}
-                >
-                    {agreed && <Check />}
-                </span>
 
                 {/* Text */}
                 <p
