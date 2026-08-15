@@ -1,76 +1,75 @@
 import { useState } from 'react';
+import { FormField, AuthFormSubmitBtn } from '@auth';
 import { Checkbox } from '@ui';
-import { Eye } from '@icons';
-import Button from './FormBtn.jsx';
 
-const fields = [
-    { name: 'email', type: 'email', placeholder: 'Your username or email address' },
-    { name: 'password', type: 'password', placeholder: 'Password' },
+const SIGN_IN_FIELDS = [
+    {
+        name: 'identifier',
+        type: 'text',
+        placeholder: 'Your username or email address',
+    },
+    {
+        name: 'password',
+        type: 'password',
+        placeholder: 'Password',
+    },
 ];
 
-const SignInForm = ({ }) => {
+const SignInForm = () => {
+    const [rememberMe, setRememberMe] = useState(false);
 
-    const [agreed, setAgreed] = useState(false);
+    const [formData, setFormData] = useState({
+        identifier: '',
+        password: '',
+    });
+
+    const handleChange = (event) => {
+        const { name, value } = event.target;
+
+        setFormData(prev => ({
+            ...prev,
+            [name]: value,
+        }));
+    };
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+
+        console.log(formData);
+    };
 
     return (
         <form
-            action=""
-            className="
-        w-full
-        flex flex-col gap-8"
+            onSubmit={handleSubmit}
+            className="w-full flex flex-col gap-8"
         >
-            {fields.map((input, index) => (
-                <div
-                    key={index}
-                    className="
-                            relative 
-                            h-10 
-                            body-2 text-n4100 border-b border-n3100"
-                >
-                    <input
-                        key={index}
-                        type={input.type}
-                        placeholder={input.placeholder}
-                        autoComplete='on'
-                        className="w-full outline-0"
-                    />
-                    {input.type === 'password' && (
-                        <Eye
-                            className="
-                            absolute top-0 right-0 
-                            cursor-pointer"
-                        />
-                    )}
-                </div>
+            {SIGN_IN_FIELDS.map((input) => (
+                <FormField
+                    key={input.name}
+                    name={input.name}
+                    type={input.type}
+                    placeholder={input.placeholder}
+                    value={formData[input.name]}
+                    onChange={handleChange}
+                    className="w-full h-10 body-2 text-n4100 border-b border-n3100 outline-0"
+                />
             ))}
 
-            <label
-                className="
-                w-full
-                flex items-center gap-3 
-                cursor-pointer 
-                select-none"
-            >
-                {/* Custom visual checkbox */}
+            <label className="w-full flex items-center gap-3 cursor-pointer select-none">
                 <Checkbox
-                    checked={agreed}
-                    onChange={() => setAgreed(prev => !prev)}
+                    checked={rememberMe}
+                    onChange={() => setRememberMe(prev => !prev)}
                 />
 
-                {/* Text */}
-                <p
-                    className="
-                w-full
-                flex items-center justify-between flex-wrap"
-                >
+                <p className="w-full flex items-center justify-between flex-wrap">
                     <span className="body-2 text-n4100">Remember me</span>
                     <span className="caption-2-semi text-n7100">Forget Password?</span>
                 </p>
             </label>
 
-            <Button variant='default'>
-                Sign In
-            </Button>
+            <AuthFormSubmitBtn>
+                sign in
+            </AuthFormSubmitBtn>
         </form>
     );
 }
