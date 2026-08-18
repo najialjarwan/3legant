@@ -1,10 +1,11 @@
 import { Link } from 'react-router-dom';
+import { useAuth } from '@contexts';
 import { CART_PRODUCTS } from '@data';
 import { Icon, Brand, ActionBadgeBtn } from '@ui';
 import { NavLinks } from '@navigation';
 
 const NavBar = ({ onMenuOpen, onCartOpen }) => {
-    const loggedIn = true;
+    const { isAuthenticated } = useAuth();
     return (
         <nav
             className="
@@ -54,9 +55,17 @@ const NavBar = ({ onMenuOpen, onCartOpen }) => {
                 />
 
                 <Link
-                    to={loggedIn ? "/account" : "/auth?mode=signin"}
+                    to={
+                        isAuthenticated
+                            ? "/account"
+                            : "/auth?mode=signin"
+                    }
+                    aria-label={
+                        isAuthenticated
+                            ? "Account"
+                            : "Sign in"
+                    }
                     className="size-6 flex items-center justify-center"
-                    aria-label={loggedIn ? "Account" : "Sign in"}
                 >
                     <Icon
                         name="UserCircle"
