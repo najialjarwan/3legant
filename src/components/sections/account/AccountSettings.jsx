@@ -1,27 +1,31 @@
+import { useAuth } from '@contexts';
 import { Input } from '@ui';
 
 const AccountSettings = () => {
+    const { currentUser } = useAuth();
     return (
         <div className='w-full 2xl:pr-[72px] flex flex-col gap-10'>
             <InputsContainer headerTitle="account details">
                 <Input
                     required
-                    placeholder="first name"
+                    placeholder="First name"
                     type="text" />
                 <Input
                     required
-                    placeholder="last name"
+                    placeholder="Last name"
                     type="text"
                 />
                 <Input
                     required
-                    placeholder="display name"
+                    label="Display name"
+                    placeholder={currentUser.displayName ?? currentUser.name ?? "Display name"}
                     type="text"
                     caption="This will be how your name will be displayed in the account section and in reviews"
                 />
                 <Input
                     required
-                    placeholder="email"
+                    label='email'
+                    placeholder={currentUser.email || 'email'}
                     type="email"
                 />
             </InputsContainer>
