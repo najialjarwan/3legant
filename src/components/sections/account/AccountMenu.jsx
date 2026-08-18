@@ -1,11 +1,24 @@
+import { useNavigate } from 'react-router-dom';
 import { useAuth } from '@contexts';
 import { useBreakpoint } from '@hooks';
 import { Icon, Dropdown } from '@ui';
+import { ACCOUNT_MENU_ITEMS } from '@constants';
 import { ACCOUNT_MENU } from '@data';
 
 const AccountMenu = ({ activeItem, setActiveItem }) => {
-    const { currentUser } = useAuth();
     const { isMobile } = useBreakpoint();
+    const { currentUser, signOut } = useAuth();
+    const navigate = useNavigate();
+
+    const handleItemClick = (itemId) => {
+        if (itemId === ACCOUNT_MENU_ITEMS.LOGOUT) {
+            signOut();
+            navigate('/auth?mode=signin')
+            return;
+        }
+
+        setActiveItem(itemId);
+    };
 
     return (
         <div className='h-fit px-4 py-10 bg-n2100 rounded-lg'>
@@ -30,14 +43,14 @@ const AccountMenu = ({ activeItem, setActiveItem }) => {
                     <Dropdown
                         items={ACCOUNT_MENU}
                         value={activeItem}
-                        onChange={setActiveItem}
+                        onChange={handleItemClick}
                     />)
                 : (
                     <ul className='flex flex-col gap-3 text-n4100 body-2-semi capitalize'>
                         {ACCOUNT_MENU.map((item) => (
                             <li
                                 key={item.id}
-                                onClick={() => setActiveItem(item.id)}
+                                onClick={() => handleItemClick(item.id)}
                                 className={`
                                 w-[230px] py-2
                                 cursor-pointer border-b
@@ -48,7 +61,8 @@ const AccountMenu = ({ activeItem, setActiveItem }) => {
                             </li>
                         ))}
                     </ul>
-                )}
+                )
+            }
         </div>
     );
 }
