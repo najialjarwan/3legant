@@ -18,7 +18,7 @@ const AccountSettings = () => {
                 <Input
                     required
                     label="Display name"
-                    placeholder={currentUser.displayName ?? currentUser.name ?? "Display name"}
+                    placeholder={currentUser.displayName || currentUser.name || "Display name"}
                     type="text"
                     caption="This will be how your name will be displayed in the account section and in reviews"
                 />

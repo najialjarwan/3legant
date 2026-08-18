@@ -23,7 +23,7 @@ const AccountMenu = ({ activeItem, setActiveItem }) => {
                 </div>
             </div>
             <p className='w-fit mx-auto mb-10 text-black body-1-semi'>
-                {currentUser.name ?? currentUser.username}
+                {currentUser.name || currentUser.username}
             </p>
             {isMobile
                 ? (
