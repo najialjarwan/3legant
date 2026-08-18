@@ -1,6 +1,6 @@
 export const mergeReviewsWithUsers = (reviews, users) => {
     return reviews.map(review => {
-        const user = users.find(u => u.userName === review.userName);
+        const user = users.find(u => u.username === review.username);
 
         return {
             user,
