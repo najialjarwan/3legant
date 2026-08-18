@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { useAuth } from '@contexts';
 import { ACCOUNT_MENU_ITEMS } from '@constants';
 import { CART_PRODUCTS, ACCOUNT_WISHLIST_PRODUCTS } from '@data';
 import { Icon, Brand, ActionBadgeBtn, SocialLinks } from '@ui';
@@ -11,7 +12,7 @@ export const asideClass = `
     bg-white`;
 
 const FlyMenu = ({ isOpen, onClose, onCartOpen }) => {
-    const loggedIn = true;
+    const { isAuthenticated } = useAuth();
 
     const userSavedProducts = [
         {
@@ -153,14 +154,15 @@ const FlyMenu = ({ isOpen, onClose, onCartOpen }) => {
 
                     {/* Sign In */}
                     <Link
-                        to={loggedIn ? '/account' : '/auth?mode=signin'}
+                        onClick={onClose}
+                        to={isAuthenticated ? '/account' : '/auth?mode=signin'}
                         className="
                         w-full py-2.5 px-6.5 rounded-md
                         flex items-center justify-center
                         bg-n7100
                         btn-m text-white"
                     >
-                        Sign In
+                        {isAuthenticated ? "Account" : "Sign In"}
                     </Link>
 
                     {/* Social Media Links */}
