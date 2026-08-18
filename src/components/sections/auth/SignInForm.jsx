@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { useAuth } from '@contexts';
 import { FormField, AuthFormSubmitBtn } from '@auth';
 import { Checkbox } from '@ui';
 
@@ -16,8 +18,9 @@ const SIGN_IN_FIELDS = [
 ];
 
 const SignInForm = () => {
+    const navigate = useNavigate();
+    const { signIn } = useAuth();
     const [rememberMe, setRememberMe] = useState(false);
-
     const [formData, setFormData] = useState({
         identifier: '',
         password: '',
@@ -32,10 +35,16 @@ const SignInForm = () => {
         }));
     };
 
-    const handleSubmit = (event) => {
+    const handleSubmit = async (event) => {
         event.preventDefault();
 
-        console.log(formData);
+        try {
+            const user = await signIn(formData);
+            console.log('Signed in:', user);
+            navigate('/');
+        } catch (error) {
+            console.error(error.message);
+        }
     };
 
     return (

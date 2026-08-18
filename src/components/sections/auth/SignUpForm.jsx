@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { useAuth } from '@contexts';
 import { FormField, AuthFormSubmitBtn } from '@auth';
 import { Checkbox } from '@ui';
 
@@ -26,11 +28,12 @@ const SIGN_UP_FIELDS = [
 ];
 
 const SignUpForm = () => {
+    const navigate = useNavigate();
+    const { signUp } = useAuth();
     const [acceptedTerms, setAcceptedTerms] = useState(false);
-
     const [formData, setFormData] = useState({
         name: '',
-        userName: '',
+        username: '',
         email: '',
         password: '',
     });
@@ -44,10 +47,20 @@ const SignUpForm = () => {
         }));
     };
 
-    const handleSubmit = (event) => {
+    const handleSubmit = async (event) => {
         event.preventDefault();
 
-        console.log(formData);
+        if (!acceptedTerms) {
+            return;
+        }
+
+        try {
+            const user = await signUp(formData);
+            console.log('Account created:', user);
+            navigate('/');
+        } catch (error) {
+            console.error(error.message);
+        }
     };
 
     return (
