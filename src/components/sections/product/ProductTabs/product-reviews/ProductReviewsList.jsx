@@ -27,7 +27,7 @@ const ProductReviewList = ({ product }) => {
             <div className='w-full flex flex-col items-center gap-6'>
                 {usersReviewSorted.slice(0, reviewCount).map((review) => (
                     <div
-                        key={review.user.userName}
+                        key={review.user.username}
                         className='w-full pb-4 2xl:pb-6 border-b border-b-n3100'
                     >
                         <div className='flex flex-col gap-4'>
@@ -40,7 +40,7 @@ const ProductReviewList = ({ product }) => {
 
                                 <div className='flex flex-col gap-4'>
                                     <header className='text-n7100 body-1-semi [word-spacing:4px]'>
-                                        {review.user.userName}
+                                        {review.user.username}
                                     </header>
 
                                     <ProductRating rating={review.rating} />
