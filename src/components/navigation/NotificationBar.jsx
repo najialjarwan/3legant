@@ -37,6 +37,7 @@ const NotificationBar = ({ onClose, className = '' }) => {
                     labelClass='btn-xs text-blue'
                     iconSpanClass='size-[18px]'
                     iconClass='w-[10.5px] h-[9px] text-blue'
+                    directTo='/shop'
                 />
             </div>
 
