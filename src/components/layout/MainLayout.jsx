@@ -1,10 +1,14 @@
+import { useState } from 'react';
 import { NotificationBar, NavBar } from '@navigation';
 import { Newsletter, Footer } from '@footer';
 
 const MainLayout = ({ children, onMenuOpen, onCartOpen }) => {
+  const [showNotificationBar, setShowNotificationBar] = useState(true);
   return (
     <>
-      <NotificationBar />
+      {showNotificationBar && (
+        <NotificationBar onClose={() => setShowNotificationBar(prev => !prev)} />
+      )}
 
       <NavBar
         onMenuOpen={onMenuOpen}
