@@ -1,15 +1,22 @@
 import { createContext, useContext, useState } from 'react';
-import { signInService, signUpService } from '@services';
+import {
+    signInService,
+    signUpService,
+    saveSession,
+    getSession,
+    clearSession,
+} from '@services';
 
 const AuthContext = createContext(null);
 
 export const AuthProvider = ({ children }) => {
-    const [currentUser, setCurrentUser] = useState(null);
+    const [currentUser, setCurrentUser] = useState(() => getSession());
 
-    const signIn = async (credentials) => {
+    const signIn = async (credentials, rememberMe) => {
         const user = await signInService(credentials);
 
         setCurrentUser(user);
+        saveSession(user, rememberMe);
 
         return user;
     };
@@ -18,11 +25,13 @@ export const AuthProvider = ({ children }) => {
         const user = await signUpService(userData);
 
         setCurrentUser(user);
+        saveSession(user, false);
 
         return user;
     };
 
     const signOut = () => {
+        clearSession();
         setCurrentUser(null);
     };
 
