@@ -39,7 +39,7 @@ const SignInForm = () => {
         event.preventDefault();
 
         try {
-            const user = await signIn(formData);
+            const user = await signIn(formData, rememberMe);
             console.log('Signed in:', user);
             navigate('/');
         } catch (error) {
