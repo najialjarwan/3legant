@@ -1,6 +1,5 @@
-// App.jsx
-import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Navigate, Outlet } from 'react-router-dom';
+import { useAuth } from '@contexts';
 import {
   GlobalLayout,
   MainLayout,
@@ -22,6 +21,14 @@ import {
 import { ProductProvider } from '@product';
 
 const App = () => {
+  const ProtectedRoute = () => {
+    const { isAuthenticated } = useAuth();
+
+    return isAuthenticated
+      ? <Outlet />
+      : <Navigate to="/auth?mode=signin" replace />;
+  };
+
   return (
     <BrowserRouter>
       <Routes>
@@ -44,8 +51,11 @@ const App = () => {
         </Route>
 
         <Route element={<GlobalLayout Shell={MinimalLayout} />}>
-          <Route path='/cart' element={<CartPage />} />
-          <Route path="/account" element={<AccountPage />} />
+          <Route path="/cart" element={<CartPage />} />
+
+          <Route element={<ProtectedRoute />}>
+            <Route path="/account" element={<AccountPage />} />
+          </Route>
         </Route>
 
         <Route path="/auth" element={<AuthPage />} />
