@@ -1,6 +1,6 @@
 import { Icon, MoreActionBtn } from '@ui';
 
-const NotificationBar = ({ className = '' }) => {
+const NotificationBar = ({ onClose, className = '' }) => {
     return (
         <header
             className={`
@@ -42,6 +42,7 @@ const NotificationBar = ({ className = '' }) => {
 
             {/* Close Notification Button */}
             <button
+                onClick={onClose}
                 data-id='closeNotification'
                 className="
                 "
