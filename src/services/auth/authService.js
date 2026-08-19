@@ -1,6 +1,4 @@
-import { USERS } from '@data';
-
-let users = [...USERS];
+import { getUsers, addUser } from '@services';
 
 const delay = (ms) => (
     new Promise(resolve => setTimeout(resolve, ms))
@@ -10,6 +8,8 @@ const toPublicUser = ({ password, ...user }) => user;
 
 export const signIn = async ({ identifier, password }) => {
     await delay(500);
+
+    const users = getUsers();
 
     const user = users.find(
         user =>
@@ -37,6 +37,8 @@ export const signUp = async ({
 }) => {
     await delay(500);
 
+    const users = getUsers();
+
     const usernameExists = users.some(
         user => user.username === username
     );
@@ -58,7 +60,7 @@ export const signUp = async ({
     }
 
     const newUser = {
-        id: Date.now(),
+        id: crypto.randomUUID(),
         name,
         username,
         email,
@@ -66,7 +68,7 @@ export const signUp = async ({
         avatar: '/images/users-avatar/default.png',
     };
 
-    users.push(newUser);
+    addUser(newUser);
 
     return toPublicUser(newUser);
 };
