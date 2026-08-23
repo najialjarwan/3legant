@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route, Navigate, Outlet } from 'react-router-dom';
-import { useAuth } from '@contexts';
+import { useAuth, ProductProvider } from '@contexts';
 import {
   GlobalLayout,
   MainLayout,
@@ -18,7 +18,6 @@ import {
   BlogPostPage,
   ContactUsPage,
 } from '@pages';
-import { ProductProvider } from '@product';
 
 const App = () => {
   const ProtectedRoute = () => {
