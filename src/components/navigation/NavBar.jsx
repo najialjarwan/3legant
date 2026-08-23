@@ -31,7 +31,6 @@ const NavBar = ({ onMenuOpen, onCartOpen }) => {
 
             {/* Pages Navigation Links */}
             <NavLinks
-                exclude={['Blog']}
                 classNames={{
                     ul: `
                     w-fit h-fit

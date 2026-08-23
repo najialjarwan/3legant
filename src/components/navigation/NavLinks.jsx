@@ -4,7 +4,6 @@ import { NAV_ITEMS } from '@data';
 const NavLinks = ({
   onMenuClose,
   items = NAV_ITEMS,
-  exclude = [],
   classNames = {},
 
 }) => {
@@ -18,17 +17,15 @@ const NavLinks = ({
 
   return (
     <ul className={ul}>
-      {items
-        .filter(item => !exclude.includes(item.label))
-        .map(item => (
-          <li key={item.label} className={li}>
-            <div className={`flex justify-between ${row}`}>
-              <Link to={item.link} onClick={onMenuClose} className={link}>
-                {item.label}
-              </Link>
-            </div>
-          </li>
-        ))}
+      {items.map(item => (
+        <li key={item.label} className={li}>
+          <div className={`flex justify-between ${row}`}>
+            <Link to={item.link} onClick={onMenuClose} className={link}>
+              {item.label}
+            </Link>
+          </div>
+        </li>
+      ))}
     </ul>
   );
 };

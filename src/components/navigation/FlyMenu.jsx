@@ -109,7 +109,6 @@ const FlyMenu = ({ isOpen, onClose, onCartOpen }) => {
                     {/* Pages Navigation Links */}
                     <NavLinks
                         onMenuClose={onClose}
-                        exclude={['Blog']}
                         classNames={{
                             ul: `
                             w-full
