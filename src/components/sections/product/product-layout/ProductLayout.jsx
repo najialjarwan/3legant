@@ -1,5 +1,5 @@
 import { useParams } from 'react-router-dom';
-import { useProduct } from '../product-context/ProductContext';
+import { useProduct } from '@contexts';
 import { useBreakpoint } from '@hooks';
 import { computeLayoutFlags } from '@utils';
 import { ProductLoop, ProductTabs } from '@product';
