@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { NAV_ITEMS } from '@data';
 
@@ -7,7 +8,11 @@ const NavLinks = ({
   classNames = {},
 
 }) => {
-
+  const [activeLink, setActiveLink] = useState('Home');
+  const handleClick = (label) => {
+    onMenuClose;
+    setActiveLink(label);
+  }
   const {
     ul = '',
     li = '',
@@ -20,7 +25,11 @@ const NavLinks = ({
       {items.map(item => (
         <li key={item.label} className={li}>
           <div className={`flex justify-between ${row}`}>
-            <Link to={item.link} onClick={onMenuClose} className={link}>
+            <Link
+              to={item.link}
+              onClick={() => handleClick(item.label)}
+              className={`${link} ${activeLink === item.label ? 'text-n7100' : ''}`}
+            >
               {item.label}
             </Link>
           </div>
