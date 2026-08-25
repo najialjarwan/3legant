@@ -1,40 +1,42 @@
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { NAV_ITEMS } from '@data';
 
 const NavLinks = ({
   onMenuClose,
   items = NAV_ITEMS,
+  highlightActive = false,
   classNames = {},
-
 }) => {
-  const [activeLink, setActiveLink] = useState('Home');
-  const handleClick = (label) => {
-    onMenuClose;
-    setActiveLink(label);
-  }
+  const { pathname } = useLocation();
+
   const {
     ul = '',
     li = '',
-    row = '',
-    link = '',
   } = classNames;
 
   return (
     <ul className={ul}>
-      {items.map(item => (
-        <li key={item.label} className={li}>
-          <div className={`flex justify-between ${row}`}>
+      {items.map(item => {
+        const isActive = pathname === item.link;
+
+        return (
+          <li
+            key={item.label}
+            className={`
+              flex justify-between
+              ${li}
+              ${highlightActive && isActive ? 'text-n7100' : ''}
+            `}
+          >
             <Link
               to={item.link}
-              onClick={() => handleClick(item.label)}
-              className={`${link} ${activeLink === item.label ? 'text-n7100' : ''}`}
+              onClick={onMenuClose}
             >
               {item.label}
             </Link>
-          </div>
-        </li>
-      ))}
+          </li>
+        );
+      })}
     </ul>
   );
 };
