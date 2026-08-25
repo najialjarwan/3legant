@@ -115,10 +115,8 @@ const FlyMenu = ({ isOpen, onClose, onCartOpen }) => {
                             flex flex-col gap-4
                             btn-xs text-n7100`,
                             li: `
-                            w-full pb-1.75
+                            w-full h-8 pb-1.75
                             border-b border-n3100 box-border`,
-                            row: `w-full h-8`,
-                            link: `w-full`,
                         }}
                     />
                 </div>
