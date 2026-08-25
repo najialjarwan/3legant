@@ -37,7 +37,7 @@ const Footer = () => {
                         ul: `
                         flex flex-col justify-center 2xl:flex-row gap-8 2xl:gap-10
                         text-n1100 caption-1`,
-                        row: `justify-center`,
+                        li: `justify-center`,
                     }}
                 />
             </div>
