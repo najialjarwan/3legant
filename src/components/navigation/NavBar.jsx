@@ -31,13 +31,14 @@ const NavBar = ({ onMenuOpen, onCartOpen }) => {
 
             {/* Pages Navigation Links */}
             <NavLinks
+                highlightActive
                 classNames={{
                     ul: `
                     w-fit h-fit
                     hidden 2xl:flex items-center gap-10
-                    text-n4100 btn-xs font-space-grotesk`,
+                    btn-xs font-space-grotesk`,
                     li: `
-                    w-fit h-fit`,
+                    w-fit h-fit text-n4100`,
                 }}
             />
 
